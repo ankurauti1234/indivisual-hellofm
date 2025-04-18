@@ -17,26 +17,41 @@ const DownloadDialog = ({ selectedDate }) => {
   const [date, setDate] = useState(selectedDate || format(new Date(), "yyyy-MM-dd"));
   const [startTime, setStartTime] = useState("00:00:00");
   const [endTime, setEndTime] = useState("23:59:59");
-  const [selectedChannel, setSelectedChannel] = useState("all");
+  const [selectedChannels, setSelectedChannels] = useState([]); // Changed to array for multi-select
+  const [selectedRegion, setSelectedRegion] = useState("all");
   const [open, setOpen] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [noDataAlert, setNoDataAlert] = useState(false);
   const { toast } = useToast();
 
-  // Get unique channels for the selected date
+  // Get unique channels and regions for the selected date
   const getAvailableChannels = (data, selectedDate) => {
     const filteredPrograms = data.filter((item) => item.date === selectedDate);
     return [...new Set(filteredPrograms.map((item) => item.channel))];
   };
+  const getUniqueRegions = (data) => [...new Set(data.map((item) => item.region).filter(Boolean))];
   const availableChannels = getAvailableChannels(epgData, date);
+  const regions = getUniqueRegions(epgData);
+
+  // Handle multi-select for channels
+  const handleChannelSelect = (channel) => {
+    if (channel === "all") {
+      setSelectedChannels([]);
+    } else if (selectedChannels.includes(channel)) {
+      setSelectedChannels(selectedChannels.filter((c) => c !== channel));
+    } else {
+      setSelectedChannels([...selectedChannels, channel]);
+    }
+  };
 
   // Validate time range and check for data availability
   const validateAndCheckData = () => {
     if (!date || !startTime || !endTime) return false;
-    
+
     const filteredData = epgData.filter((item) => {
       if (item.date !== date) return false;
-      if (selectedChannel !== "all" && item.channel !== selectedChannel) return false;
+      if (selectedChannels.length > 0 && !selectedChannels.includes(item.channel)) return false;
+      if (selectedRegion !== "all" && item.region !== selectedRegion) return false;
 
       const itemStartTime = item.start;
       const itemEndTime = item.end;
@@ -52,19 +67,20 @@ const DownloadDialog = ({ selectedDate }) => {
     return filteredData.length > 0;
   };
 
-  // Update no-data alert whenever date, time, or channel changes
+  // Update no-data alert whenever date, time, channels, or region changes
   useEffect(() => {
     validateAndCheckData();
-  }, [date, startTime, endTime, selectedChannel]);
+  }, [date, startTime, endTime, selectedChannels, selectedRegion]);
 
   const handleDownload = () => {
     setIsDownloading(true);
-    
+
     try {
-      // Filter epgData based on date, time, and channel
+      // Filter epgData based on date, time, channels, and region
       const filteredData = epgData.filter((item) => {
         if (item.date !== date) return false;
-        if (selectedChannel !== "all" && item.channel !== selectedChannel) return false;
+        if (selectedChannels.length > 0 && !selectedChannels.includes(item.channel)) return false;
+        if (selectedRegion !== "all" && item.region !== selectedRegion) return false;
 
         const itemStartTime = item.start;
         const itemEndTime = item.end;
@@ -90,12 +106,14 @@ const DownloadDialog = ({ selectedDate }) => {
         End: item.end,
         Type: item.type,
         Program: item.program,
+        Region: item.region || "",
         GIF: item.GIF || "",
       }));
 
       // Generate file name
-      const channelPart = selectedChannel === "all" ? "all-channels" : selectedChannel.toLowerCase().replace(/\s+/g, "-");
-      const fileName = `epg_${date}_${channelPart}_${startTime.replace(/:/g, "")}_${endTime.replace(/:/g, "")}.${fileFormat}`;
+      const channelPart = selectedChannels.length === 0 ? "all-channels" : selectedChannels.join("-").toLowerCase().replace(/\s+/g, "-");
+      const regionPart = selectedRegion === "all" ? "all-regions" : selectedRegion.toLowerCase().replace(/\s+/g, "-");
+      const fileName = `epg_${date}_${channelPart}_${regionPart}_${startTime.replace(/:/g, "")}_${endTime.replace(/:/g, "")}.${fileFormat}`;
 
       if (fileFormat === "csv") {
         const csv = Papa.unparse(exportData);
@@ -148,7 +166,7 @@ const DownloadDialog = ({ selectedDate }) => {
           {noDataAlert && (
             <Alert className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 rounded-lg">
               <AlertDescription>
-                No data available for the selected date, time range, or channel.
+                No data available for the selected date, time range, channels, or region.
               </AlertDescription>
             </Alert>
           )}
@@ -166,19 +184,45 @@ const DownloadDialog = ({ selectedDate }) => {
               />
             </div>
 
-            {/* Channel Selection */}
+            {/* Region Selection */}
             <div className="space-y-2">
-              <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Channel</Label>
-              <Select value={selectedChannel} onValueChange={setSelectedChannel}>
+              <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Region</Label>
+              <Select value={selectedRegion} onValueChange={setSelectedRegion}>
                 <SelectTrigger className="w-full bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400">
-                  <SelectValue placeholder="Select channel" />
+                  <SelectValue placeholder="Select region" />
+                </SelectTrigger>
+                <SelectContent className="bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100">
+                  <SelectItem value="all">All Regions</SelectItem>
+                  {regions.length > 0 ? (
+                    regions.map((region) => (
+                      <SelectItem key={region} value={region}>
+                        {region}
+                      </SelectItem>
+                    ))
+                  ) : (
+                    <SelectItem value="no-regions" disabled>
+                      No regions available
+                    </SelectItem>
+                  )}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Channel Multi-Selection */}
+            <div className="space-y-2">
+              <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Channels</Label>
+              <Select onValueChange={handleChannelSelect}>
+                <SelectTrigger className="w-full bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400">
+                  <SelectValue>
+                    {selectedChannels.length === 0 ? "All Channels" : selectedChannels.join(", ")}
+                  </SelectValue>
                 </SelectTrigger>
                 <SelectContent className="bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100">
                   <SelectItem value="all">All Channels</SelectItem>
                   {availableChannels.length > 0 ? (
                     availableChannels.map((channel) => (
                       <SelectItem key={channel} value={channel}>
-                        {channel}
+                        {channel} {selectedChannels.includes(channel) ? "(Selected)" : ""}
                       </SelectItem>
                     ))
                   ) : (

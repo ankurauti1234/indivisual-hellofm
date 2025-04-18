@@ -55,11 +55,7 @@ const data = {
         {
           title: "Brands",
           url: "/dashboard/tv/brands",
-        },
-        {
-          title: "Sports",
-          url: "/dashboard/tv/sports",
-        },
+        }
       ],
     },
     {
@@ -135,6 +131,25 @@ const data = {
         {
           title: "Players",
           url: "/dashboard/gaming/players",
+        },
+      ],
+    },
+    {
+      title: "Sports",
+      url: "/dashboard/sports",
+      icon: PieChart, // Choose an appropriate icon
+      items: [
+        {
+          title: "Events",
+          url: "/dashboard/sports/events",
+        },
+        {
+          title: "Sponsors",
+          url: "/dashboard/sports/sponsors",
+        },
+        {
+          title: "Athletes",
+          url: "/dashboard/sports/athletes",
         },
       ],
     },

@@ -15,16 +15,32 @@ import { useRouter, useSearchParams } from "next/navigation";
 const MINUTES_IN_DAY = 24 * 60;
 const FIXED_WIDTH = 9600;
 
-// Dummy data for radio stations and cities
-const radioStations = ["Radio Mirchi", "Suryan FM", "Hello FM", "Big FM"];
-const cities = ["Trichy", "Chennai", "Madurai", "Coimbatore"];
-
+// Get unique regions, channels, content types, and dates with data from epgData
+const getUniqueRegions = (data) => [...new Set(data.map((item) => item.region).filter(Boolean))];
 const getUniqueChannels = (data, selectedDate) => {
   const filteredPrograms = data.filter((item) => item.date === selectedDate);
   return [...new Set(filteredPrograms.map((item) => item.channel))];
 };
-const getUniqueBrands = (data) => [...new Set(data.filter((item) => item.type === "ad").map((item) => item.brand).filter(Boolean))];
+const getAllChannels = (data) => [...new Set(data.map((item) => item.channel))];
 const getUniqueContentTypes = (data) => [...new Set(data.map((item) => item.type))];
+const getDatesWithData = (data) => [...new Set(data.map((item) => item.date))].sort();
+
+// Utility to find the nearest date with data
+const findNearestDateWithData = (currentDate, datesWithData) => {
+  const current = new Date(currentDate);
+  let nearestDate = null;
+  let minDiff = Infinity;
+
+  datesWithData.forEach((date) => {
+    const diff = Math.abs(new Date(date) - current);
+    if (diff < minDiff) {
+      minDiff = diff;
+      nearestDate = date;
+    }
+  });
+
+  return nearestDate;
+};
 
 // Utility to format minutes to HH:mm:ss for URL
 const formatTimeForURL = (minutes) => {
@@ -94,6 +110,31 @@ const TimelineRuler = ({ timeRange }) => {
   );
 };
 
+const EmptyState = ({ onGoToNearestDate }) => (
+  <div className="flex flex-col items-center justify-center h-full bg-zinc-100 dark:bg-zinc-900 text-center p-8">
+    <svg className="w-16 h-16 text-zinc-400 dark:text-zinc-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17v-6h6v6m-3-6v6m-9 3h18M4 6h16M4 10h16" />
+    </svg>
+    <h2 className="text-xl font-semibold text-zinc-800 dark:text-zinc-200 mb-2">No Programs Available</h2>
+    <p className="text-zinc-600 dark:text-zinc-400 mb-6">There are no programs scheduled for this date.</p>
+    <Button onClick={onGoToNearestDate} className="bg-indigo-600 hover:bg-indigo-700 text-white">
+      Go to Nearest Date with Data
+    </Button>
+  </div>
+);
+
+const LoadingState = () => (
+  <div className="flex items-center justify-center h-full bg-zinc-100/50 dark:bg-zinc-900/50">
+    <div className="flex flex-col items-center">
+      <svg className="animate-spin h-10 w-10 text-indigo-600 dark:text-indigo-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+      </svg>
+      <span className="mt-2 text-zinc-600 dark:text-zinc-400">Loading...</span>
+    </div>
+  </div>
+);
+
 const EPG = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -104,20 +145,29 @@ const EPG = () => {
   const [timeRange, setTimeRange] = useState([initialStart, initialEnd]);
   const [selectedProgram, setSelectedProgram] = useState(null);
   const [selectedDate, setSelectedDate] = useState(initialDate);
-  const [selectedBrand, setSelectedBrand] = useState("all");
   const [selectedContentType, setSelectedContentType] = useState("all");
   const [selectedRadioStation, setSelectedRadioStation] = useState("all");
-  const [selectedCity, setSelectedCity] = useState("all");
+  const [selectedRegion, setSelectedRegion] = useState("all");
   const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const channels = getUniqueChannels(epgData, selectedDate);
-  const brands = getUniqueBrands(epgData);
+  const allChannels = getAllChannels(epgData);
+  const regions = getUniqueRegions(epgData);
   const contentTypes = getUniqueContentTypes(epgData);
+  const datesWithData = getDatesWithData(epgData);
 
   const minutesInRange = timeRange[1] - timeRange[0];
   const pixelsPerMinute = FIXED_WIDTH / minutesInRange;
   const adjustedEndTime = Math.ceil(timeRange[1] / 60) * 60;
   const dynamicWidth = (adjustedEndTime - timeRange[0]) * pixelsPerMinute;
+
+  // Simulate loading state on filter or date change
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = setTimeout(() => setIsLoading(false), 300); // Short delay to show loading
+    return () => clearTimeout(timer);
+  }, [selectedDate, selectedContentType, selectedRadioStation, selectedRegion, timeRange]);
 
   // Update URL with date, start, and end times
   useEffect(() => {
@@ -133,15 +183,13 @@ const EPG = () => {
     setTimeRange(newRange);
   };
 
-  // Filter data (relaxed filtering for radio station and city)
+  // Filter data
   const filteredData = epgData.filter((program) => {
     const matchesDate = program.date === selectedDate;
-    const matchesBrand = selectedBrand === "all" || program.brand === selectedBrand;
     const matchesContentType = selectedContentType === "all" || program.type === selectedContentType;
-    // Only apply radio station and city filters if explicitly supported by data
     const matchesRadioStation = selectedRadioStation === "all" || program.channel === selectedRadioStation;
-    const matchesCity = selectedCity === "all" || program.channel.includes(selectedCity);
-    return matchesDate && matchesBrand && matchesContentType && matchesRadioStation && matchesCity;
+    const matchesRegion = selectedRegion === "all" || program.region === selectedRegion;
+    return matchesDate && matchesContentType && matchesRadioStation && matchesRegion;
   });
 
   const handlePrevDate = () => {
@@ -165,6 +213,13 @@ const EPG = () => {
     if (newDate) {
       setSelectedDate(newDate);
       setIsDatePickerOpen(false);
+    }
+  };
+
+  const handleGoToNearestDate = () => {
+    const nearestDate = findNearestDateWithData(selectedDate, datesWithData);
+    if (nearestDate) {
+      setSelectedDate(nearestDate);
     }
   };
 
@@ -291,20 +346,6 @@ const EPG = () => {
               <DropdownMenuLabel>Filters</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="flex flex-col items-start p-2">
-                <label className="text-sm font-medium text-zinc-800 dark:text-zinc-200 mb-1">Ad Brand</label>
-                <Select value={selectedBrand} onValueChange={setSelectedBrand}>
-                  <SelectTrigger className="w-full bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700">
-                    <SelectValue placeholder="Filter by Ad Brand" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Ad Brands</SelectItem>
-                    {brands.map((brand) => (
-                      <SelectItem key={brand} value={brand}>{brand}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="flex flex-col items-start p-2">
                 <label className="text-sm font-medium text-zinc-800 dark:text-zinc-200 mb-1">Content Type</label>
                 <Select value={selectedContentType} onValueChange={setSelectedContentType}>
                   <SelectTrigger className="w-full bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700">
@@ -326,22 +367,22 @@ const EPG = () => {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Radio Stations</SelectItem>
-                    {radioStations.map((station) => (
+                    {allChannels.map((station) => (
                       <SelectItem key={station} value={station}>{station}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </DropdownMenuItem>
               <DropdownMenuItem className="flex flex-col items-start p-2">
-                <label className="text-sm font-medium text-zinc-800 dark:text-zinc-200 mb-1">City</label>
-                <Select value={selectedCity} onValueChange={setSelectedCity}>
+                <label className="text-sm font-medium text-zinc-800 dark:text-zinc-200 mb-1">Region</label>
+                <Select value={selectedRegion} onValueChange={setSelectedRegion}>
                   <SelectTrigger className="w-full bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700">
-                    <SelectValue placeholder="Filter by City" />
+                    <SelectValue placeholder="Filter by Region" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Cities</SelectItem>
-                    {cities.map((city) => (
-                      <SelectItem key={city} value={city}>{city}</SelectItem>
+                    <SelectItem value="all">All Regions</SelectItem>
+                    {regions.map((region) => (
+                      <SelectItem key={region} value={region}>{region}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -372,24 +413,30 @@ const EPG = () => {
           ))}
         </div>
         <ScrollArea className="flex-1 bg-zinc-100 dark:bg-zinc-900">
-          <div className="relative" style={{ width: `${dynamicWidth}px`, height: `${channels.length * 112}px` }}>
-            <TimelineRuler timeRange={timeRange} />
-            {channels.map((channel, channelIndex) => {
-              const channelPrograms = filteredData
-                .filter((p) => p.channel === channel)
-                .filter((program) => {
-                  const startMinutes = timeToMinutes(program.start);
-                  const endMinutes = timeToMinutes(program.end);
-                  return !(endMinutes <= timeRange[0] || startMinutes >= timeRange[1]);
-                });
+          {isLoading ? (
+            <LoadingState />
+          ) : filteredData.length === 0 ? (
+            <EmptyState onGoToNearestDate={handleGoToNearestDate} />
+          ) : (
+            <div className="relative" style={{ width: `${dynamicWidth}px`, height: `${channels.length * 112}px` }}>
+              <TimelineRuler timeRange={timeRange} />
+              {channels.map((channel, channelIndex) => {
+                const channelPrograms = filteredData
+                  .filter((p) => p.channel === channel)
+                  .filter((program) => {
+                    const startMinutes = timeToMinutes(program.start);
+                    const endMinutes = timeToMinutes(program.end);
+                    return !(endMinutes <= timeRange[0] || startMinutes >= timeRange[1]);
+                  });
 
-              return (
-                <div key={channel} className="absolute left-0 right-0 h-28 top-[48px]" style={{ top: `${channelIndex * 112 + 48}px` }}>
-                  {channelPrograms.map((program) => renderProgramBlock(program, timeRange))}
-                </div>
-              );
-            })}
-          </div>
+                return (
+                  <div key={channel} className="absolute left-0 right-0 h-28 top-[48px]" style={{ top: `${channelIndex * 112 + 48}px` }}>
+                    {channelPrograms.map((program) => renderProgramBlock(program, timeRange))}
+                  </div>
+                );
+              })}
+            </div>
+          )}
           <ScrollBar orientation="horizontal" className="bg-zinc-200/50 dark:bg-zinc-800/50" />
         </ScrollArea>
       </div>
