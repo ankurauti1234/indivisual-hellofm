@@ -299,7 +299,7 @@ const EPG = () => {
   };
 
   return (
-    <div className="h-[90vh] flex flex-col bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 overflow-hidden">
+    <div className="flex flex-col bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 overflow-hidden">
       <header className="p-6 bg-gradient-to-r from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-800 border-b border-zinc-200/50 dark:border-zinc-700/50">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-zinc-800 dark:text-zinc-100">Radio Program Guide</h1>
