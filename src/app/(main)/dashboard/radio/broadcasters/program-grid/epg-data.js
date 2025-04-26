@@ -77049,7 +77049,7 @@ export const epgData = [
     "id": "ITEM-C5495716",
     "program": "Jingle",
     "region": "Kochi",
-    "start": "12:29:04",
+    "start": "14:29:04",
     "type": "jingle"
   },
   {
@@ -77463,7 +77463,7 @@ export const epgData = [
     "audio": "https://radio-playback-files.s3.ap-south-1.amazonaws.com/Advertisements/Sowdambika+World+School.mp3",
     "channel": "Suriyan FM",
     "date": "2025-04-17",
-    "end": "14:05:40",
+    "end": "14:51:40",
     "id": "ITEM-B7508790",
     "program": "Ad:Sowkambika World School, Trichy",
     "region": "Kochi",
@@ -77478,7 +77478,7 @@ export const epgData = [
     "id": "ITEM-CB7BADE9",
     "program": "Ad:Masala Dude, Trichy",
     "region": "Kochi",
-    "start": "14:05:40",
+    "start": "14:51:40",
     "type": "advertisement"
   },
   {
