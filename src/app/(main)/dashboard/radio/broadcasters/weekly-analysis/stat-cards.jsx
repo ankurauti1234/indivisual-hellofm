@@ -16,28 +16,27 @@ const StatCards = () => {
   const summaryCards = [
     {
       title: "Highest AD Count",
-      value: "201",
-      trend: "+8.2%",
+      value: "287",
+      // trend: "Saravan Electricals",
       isPositive: true,
       icon: <ScrollText className="text-gray-600" size={20} />,
     },
     {
       title: "Top Radio Station",
-      value: "Radio Mirchi",
+      value: "Hello FM",
       trend: "+3.4%",
       isPositive: true,
       icon: <CheckSquare className="text-gray-600" size={20} />,
     },
     {
-      title: "Top Sector",
-      value: "FMCGA",
-      trend: "+4%",
+      title: "Top Ad",
+      value: "Saravana Electricals",
       isPositive: true,
       icon: <Users className="text-gray-600" size={20} />,
     },
     {
       title: "Total ADs Duration",
-      value: "270 minutes",
+      value: "~1580 minutes",
       icon: <BarChart className="text-gray-600" size={20} />,
     },
     {
@@ -79,17 +78,17 @@ const StatCards = () => {
         {/* Left side: 2x2 grid */}
         <div className="grid grid-cols-2 lg:col-span-2">
           {summaryCards.slice(0, 4).map((card, index) => (
-            <Card key={index} className="bg-white rounded-none shadow-sm">
+            <Card key={index} className="rounded-none shadow-sm">
               <CardContent className="p-6">
                 <div className="flex justify-between items-start">
                   <div>
-                    <p className="text-sm font-medium text-gray-500">
+                    <p className="text-sm font-medium text-muted-foreground">
                       {card.title}
                     </p>
                     <h3 className="text-2xl font-bold mt-2">{card.value}</h3>
                     {renderTrend(card.trend, card.isPositive)}
                   </div>
-                  <div className="p-2 bg-gray-50 rounded-lg">{card.icon}</div>
+                  <div className="p-2 bg-accent rounded-lg">{card.icon}</div>
                 </div>
               </CardContent>
             </Card>
@@ -99,18 +98,18 @@ const StatCards = () => {
         {/* Right side: Popular Songs and Popular Program */}
         <div className="grid grid-cols-2 lg:col-span-2">
           {summaryCards.slice(4).map((card, index) => (
-            <Card key={index} className="bg-white rounded-none shadow-sm">
+            <Card key={index} className="rounded-none shadow-sm">
               <CardContent className="p-6">
                 <div className="flex justify-between items-start">
                   <div>
-                    <p className="text-sm font-medium text-gray-500">
+                    <p className="text-sm font-medium text-muted-foreground">
                       {card.title}
                     </p>
                     <ul className="mt-2 space-y-1">
                       {card.items.map((item, idx) => (
                         <li
                           key={idx}
-                          className="text-sm text-gray-700 font-medium"
+                          className="text-sm text-muted-foreground font-medium"
                         >
                           {idx + 1}. {item}
                         </li>
@@ -118,7 +117,7 @@ const StatCards = () => {
                     </ul>
                     {renderTrend(card.trend, card.isPositive)}
                   </div>
-                  <div className="p-2 bg-gray-50 rounded-lg">{card.icon}</div>
+                  <div className="p-2 bg-accent rounded-lg">{card.icon}</div>
                 </div>
               </CardContent>
             </Card>
