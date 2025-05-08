@@ -15,7 +15,7 @@ import {
 const StatCards = () => {
   const summaryCards = [
     {
-      title: "Highest AD Count",
+      title: "AD Count of Top AD",
       value: "287",
       // trend: "Saravan Electricals",
       isPositive: true,
@@ -35,7 +35,7 @@ const StatCards = () => {
       icon: <Users className="text-gray-600" size={20} />,
     },
     {
-      title: "Total ADs Duration",
+      title: "Total ADs Duration of Top Radio Station",
       value: "~1580 minutes",
       icon: <BarChart className="text-gray-600" size={20} />,
     },
