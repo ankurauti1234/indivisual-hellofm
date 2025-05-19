@@ -16,10 +16,10 @@ const AppleStyleTreemap = () => {
 
   // Define colors based on ad count ranges
   const getColorByRange = (size) => {
-    if (size >= 31 && size <= 35) return "#FF3B30";      // Red for highest range
-    if (size >= 26 && size <= 30) return "#007AFF";      // Blue for high range
-    if (size >= 21 && size <= 25) return "#34C759";      // Green for medium range
-    if (size >= 15 && size <= 20) return "#5856D6";      // Purple for lower range
+    if (size >= 0 && size <= 200) return "#FF3B30";      // Red for highest range
+    if (size >= 1200 && size <= 3000) return "#007AFF";      // Blue for high range
+    if (size >= 600 && size <= 1200) return "#34C759";      // Green for medium range
+    if (size >= 200 && size <= 600) return "#5856D6";      // Purple for lower range
     return "#FFCC00";                                    // Yellow for outliers
   };
 
@@ -36,176 +36,98 @@ const AppleStyleTreemap = () => {
     1: {
       name: "Radio City FM",
       children: [
-          { name: "Medicinal Products", size: 30, brands: ["Cipla", "Sun Pharma", "Pfizer", "Dr. Reddy's"] },
-          { name: "Travel & Tourism", size: 28, brands: ["MakeMyTrip", "Goibibo", "Yatra", "Expedia"] },
-          { name: "Automobile - Car", size: 32, brands: ["Maruti Suzuki", "Hyundai", "Tata Motors", "Honda"] },
-          { name: "Dairy Products", size: 25, brands: ["Amul", "Mother Dairy", "Nestle", "Britannia"] },
-          { name: "Finance - Loans", size: 27, brands: ["HDFC", "ICICI", "Bajaj Finance", "SBI"] },
-          { name: "Public Service Ads", size: 15, brands: ["Ministry of Health", "WHO", "UNICEF", "NITI Aayog"] },
-          { name: "Automobile - Dealers", size: 20, brands: ["True Value", "Mahindra First Choice", "Spinny", "Cars24"] },
-          { name: "Finance - Bank", size: 30, brands: ["HDFC Bank", "ICICI Bank", "SBI", "Axis Bank"] },
-          { name: "Fast Food", size: 26, brands: ["McDonald's", "KFC", "Domino's", "Burger King"] },
-          { name: "Building Materials", size: 22, brands: ["Ultratech Cement", "ACC Cement", "Ambuja Cement", "Shree Cement"] },
-          { name: "Finance - Insurance", size: 23, brands: ["LIC", "Max Life", "HDFC Life", "Bajaj Allianz"] },
-          { name: "Personal Care", size: 25, brands: ["Dove", "Nivea", "Himalaya", "Patanjali"] },
-          { name: "Textile and Apparels", size: 21, brands: ["Raymond", "Allen Solly", "Levi's", "Van Heusen"] },
-          { name: "Hotel & Restaurants", size: 30, brands: ["Taj Hotels", "Oberoi", "Hyatt", "ITC Hotels"] },
-          { name: "Building Material", size: 28, brands: ["L&T", "Godrej Interio", "Asian Paints", "Berger Paints"] },
-          { name: "Entertainment", size: 32, brands: ["Netflix", "Amazon Prime", "Disney+", "Sony Liv"] },
-          { name: "Accessory - Jewellery", size: 19, brands: ["Tanishq", "Malabar Gold", "Kalyan Jewellers", "CaratLane"] },
-          { name: "Healthcare", size: 29, brands: ["Apollo", "Fortis", "Medanta", "Max Healthcare"] },
-          { name: "Education", size: 22, brands: ["Byju's", "Unacademy", "Coursera", "Udemy"] },
-          { name: "Insurance", size: 27, brands: ["ICICI Prudential", "HDFC Life", "SBI Life", "Tata AIA"] },
-          { name: "Fashion", size: 21, brands: ["H&M", "Zara", "Nike", "Adidas"] },
-          { name: "Food & Beverage", size: 30, brands: ["Coca-Cola", "PepsiCo", "McDonald's", "KFC"] },
-          { name: "Banking", size: 25, brands: ["SBI", "HDFC Bank", "ICICI Bank", "Axis Bank"] },
-          { name: "Chemical", size: 22, brands: ["Tata Chemicals", "Reliance Chemicals", "UPL", "BASF"] },
-          { name: "Construction", size: 28, brands: ["L&T", "Shapoorji Pallonji", "GMR", "HCC"] },
-          { name: "Public Works", size: 24, brands: ["NHAI", "PWD", "Indian Railways", "Metro Projects"] },
-          { name: "FMCG", size: 27, brands: ["Hindustan Unilever", "Nestle", "ITC", "Dabur"] },
-          { name: "Government", size: 20, brands: ["Ministry of Tourism", "Swachh Bharat", "Make in India", "Skill India"] },
-          { name: "Real Estate", size: 30, brands: ["DLF", "Godrej Properties", "Prestige", "Lodha"] },
-          { name: "Jewellery", size: 19, brands: ["Tanishq", "Kalyan Jewellers", "Malabar Gold", "CaratLane"] },
-          { name: "Travel", size: 29, brands: ["IRCTC", "Airbnb", "Expedia", "Yatra"] },
-          { name: "Automobile", size: 32, brands: ["Maruti Suzuki", "Hyundai", "Tata Motors", "Mahindra"] }
-      ].map(item => ({ ...item, fill: getColorByRange(item.size) }))
-  },
-  2: {
-    name: "Capital Radio",
-    children: [
-      {
-        name: "Entertainment",
-        size: 30,
-        brands: ["Netflix", "Amazon Prime", "Disney+", "Sony"],
-      },
-      {
-        name: "Fashion",
-        size: 25,
-        // fill: vibrantColors[1],
-        brands: ["H&M", "Zara", "Uniqlo", "Nike"],
-      },
-      {
-        name: "Food & Beverage",
-        size: 20,
-        // fill: vibrantColors[2],
-        brands: ["Coca-Cola", "PepsiCo", "McDonald's", "KFC"],
-      },
-      {
-        name: "Technology",
-        size: 15,
-        // fill: vibrantColors[3],
-        brands: ["Apple", "Samsung", "OnePlus", "Dell"],
-      },
-      {
-        name: "Insurance",
-        size: 10,
-        // fill: vibrantColors[4],
-        brands: ["LIC", "HDFC Life", "Max Life", "SBI Life"],
-      },
-    ].map(item => ({ ...item, fill: getColorByRange(item.size) })),
-  },
-  3: {
-    name: "Wave FM",
-    children: [
-      {
-        name: "Sports",
-        size: 28,
-        brands: ["Nike", "Adidas", "Puma", "Under Armour"],
-      },
-      {
-        name: "Beauty",
-        size: 22,
-        // fill: vibrantColors[1],
-        brands: ["L'Oreal", "Maybelline", "MAC", "Lakme"],
-      },
-      {
-        name: "Healthcare",
-        size: 18,
-        // fill: vibrantColors[2],
-        brands: ["Apollo", "Fortis", "Max Healthcare", "Cipla"],
-      },
-      {
-        name: "Education",
-        size: 20,
-        // fill: vibrantColors[3],
-        brands: ["Byju's", "Unacademy", "Coursera", "Udemy"],
-      },
-      {
-        name: "Real Estate",
-        size: 12,
-        // fill: vibrantColors[4],
-        brands: ["DLF", "Godrej Properties", "Prestige", "Lodha"],
-      },
-    ].map(item => ({ ...item, fill: getColorByRange(item.size) })),
-  },
-  4: {
-    name: "Melody 90.4",
-    children: [
-      {
-        name: "Travel",
-        size: 25,
-        brands: ["MakeMyTrip", "Yatra", "Airbnb", "IRCTC"],
-      },
-      {
-        name: "Jewelry",
-        size: 20,
-        // fill: vibrantColors[1],
-        brands: ["Tanishq", "Kalyan", "CaratLane", "Malabar Gold"],
-      },
-      {
-        name: "Home Decor",
-        size: 15,
-        // fill: vibrantColors[2],
-        brands: ["IKEA", "Home Centre", "Urban Ladder", "Pepperfry"],
-      },
-      {
-        name: "Electronics",
-        size: 22,
-        // fill: vibrantColors[3],
-        brands: ["Croma", "Reliance Digital", "Vijay Sales", "Amazon"],
-      },
-      {
-        name: "Fitness",
-        size: 18,
-        // fill: vibrantColors[4],
-        brands: ["Cult.fit", "Decathlon", "Gold's Gym", "Fitbit"],
-      },
-    ].map(item => ({ ...item, fill: getColorByRange(item.size) })),
-  },
-  5: {
-    name: "Rhythm Radio",
-    children: [
-      {
-        name: "Gaming",
-        size: 24,
-        brands: ["PlayStation", "Xbox", "Nintendo", "EA Sports"],
-      },
-      {
-        name: "Streaming",
-        size: 28,
-        // fill: vibrantColors[1],
-        brands: ["Spotify", "Gaana", "JioSaavn", "Amazon Music"],
-      },
-      {
-        name: "Food Delivery",
-        size: 20,
-        // fill: vibrantColors[2],
-        brands: ["Zomato", "Swiggy", "Domino's", "Pizza Hut"],
-      },
-      {
-        name: "Airlines",
-        size: 16,
-        // fill: vibrantColors[3],
-        brands: ["IndiGo", "Air India", "SpiceJet", "Vistara"],
-      },
-      {
-        name: "Digital Payments",
-        size: 12,
-        // fill: vibrantColors[4],
-        brands: ["Paytm", "PhonePe", "Google Pay", "Amazon Pay"],
-      },
-    ].map(item => ({ ...item, fill: getColorByRange(item.size) })),
-  },
+        {
+          name: "Accessories - Jewellery",
+          size: 1416,
+          brands: ["Tanishq", "Malabar Gold", "Kalyan Jewellers", "CaratLane"],
+        },
+        {
+          name: "Textiles & Apparels",
+          size: 1071,
+          brands: ["Raymond", "Allen Solly", "Levi's", "Van Heusen"],
+        },
+        {
+          name: "Food Products",
+          size: 486,
+          brands: ["Nestle", "Amul", "Britannia", "Parle"],
+        },
+        {
+          name: "Services - Medical",
+          size: 412,
+          brands: ["Apollo Hospitals", "Fortis", "Max Healthcare", "AIIMS"],
+        },
+        {
+          name: "Education",
+          size: 348,
+          brands: ["Byju's", "Unacademy", "Coursera", "Udemy"],
+        },
+        {
+          name: "Radio",
+          size: 347,
+          brands: ["Radio Mirchi", "Red FM", "Big FM", "Fever FM"],
+        },
+        {
+          name: "Consumer Durables",
+          size: 316,
+          brands: ["Samsung", "LG", "Whirlpool", "Sony"],
+        },
+        {
+          name: "Building Material",
+          size: 283,
+          brands: ["Ultratech Cement", "ACC", "Ambuja", "Shree Cement"],
+        },
+        {
+          name: "Automobile - Car",
+          size: 260,
+          brands: ["Maruti Suzuki", "Hyundai", "Tata Motors", "Honda"],
+        },
+        {
+          name: "Consumer Durables - Home Appliances",
+          size: 229,
+          brands: ["LG", "Samsung", "Voltas", "Haier"],
+        },
+        {
+          name: "Retail",
+          size: 161,
+          brands: ["Reliance Retail", "DMart", "Big Bazaar", "Spencer's"],
+        },
+        {
+          name: "Consumer Durables - Mobile Phone",
+          size: 82,
+          brands: ["Samsung", "Apple", "Xiaomi", "OnePlus"],
+        },
+        {
+          name: "Consumer Durables - Solar Products",
+          size: 66,
+          brands: ["Loom Solar", "Tata Power Solar", "Vikram Solar", "Waaree"],
+        },
+        {
+          name: "Entertainment - Others",
+          size: 58,
+          brands: ["Netflix", "Amazon Prime", "Disney+", "Sony Liv"],
+        },
+        {
+          name: "Financial Services",
+          size: 58,
+          brands: ["HDFC", "ICICI", "SBI", "Axis Bank"],
+        },
+        {
+          name: "Consumer Durables-Home Appliances",
+          size: 52,
+          brands: ["Godrej", "Panasonic", "Blue Star", "IFB"],
+        },
+        {
+          name: "Public Service Ads",
+          size: 41,
+          brands: ["Ministry of Health", "WHO", "UNICEF", "NITI Aayog"],
+        },
+        {
+          name: "Entertainment - Pubs & Discotheques",
+          size: 41,
+          brands: ["Kitty Su", "Privee", "Tito's", "Social"],
+        },
+      ].map((item) => ({ ...item, fill: getColorByRange(item.size) })),
+    },
   };
 
   const CustomizedContent = (props) => {
