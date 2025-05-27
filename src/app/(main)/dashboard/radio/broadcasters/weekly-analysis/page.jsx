@@ -30,13 +30,13 @@ const RadioDashboard = () => {
       <RadioAdHeatmap />
       <RadioSectorAnalysis />
       <AppleStyleTreemap />
-      <div className='flex gap-4'>
+      {/* <div className='flex gap-4'>
         <TopProgramsChart />
         <TopSongsChart />
       </div>
       <AdPlacementFrequencyChart />
       <DetailedAdAnalysis />
-      <PlatformComparison />
+      <PlatformComparison /> */}
     </div>
   );
 }
