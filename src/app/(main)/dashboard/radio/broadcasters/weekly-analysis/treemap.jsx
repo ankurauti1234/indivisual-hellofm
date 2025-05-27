@@ -9,124 +9,76 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Radio, Info } from "lucide-react";
+import { hello as helloWeek1, suriyan as suriyanWeek1 } from "./treemap-data.js";
+import { hello as helloWeek2, suriyan as suriyanWeek2 } from "./treemap-data_2.js";
 
-const AppleStyleTreemap = () => {
-  const [selectedStation, setSelectedStation] = useState("1");
+// Define colors based on percentage ranges
+const getColorByRange = (percentage) => {
+  if (percentage/100 >= 10) return "#FF3B30"; // Red for highest range
+  if (percentage/100 >= 5) return "#007AFF"; // Blue for high range
+  if (percentage/100 >= 3) return "#34C759"; // Green for medium range
+  if (percentage/100 >= 1) return "#5856D6";  // Purple for lower range
+  return "#FFCC00";                      // Yellow for lowest range
+};
+
+// Aggregate data to combine duplicate categories and their brands
+const aggregateData = (data) => {
+  const categoryMap = data.reduce((acc, item) => {
+    const { Category, Percentage, "Brand Name/Parent Comany": brand } = item;
+    if (!acc[Category]) {
+      acc[Category] = { size: 0, brands: new Set() };
+    }
+    acc[Category].size += Percentage;
+    if (brand) {
+      acc[Category].brands.add(brand);
+    }
+    return acc;
+  }, {});
+
+  return Object.entries(categoryMap).map(([name, { size, brands }]) => ({
+    name,
+    size,
+    brands: Array.from(brands),
+    fill: getColorByRange(size),
+  }));
+};
+
+const SectorTreemap = () => {
+  const [selectedStation, setSelectedStation] = useState("hello");
+  const [selectedWeek, setSelectedWeek] = useState("week1");
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  // Define colors based on ad count ranges
-  const getColorByRange = (size) => {
-    if (size >= 0 && size <= 200) return "#FF3B30";      // Red for highest range
-    if (size >= 1200 && size <= 3000) return "#007AFF";      // Blue for high range
-    if (size >= 600 && size <= 1200) return "#34C759";      // Green for medium range
-    if (size >= 200 && size <= 600) return "#5856D6";      // Purple for lower range
-    return "#FFCC00";                                    // Yellow for outliers
-  };
-
   const stations = [
-    { id: "1", name: "Radio City FM" },
-    { id: "2", name: "Radio Mirchi" },
-    { id: "3", name: "Red FM" },
-    { id: "4", name: "Big FM" },
-    { id: "5", name: "Rainbow FM" },
+    { id: "hello", name: "Hello FM" },
+    { id: "suriyan", name: "Suriyan FM" },
   ];
 
-  // Enhanced station data with dynamic colors based on size
+  const weeks = [
+    { id: "week1", name: "Week 1" },
+    { id: "week2", name: "Week 2" },
+  ];
+
+  // Map station and week data with aggregated categories
   const stationData = {
-    1: {
-      name: "Radio City FM",
-      children: [
-        {
-          name: "Accessories - Jewellery",
-          size: 1416,
-          brands: ["Tanishq", "Malabar Gold", "Kalyan Jewellers", "CaratLane"],
-        },
-        {
-          name: "Textiles & Apparels",
-          size: 1071,
-          brands: ["Raymond", "Allen Solly", "Levi's", "Van Heusen"],
-        },
-        {
-          name: "Food Products",
-          size: 486,
-          brands: ["Nestle", "Amul", "Britannia", "Parle"],
-        },
-        {
-          name: "Services - Medical",
-          size: 412,
-          brands: ["Apollo Hospitals", "Fortis", "Max Healthcare", "AIIMS"],
-        },
-        {
-          name: "Education",
-          size: 348,
-          brands: ["Byju's", "Unacademy", "Coursera", "Udemy"],
-        },
-        {
-          name: "Radio",
-          size: 347,
-          brands: ["Radio Mirchi", "Red FM", "Big FM", "Fever FM"],
-        },
-        {
-          name: "Consumer Durables",
-          size: 316,
-          brands: ["Samsung", "LG", "Whirlpool", "Sony"],
-        },
-        {
-          name: "Building Material",
-          size: 283,
-          brands: ["Ultratech Cement", "ACC", "Ambuja", "Shree Cement"],
-        },
-        {
-          name: "Automobile - Car",
-          size: 260,
-          brands: ["Maruti Suzuki", "Hyundai", "Tata Motors", "Honda"],
-        },
-        {
-          name: "Consumer Durables - Home Appliances",
-          size: 229,
-          brands: ["LG", "Samsung", "Voltas", "Haier"],
-        },
-        {
-          name: "Retail",
-          size: 161,
-          brands: ["Reliance Retail", "DMart", "Big Bazaar", "Spencer's"],
-        },
-        {
-          name: "Consumer Durables - Mobile Phone",
-          size: 82,
-          brands: ["Samsung", "Apple", "Xiaomi", "OnePlus"],
-        },
-        {
-          name: "Consumer Durables - Solar Products",
-          size: 66,
-          brands: ["Loom Solar", "Tata Power Solar", "Vikram Solar", "Waaree"],
-        },
-        {
-          name: "Entertainment - Others",
-          size: 58,
-          brands: ["Netflix", "Amazon Prime", "Disney+", "Sony Liv"],
-        },
-        {
-          name: "Financial Services",
-          size: 58,
-          brands: ["HDFC", "ICICI", "SBI", "Axis Bank"],
-        },
-        {
-          name: "Consumer Durables-Home Appliances",
-          size: 52,
-          brands: ["Godrej", "Panasonic", "Blue Star", "IFB"],
-        },
-        {
-          name: "Public Service Ads",
-          size: 41,
-          brands: ["Ministry of Health", "WHO", "UNICEF", "NITI Aayog"],
-        },
-        {
-          name: "Entertainment - Pubs & Discotheques",
-          size: 41,
-          brands: ["Kitty Su", "Privee", "Tito's", "Social"],
-        },
-      ].map((item) => ({ ...item, fill: getColorByRange(item.size) })),
+    week1: {
+      hello: {
+        name: "Hello FM",
+        children: aggregateData(helloWeek1),
+      },
+      suriyan: {
+        name: "Suriyan FM",
+        children: aggregateData(suriyanWeek1),
+      },
+    },
+    week2: {
+      hello: {
+        name: "Hello FM",
+        children: aggregateData(helloWeek2),
+      },
+      suriyan: {
+        name: "Suriyan FM",
+        children: aggregateData(suriyanWeek2),
+      },
     },
   };
 
@@ -181,7 +133,7 @@ const AppleStyleTreemap = () => {
                 fontWeight: "400",
               }}
             >
-              {`${size} Ads`}
+              {`${(size/100)?.toFixed(2)}%`}
             </tspan>
           </text>
         )}
@@ -202,28 +154,30 @@ const AppleStyleTreemap = () => {
             <h3 className="font-semibold text-lg">{industry.name}</h3>
           </div>
           <p className="text-sm text-gray-600 mb-3">
-            Number of Ads: {industry.size}
+            Percentage: {(industry.size/100)?.toFixed(2)}%
           </p>
-          <div className="space-y-2">
-            <p className="font-medium text-sm">Top Brands:</p>
-            <div className="grid grid-cols-2 gap-2">
-              {industry.brands.map((brand, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50/80 px-3 py-2 rounded-xl text-sm"
-                >
-                  {brand}
-                </div>
-              ))}
+          {industry.brands.length > 0 && (
+            <div className="space-y-2">
+              <p className="font-medium text-sm">Top Brands:</p>
+              <div className="grid grid-cols-2 gap-2">
+                {industry.brands.map((brand, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50/80 px-3 py-2 rounded-xl text-sm"
+                  >
+                    {brand}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       );
     }
     return null;
   };
 
-  const currentStation = stationData[selectedStation];
+  const currentStation = stationData[selectedWeek][selectedStation];
 
   return (
     <Card className="w-full bg-gradient-to-br from-gray-50 to-gray-100">
@@ -236,42 +190,62 @@ const AppleStyleTreemap = () => {
                 Radio Ads Distribution
               </h2>
               <p className="text-sm text-gray-500 font-normal mt-1">
-                Advertisement Distribution by Count Range
+                Advertisement Distribution by Percentage
               </p>
             </div>
           </CardTitle>
           <div className="flex items-center gap-4">
             <div className="flex gap-2 text-sm">
               <div className="flex items-center gap-1">
+                <div className="w-3 h-3 rounded-full bg-[#FFCC00]" />
+                <span>0-1%</span>
+              </div>
+              <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#5856D6]" />
-                <span>15-20</span>
+                <span>0-3%</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#34C759]" />
-                <span>21-25</span>
+                <span>0-5%</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#007AFF]" />
-                <span>26-30</span>
+                <span>0-10%</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#FF3B30]" />
-                <span>31-35</span>
+                <span>10%+</span>
               </div>
             </div>
-            <div className="w-72">
-              <Select value={selectedStation} onValueChange={setSelectedStation}>
-                <SelectTrigger className="w-full h-11 rounded-xl">
-                  <SelectValue placeholder="Select a station" />
-                </SelectTrigger>
-                <SelectContent>
-                  {stations.map((station) => (
-                    <SelectItem key={station.id} value={station.id}>
-                      {station.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+            <div className="flex gap-4">
+              <div className="w-36">
+                <Select value={selectedWeek} onValueChange={setSelectedWeek}>
+                  <SelectTrigger className="w-full h-11 rounded-xl">
+                    <SelectValue placeholder="Select a week" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {weeks.map((week) => (
+                      <SelectItem key={week.id} value={week.id}>
+                        {week.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="w-36">
+                <Select value={selectedStation} onValueChange={setSelectedStation}>
+                  <SelectTrigger className="w-full h-11 rounded-xl">
+                    <SelectValue placeholder="Select a station" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {stations.map((station) => (
+                      <SelectItem key={station.id} value={station.id}>
+                        {station.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
           </div>
         </div>
@@ -280,11 +254,11 @@ const AppleStyleTreemap = () => {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <h3 className="text-lg font-medium">{currentStation.name}</h3>
+              <h3 className="text-lg font-medium">{currentStation.name} - {weeks.find(w => w.id === selectedWeek).name}</h3>
               <Info className="w-4 h-4 text-gray-400" />
             </div>
             <div className="px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              {currentStation.children.length} Industries
+              {currentStation.children.length} Categories
             </div>
           </div>
           <div className="h-[500px] rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">
@@ -311,4 +285,4 @@ const AppleStyleTreemap = () => {
   );
 };
 
-export default AppleStyleTreemap;
+export default SectorTreemap;
