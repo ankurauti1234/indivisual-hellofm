@@ -14,216 +14,123 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { SuriyanSerctorData, HelloSerctorData } from "./sector-data";
 
 const RadioSectorAnalysis = () => {
-  const [selectedMonths, setSelectedMonths] = useState(["jan24"]);
-  const [selectedRegion, setSelectedRegion] = useState("all");
-  const [selectedLanguage, setSelectedLanguage] = useState("all");
+  const [selectedWeeks, setSelectedWeeks] = useState(["week_1"]);
+  const [selectedStation, setSelectedStation] = useState("all");
 
+  // Define sectors with colors
   const sectors = {
-    automotive: { name: "Automotive", color: "#61C9A8" },
-    retail: { name: "Retail", color: "#ED9B40" },
-    fmcg: { name: "FMCG", color: "#009DDC" },
-    banking: { name: "Banking", color: "#A855F7" },
-    entertainment: { name: "Entertainment", color: "#F26430" },
+    Accessories: { name: "Accessories", color: "#61C9A8" },
+    Airlines: { name: "Airlines", color: "#ED9B40" },
+    Automobile: { name: "Automobile", color: "#009DDC" },
+    BuildingMaterials: { name: "Building Materials", color: "#A855F7" },
+    Constructions: { name: "Constructions", color: "#F26430" },
+    ConsumerDurables: { name: "Consumer Durables", color: "#FF6B6B" },
+    Education: { name: "Education", color: "#4ECDC4" },
+    Entertainment: { name: "Entertainment", color: "#45B7D1" },
+    FMCG: { name: "FMCG", color: "#2ed343" },
+    Finance: { name: "Finance", color: "#D4A5A5" },
+    Government: { name: "Government", color: "#FFEEAD" },
+    HomeFurnishing: { name: "Home Furnishing", color: "#D72638" },
+    Manufacturing: { name: "Manufacturing", color: "#3F88C5" },
+    Medicine: { name: "Medicine", color: "#A8DA1C" },
+    Property: { name: "Property", color: "#457B9D" },
+    Retail: { name: "Retail", color: "#1D3557" },
+    Services: { name: "Services", color: "#E63946" },
+    "Consumer Durables": { name: "Aduthaduthu Moonu Pattu", color: "#111" },
+    Radio: { name: "Aduthaduthu Moonu Pattu", color: "#fe3421" },
+
+    Hospitality: { name: "Hospitality", color: "#2A9D8F" },
   };
 
-  const months = [
-    { value: "jan24", label: "January 2024", shortLabel: "Jan" },
-    { value: "feb24", label: "February 2024", shortLabel: "Feb" },
-    { value: "mar24", label: "March 2024", shortLabel: "Mar" },
+  // Define weeks
+  const weeks = [
+    { value: "week_1", label: "Week 1", shortLabel: "Week 1" },
+    { value: "week_2", label: "Week 2", shortLabel: "Week 2" },
   ];
 
-  const regions = [
-    { value: "all", label: "All Regions" },
-    { value: "delhi", label: "Delhi" },
-    { value: "mumbai", label: "Mumbai" },
-    { value: "kolkata", label: "Kolkata" },
-    { value: "chennai", label: "Chennai" },
-    { value: "bangalore", label: "Bengaluru" },
-    { value: "hyderabad", label: "Hyderabad" },
-    { value: "kochi", label: "Kochi" },
-    { value: "pune", label: "Pune" },
-    { value: "ahmedabad", label: "Ahmedabad" },
-    { value: "jaipur", label: "Jaipur" },
-    { value: "lucknow", label: "Lucknow" },
+  // Define stations
+  const stations = [
+    { value: "all", label: "All Stations" },
+    { value: "suriyan", label: "Suriyan" },
+    { value: "hellofm", label: "HelloFM" },
   ];
 
-  const languages = [
-    { value: "all", label: "All Languages" },
-    { value: "hindi", label: "Hindi" },
-    { value: "marathi", label: "Marathi" },
-    { value: "tamil", label: "Tamil" },
-    { value: "telugu", label: "Telugu" },
-    { value: "kannada", label: "Kannada" },
-    { value: "malayalam", label: "Malayalam" },
-    { value: "gujarati", label: "Gujarati" },
-    { value: "bengali", label: "Bengali" },
-    { value: "english", label: "English" },
-  ];
-
+  // Combine and normalize data
   const rawData = {
-    "Radio City": {
-      "Delhi": {
-        region: "delhi",
-        language: "hindi",
-        monthly: {
-          jan24: { automotive: 52, retail: 45, fmcg: 38, banking: 32, entertainment: 28 },
-          feb24: { automotive: 54, retail: 47, fmcg: 40, banking: 34, entertainment: 29 },
-          mar24: { automotive: 53, retail: 46, fmcg: 39, banking: 33, entertainment: 30 }
-        }
-      },
-      "Mumbai": {
-        region: "mumbai",
-        language: "marathi",
-        monthly: {
-          jan24: { automotive: 48, retail: 42, fmcg: 35, banking: 30, entertainment: 25 },
-          feb24: { automotive: 50, retail: 44, fmcg: 37, banking: 31, entertainment: 26 },
-          mar24: { automotive: 49, retail: 43, fmcg: 36, banking: 32, entertainment: 27 }
-        }
-      },
-      "Bangalore": {
-        region: "bangalore",
-        language: "kannada",
-        monthly: {
-          jan24: { automotive: 45, retail: 39, fmcg: 32, banking: 28, entertainment: 23 },
-          feb24: { automotive: 47, retail: 41, fmcg: 34, banking: 29, entertainment: 24 },
-          mar24: { automotive: 46, retail: 40, fmcg: 33, banking: 28, entertainment: 25 }
-        }
-      }
+    Suriyan: {
+      region: "chennai",
+      language: "tamil",
+      weekly: Object.fromEntries(
+        SuriyanSerctorData.map(({ week, data }) => [week, data])
+      ),
     },
-    "Radio Mirchi": {
-      "Chennai": {
-        region: "chennai",
-        language: "tamil",
-        monthly: {
-          jan24: { automotive: 46, retail: 40, fmcg: 33, banking: 28, entertainment: 24 },
-          feb24: { automotive: 48, retail: 42, fmcg: 35, banking: 30, entertainment: 25 },
-          mar24: { automotive: 47, retail: 41, fmcg: 34, banking: 29, entertainment: 26 }
-        }
-      },
-      "Kolkata": {
-        region: "kolkata",
-        language: "bengali",
-        monthly: {
-          jan24: { automotive: 44, retail: 38, fmcg: 31, banking: 26, entertainment: 22 },
-          feb24: { automotive: 46, retail: 40, fmcg: 33, banking: 28, entertainment: 23 },
-          mar24: { automotive: 45, retail: 39, fmcg: 32, banking: 27, entertainment: 24 }
-        }
-      },
-      "Hyderabad": {
-        region: "hyderabad",
-        language: "telugu",
-        monthly: {
-          jan24: { automotive: 43, retail: 37, fmcg: 30, banking: 25, entertainment: 21 },
-          feb24: { automotive: 45, retail: 39, fmcg: 32, banking: 27, entertainment: 22 },
-          mar24: { automotive: 44, retail: 38, fmcg: 31, banking: 26, entertainment: 23 }
-        }
-      }
+    HelloFM: {
+      region: "chennai",
+      language: "tamil",
+      weekly: Object.fromEntries(
+        HelloSerctorData.map(({ week, data }) => [week, data])
+      ),
     },
-    "Red FM": {
-      "Ahmedabad": {
-        region: "ahmedabad",
-        language: "gujarati",
-        monthly: {
-          jan24: { automotive: 42, retail: 36, fmcg: 29, banking: 24, entertainment: 20 },
-          feb24: { automotive: 44, retail: 38, fmcg: 31, banking: 26, entertainment: 21 },
-          mar24: { automotive: 43, retail: 37, fmcg: 30, banking: 25, entertainment: 22 }
-        }
-      },
-      "Pune": {
-        region: "pune",
-        language: "marathi",
-        monthly: {
-          jan24: { automotive: 41, retail: 35, fmcg: 28, banking: 23, entertainment: 19 },
-          feb24: { automotive: 43, retail: 37, fmcg: 30, banking: 25, entertainment: 20 },
-          mar24: { automotive: 42, retail: 36, fmcg: 29, banking: 24, entertainment: 21 }
-        }
-      },
-      "Lucknow": {
-        region: "lucknow",
-        language: "hindi",
-        monthly: {
-          jan24: { automotive: 40, retail: 34, fmcg: 27, banking: 22, entertainment: 18 },
-          feb24: { automotive: 42, retail: 36, fmcg: 29, banking: 24, entertainment: 19 },
-          mar24: { automotive: 41, retail: 35, fmcg: 28, banking: 23, entertainment: 20 }
-        }
-      }
-    },
-    "Big FM": {
-      "Kochi": {
-        region: "kochi",
-        language: "malayalam",
-        monthly: {
-          jan24: { automotive: 39, retail: 33, fmcg: 26, banking: 21, entertainment: 17 },
-          feb24: { automotive: 41, retail: 35, fmcg: 28, banking: 23, entertainment: 18 },
-          mar24: { automotive: 40, retail: 34, fmcg: 27, banking: 22, entertainment: 19 }
-        }
-      },
-      "Jaipur": {
-        region: "jaipur",
-        language: "hindi",
-        monthly: {
-          jan24: { automotive: 38, retail: 32, fmcg: 25, banking: 20, entertainment: 16 },
-          feb24: { automotive: 40, retail: 34, fmcg: 27, banking: 22, entertainment: 17 },
-          mar24: { automotive: 39, retail: 33, fmcg: 26, banking: 21, entertainment: 18 }
-        }
-      }
-    }
   };
-
 
   // Convert nested data structure to flat array for filtering
-  const flattenedData = Object.entries(rawData).flatMap(([network, stations]) =>
-    Object.entries(stations).map(([city, data]) => ({
-      station: `${network} ${city}`,
-      ...data
-    }))
-  );
+  const flattenedData = Object.entries(rawData).map(([station, data]) => ({
+    station,
+    ...data,
+  }));
 
-  // Define filteredData before the return statement
+  // Filter data based on selected station and weeks
   const filteredData = useMemo(() => {
     return flattenedData
       .filter((stationData) => {
-        const regionMatch = selectedRegion === "all" || stationData.region === selectedRegion;
-        const languageMatch = selectedLanguage === "all" || stationData.language === selectedLanguage;
-        return regionMatch && languageMatch;
+        return selectedStation === "all" || stationData.station.toLowerCase() === selectedStation;
       })
       .map((stationData) => ({
         station: stationData.station,
-        monthlyData: selectedMonths.map(month => ({
-          month,
-          ads: stationData.monthly[month] || {},
+        weeklyData: selectedWeeks.map((week) => ({
+          week,
+          sectors: stationData.weekly[week] || {},
         })),
         region: stationData.region,
         language: stationData.language,
       }));
-  }, [selectedMonths, selectedRegion, selectedLanguage, flattenedData]);
+  }, [selectedWeeks, selectedStation]);
 
-  const maxTotalAds = useMemo(() => {
-    return Math.max(
+  // Calculate maximum total percentage for scaling
+  const maxTotalPercentage = useMemo(() => {
+    const max = Math.max(
       ...filteredData.map((station) =>
-        station.monthlyData.reduce((sum, monthData) => 
-          sum + Object.values(monthData.ads).reduce((a, b) => a + b, 0), 0
-        )
-      )
+        station.weeklyData.reduce((sum, weekData) => {
+          const total = Object.values(weekData.sectors).reduce(
+            (acc, sector) => acc + (sector.total_percentage || 0),
+            0
+          );
+          return Math.max(sum, total);
+        }, 0)
+      ),
+      100 // Ensure max is at least 100 for percentage scaling
     );
+    console.log("maxTotalPercentage:", max); // Debug
+    return max;
   }, [filteredData]);
 
-  const formatSelectedMonths = (selected) => {
-    if (selected.length === 0) return "Select months";
-    if (selected.length === 3) return "Quarter 1";
+  const formatSelectedWeeks = (selected) => {
+    if (selected.length === 0) return "Select weeks";
+    if (selected.length === 2) return "Weeks 1-2";
     return selected
-      .map(month => months.find(m => m.value === month)?.shortLabel)
-      .sort((a, b) => months.findIndex(m => m.shortLabel === a) - months.findIndex(m => m.shortLabel === b))
+      .map((week) => weeks.find((w) => w.value === week)?.shortLabel)
+      .sort((a, b) => weeks.findIndex((w) => w.shortLabel === a) - weeks.findIndex((w) => w.shortLabel === b))
       .join("-");
   };
 
-  const handleMonthSelection = (value) => {
-    if (selectedMonths.includes(value)) {
-      setSelectedMonths(selectedMonths.filter(month => month !== value));
+  const handleWeekSelection = (value) => {
+    if (selectedWeeks.includes(value)) {
+      setSelectedWeeks(selectedWeeks.filter((week) => week !== value));
     } else {
-      setSelectedMonths([...selectedMonths, value]);
+      setSelectedWeeks([...selectedWeeks, value]);
     }
   };
 
@@ -231,8 +138,6 @@ const RadioSectorAnalysis = () => {
     <Card className="w-full bg-white shadow-xl rounded-2xl overflow-hidden">
       <CardHeader className="bg-gradient-to-r from-gray-50 to-gray-100 p-6">
         <div className="flex flex-col space-y-4">
-
-
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
               <div className="rounded-full bg-primary/10 p-2 shadow-md">
@@ -243,7 +148,7 @@ const RadioSectorAnalysis = () => {
                   Sector-wise Ad Distribution
                 </CardTitle>
                 <CardDescription className="text-sm text-gray-600 mt-1">
-                  Analyze sector performance across regions and languages
+                  Analyze sector performance for Suriyan and HelloFM
                 </CardDescription>
               </div>
             </div>
@@ -251,50 +156,38 @@ const RadioSectorAnalysis = () => {
               <Filter className="h-5 w-5 text-gray-500" />
               <div className="flex gap-2">
                 <Select
-                  value={selectedMonths[0]}
-                  onValueChange={handleMonthSelection}
+                  value={selectedWeeks[0]}
+                  onValueChange={handleWeekSelection}
                 >
                   <SelectTrigger className="w-40 bg-white shadow-sm border-gray-200">
-                    <SelectValue>{formatSelectedMonths(selectedMonths)}</SelectValue>
+                    <SelectValue>{formatSelectedWeeks(selectedWeeks)}</SelectValue>
                   </SelectTrigger>
                   <SelectContent>
-                    {months.map((month) => (
+                    {weeks.map((week) => (
                       <SelectItem
-                        key={month.value}
-                        value={month.value}
+                        key={week.value}
+                        value={week.value}
                         className="flex items-center gap-2"
                       >
                         <input
                           type="checkbox"
-                          checked={selectedMonths.includes(month.value)}
+                          checked={selectedWeeks.includes(week.value)}
                           onChange={() => {}}
                           className="mr-2"
                         />
-                        {month.label}
+                        {week.label}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
-                <Select value={selectedRegion} onValueChange={setSelectedRegion}>
+                <Select value={selectedStation} onValueChange={setSelectedStation}>
                   <SelectTrigger className="w-36 bg-white shadow-sm border-gray-200">
-                    <SelectValue placeholder="Select region" />
+                    <SelectValue placeholder="Select station" />
                   </SelectTrigger>
                   <SelectContent>
-                    {regions.map((region) => (
-                      <SelectItem key={region.value} value={region.value}>
-                        {region.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-                <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-                  <SelectTrigger className="w-36 bg-white shadow-sm border-gray-200">
-                    <SelectValue placeholder="Select language" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {languages.map((language) => (
-                      <SelectItem key={language.value} value={language.value}>
-                        {language.label}
+                    {stations.map((station) => (
+                      <SelectItem key={station.value} value={station.value}>
+                        {station.label}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -305,20 +198,20 @@ const RadioSectorAnalysis = () => {
         </div>
       </CardHeader>
       <CardContent className="p-6">
-      <div className="flex flex-wrap gap-3 justify-center">
-            {Object.entries(sectors).map(([key, sector]) => (
+        <div className="flex flex-wrap gap-3 justify-center">
+          {Object.entries(sectors).map(([key, sector]) => (
+            <div
+              key={key}
+              className="flex items-center gap-2 bg-white/80 rounded-full px-3 py-1 shadow-sm"
+            >
               <div
-                key={key}
-                className="flex items-center gap-2 bg-white/80 rounded-full px-3 py-1 shadow-sm"
-              >
-                <div
-                  className="h-2.5 w-2.5 rounded-full ring-1 ring-white"
-                  style={{ backgroundColor: sector.color }}
-                />
-                <span className="text-xs font-medium text-gray-700">{sector.name}</span>
-              </div>
-            ))}
-          </div>
+                className="h-2.5 w-2.5 rounded-full ring-1 ring-white"
+                style={{ backgroundColor: sector.color }}
+              />
+              <span className="text-xs font-medium text-gray-700">{sector.name}</span>
+            </div>
+          ))}
+        </div>
         <div className="space-y-6">
           {filteredData.map((station) => (
             <div
@@ -328,46 +221,59 @@ const RadioSectorAnalysis = () => {
               <div className="flex items-start gap-4">
                 <div className="w-36 flex-shrink-0">
                   <div className="text-sm font-semibold text-gray-800">{station.station}</div>
-                  <div className="text-xs text-gray-500 mt-1">
-                    {regions.find(r => r.value === station.region)?.label}
-                  </div>
-                  <div className="text-xs text-gray-500">
-                    {languages.find(l => l.value === station.language)?.label}
-                  </div>
+                  <div className="text-xs text-gray-500 mt-1">Chennai</div>
+                  <div className="text-xs text-gray-500">Tamil</div>
                 </div>
                 <div className="flex-1">
                   <div className="space-y-3">
-                    {station.monthlyData.map((monthData) => {
-                      const totalMonthAds = Object.values(monthData.ads).reduce((a, b) => a + b, 0);
-                      return (
-                        <div key={monthData.month} className="relative">
-                          <div className="text-xs font-medium text-gray-600 mb-1.5">
-                            {months.find(m => m.value === monthData.month)?.label}
+                    {station.weeklyData.map((weekData) => {
+                      const totalWeekPercentage = Object.values(weekData.sectors).reduce(
+                        (sum, sector) => sum + (sector.total_percentage || 0),
+                        0
+                      );
+                      console.log(`Station: ${station.station}, Week: ${weekData.week}, Total: ${totalWeekPercentage}`); // Debug
+                      if (totalWeekPercentage === 0) {
+                        return (
+                          <div key={weekData.week} className="relative">
+                            <div className="text-xs font-medium text-gray-600 mb-1.5">
+                              {weeks.find((w) => w.value === weekData.week)?.label}
+                            </div>
+                            <div className="text-xs text-gray-500">No data available</div>
                           </div>
-                          <div className="relative h-8">
+                        );
+                      }
+                      return (
+                        <div key={weekData.week} className="relative">
+                          <div className="text-xs font-medium text-gray-600 mb-1.5">
+                            {weeks.find((w) => w.value === weekData.week)?.label}
+                          </div>
+                          <div className="relative h-8 w-full">
                             <div className="absolute inset-y-0 w-full bg-gray-200/50 rounded-full" />
                             <div
-                              className="relative h-full rounded-full flex overflow-hidden shadow-sm"
+                              className="relative h-full rounded-full flex  shadow-sm"
                               style={{
-                                width: `${(totalMonthAds / maxTotalAds) * 100}%`,
+                                width: `${Math.min((totalWeekPercentage / maxTotalPercentage) * 100, 100)}%`,
                               }}
                             >
-                              {Object.entries(monthData.ads).map(([sector, value]) => {
-                                const percentage = (value / totalMonthAds) * 100;
+                              {Object.entries(weekData.sectors).map(([sectorKey, sectorData]) => {
+                                const percentage = sectorData.total_percentage || 0;
+                                if (percentage === 0) return null; // Skip zero percentages
+                                const barWidth = (percentage / totalWeekPercentage) * 100;
                                 return (
                                   <div
-                                    key={sector}
-                                    className="h-full relative flex items-center justify-center group transition-all duration-200 hover:brightness-110"
+                                    key={sectorKey}
+                                    className="h-full flex items-center justify-center group transition-all duration-200 hover:brightness-110"
                                     style={{
-                                      width: `${percentage}%`,
-                                      backgroundColor: sectors[sector].color,
+                                      width: `${barWidth}%`,
+                                      backgroundColor: sectors[sectorKey]?.color || "#CCCCCC",
+                                      minWidth: percentage > 0 ? "20px" : "0px", // Ensure visibility for small percentages
                                     }}
                                   >
-                                    <div className="text-xs font-medium text-white px-1">
-                                      {value}
+                                    <div className="text-xs font-medium text-white px-1 truncate">
+                                      {percentage.toFixed(1)}%
                                     </div>
                                     <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900/90 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                      {sectors[sector].name}: {value} ({percentage.toFixed(1)}%)
+                                      {sectors[sectorKey]?.name || sectorKey}: {percentage.toFixed(1)}%
                                     </div>
                                   </div>
                                 );

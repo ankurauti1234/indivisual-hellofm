@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   BarChart,
@@ -13,30 +13,50 @@ import {
 } from "lucide-react";
 
 const StatCards = () => {
+  const [selectedWeek, setSelectedWeek] = useState("Week 1");
+
+  // Data for Week 1
+  const week1Data = {
+    topRadioStation: "Suryan FM",
+    totalAdsDuration: "~1228 mins",
+    topAd: "Sarathas Clothing",
+    adCountTopAd: "706",
+  };
+
+  // Data for Week 2
+  const week2Data = {
+    topRadioStation: "Hello FM",
+    totalAdsDuration: "~1986 mins",
+    topAd: "Sarathas Clothing",
+    adCountTopAd: "1033",
+  };
+
+  // Select data based on the current week
+  const currentData = selectedWeek === "Week 1" ? week1Data : week2Data;
+
   const summaryCards = [
     {
       title: "AD Count of Top AD",
-      value: "287",
-      // trend: "Saravan Electricals",
+      value: currentData.adCountTopAd,
       isPositive: true,
       icon: <ScrollText className="text-gray-600" size={20} />,
     },
     {
       title: "Top Radio Station",
-      value: "Hello FM",
-      trend: "+3.4%",
+      value: currentData.topRadioStation,
+      trend: selectedWeek === "Week 1" ? "+2.5%" : "+3.4%", // Example trends, adjust as needed
       isPositive: true,
       icon: <CheckSquare className="text-gray-600" size={20} />,
     },
     {
       title: "Top Ad",
-      value: "Saravana Electricals",
+      value: currentData.topAd,
       isPositive: true,
       icon: <Users className="text-gray-600" size={20} />,
     },
     {
       title: "Total ADs Duration of Top Radio Station",
-      value: "~1580 minutes",
+      value: currentData.totalAdsDuration,
       icon: <BarChart className="text-gray-600" size={20} />,
     },
     {
@@ -74,7 +94,31 @@ const StatCards = () => {
 
   return (
     <div className="">
-      <div className="grid grid-cols-1 lg:grid-cols-4 ">
+      {/* Toggle Buttons */}
+      <div className="flex justify-center mb-4">
+        <button
+          className={`px-4 py-2 mx-2 rounded-md ${
+            selectedWeek === "Week 1"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200 text-gray-700"
+          }`}
+          onClick={() => setSelectedWeek("Week 1")}
+        >
+          Week 1
+        </button>
+        <button
+          className={`px-4 py-2 mx-2 rounded-md ${
+            selectedWeek === "Week 2"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200 text-gray-700"
+          }`}
+          onClick={() => setSelectedWeek("Week 2")}
+        >
+          Week 2
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1">
         {/* Left side: 2x2 grid */}
         <div className="grid grid-cols-2 lg:col-span-2">
           {summaryCards.slice(0, 4).map((card, index) => (
@@ -96,33 +140,7 @@ const StatCards = () => {
         </div>
 
         {/* Right side: Popular Songs and Popular Program */}
-        <div className="grid grid-cols-2 lg:col-span-2">
-          {summaryCards.slice(4).map((card, index) => (
-            <Card key={index} className="rounded-none shadow-sm">
-              <CardContent className="p-6">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="text-sm font-medium text-muted-foreground">
-                      {card.title}
-                    </p>
-                    <ul className="mt-2 space-y-1">
-                      {card.items.map((item, idx) => (
-                        <li
-                          key={idx}
-                          className="text-sm text-muted-foreground font-medium"
-                        >
-                          {idx + 1}. {item}
-                        </li>
-                      ))}
-                    </ul>
-                    {renderTrend(card.trend, card.isPositive)}
-                  </div>
-                  <div className="p-2 bg-accent rounded-lg">{card.icon}</div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        
       </div>
     </div>
   );
