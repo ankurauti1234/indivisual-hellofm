@@ -90,7 +90,7 @@ const RadioAdHeatmap = () => {
             }`}
             onClick={() => setSelectedWeek("Week 1")}
           >
-            Week 1
+            Week 1 (16-22 April)
           </button>
           <button
             className={`px-4 py-2 mx-2 rounded-md ${
@@ -100,7 +100,7 @@ const RadioAdHeatmap = () => {
             }`}
             onClick={() => setSelectedWeek("Week 2")}
           >
-            Week 2
+            Week 2 (23-30 April)
           </button>
         </div>
       </CardHeader>

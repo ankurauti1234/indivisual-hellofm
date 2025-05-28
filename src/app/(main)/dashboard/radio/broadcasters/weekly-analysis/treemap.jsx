@@ -14,10 +14,10 @@ import { hello as helloWeek2, Suryan as SuryanWeek2 } from "./treemap-data_2.js"
 
 // Define colors based on percentage ranges (accessible palette)
 const getColorByRange = (percentage) => {
-  if (percentage / 100 >= 10) return "#D32F2F"; // Red (accessible)
-  if (percentage / 100 >= 5) return "#1976D2"; // Blue
-  if (percentage / 100 >= 3) return "#388E3C"; // Green
-  if (percentage / 100 >= 1) return "#7B1FA2"; // Purple
+  if (percentage / 100 >= 8) return "#D32F2F"; // Red (accessible)
+  if (percentage / 100 >= 6) return "#1976D2"; // Blue
+  if (percentage / 100 >= 4) return "#388E3C"; // Green
+  if (percentage / 100 >= 2) return "#7B1FA2"; // Purple
   return "#FBC02D"; // Yellow
 };
 
@@ -216,23 +216,23 @@ const SectorTreemap = () => {
             <div className="flex flex-wrap gap-3 text-sm">
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#FBC02D]" />
-                <span>0-1%</span>
+                <span>0-2%</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#7B1FA2]" />
-                <span>1-3%</span>
+                <span>2-4%</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#388E3C]" />
-                <span>3-5%</span>
+                <span>4-6%</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#1976D2]" />
-                <span>5-10%</span>
+                <span>6-8%</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 rounded-full bg-[#D32F2F]" />
-                <span>10%+</span>
+                <span>8%+</span>
               </div>
             </div>
             <div className="flex gap-4">
