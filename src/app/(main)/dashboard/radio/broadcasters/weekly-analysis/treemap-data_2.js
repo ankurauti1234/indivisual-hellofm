@@ -1499,7 +1499,7 @@ export const hello=[
     }
 ]
 
-export const suriyan = [
+export const Suryan = [
     {
         "Category": "Accessories - Jewellery",
         "Percentage": 28.11,

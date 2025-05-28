@@ -14,7 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { SuriyanSerctorData, HelloSerctorData } from "./sector-data";
+import { SuryanSerctorData, HelloSerctorData } from "./sector-data";
 
 const RadioSectorAnalysis = () => {
   const [selectedWeeks, setSelectedWeeks] = useState(["week_1"]);
@@ -52,17 +52,17 @@ const RadioSectorAnalysis = () => {
   // Define stations
   const stations = [
     { value: "all", label: "All Stations" },
-    { value: "suriyan", label: "Suriyan" },
+    { value: "Suryan", label: "Suryan" },
     { value: "hellofm", label: "HelloFM" },
   ];
 
   // Combine and normalize data
   const rawData = {
-    Suriyan: {
+    Suryan: {
       region: "chennai",
       language: "tamil",
       weekly: Object.fromEntries(
-        SuriyanSerctorData.map(({ week, data }) => [week, data])
+        SuryanSerctorData.map(({ week, data }) => [week, data])
       ),
     },
     HelloFM: {
@@ -171,7 +171,7 @@ const RadioSectorAnalysis = () => {
                   Sector-wise Ad Distribution
                 </CardTitle>
                 <CardDescription className="text-sm text-gray-600 mt-1">
-                  Analyze sector performance for Suriyan and HelloFM
+                  Analyze sector performance for Suryan and HelloFM
                 </CardDescription>
               </div>
             </div>

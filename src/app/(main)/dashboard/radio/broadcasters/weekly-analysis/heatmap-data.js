@@ -10,7 +10,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -27,7 +27,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -44,7 +44,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -61,7 +61,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -78,7 +78,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -95,7 +95,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -112,7 +112,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -129,7 +129,7 @@ export const week1 = [
                 "seconds": 5325.0,
                 "minutes": 88.75
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 5884,
                 "minutes": 98.06666667
             }
@@ -146,7 +146,7 @@ export const week1 = [
                 "seconds": 5720.0,
                 "minutes": 95.33333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 6512,
                 "minutes": 108.5333333
             }
@@ -163,7 +163,7 @@ export const week1 = [
                 "seconds": 5685.0,
                 "minutes": 94.75
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 6434,
                 "minutes": 107.2333333
             }
@@ -180,7 +180,7 @@ export const week1 = [
                 "seconds": 4475.0,
                 "minutes": 74.58333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 5984,
                 "minutes": 99.73333333
             }
@@ -197,7 +197,7 @@ export const week1 = [
                 "seconds": 5430.0,
                 "minutes": 90.5
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 4936,
                 "minutes": 82.26666667
             }
@@ -214,7 +214,7 @@ export const week1 = [
                 "seconds": 5360.0,
                 "minutes": 89.33333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 3998,
                 "minutes": 66.63333333
             }
@@ -231,7 +231,7 @@ export const week1 = [
                 "seconds": 5560.0,
                 "minutes": 92.66666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 4278,
                 "minutes": 71.3
             }
@@ -248,7 +248,7 @@ export const week1 = [
                 "seconds": 4065.0,
                 "minutes": 67.75
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 4285,
                 "minutes": 71.41666667
             }
@@ -265,7 +265,7 @@ export const week1 = [
                 "seconds": 4460.0,
                 "minutes": 74.33333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 3749,
                 "minutes": 62.48333333
             }
@@ -282,7 +282,7 @@ export const week1 = [
                 "seconds": 4875.0,
                 "minutes": 81.25
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 4278,
                 "minutes": 71.3
             }
@@ -299,7 +299,7 @@ export const week1 = [
                 "seconds": 6006.0,
                 "minutes": 100.1
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 4934,
                 "minutes": 82.23333333
             }
@@ -316,7 +316,7 @@ export const week1 = [
                 "seconds": 4670.0,
                 "minutes": 77.83333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 6412,
                 "minutes": 106.8666667
             }
@@ -333,7 +333,7 @@ export const week1 = [
                 "seconds": 4196.0,
                 "minutes": 69.93333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 5305,
                 "minutes": 88.41666667
             }
@@ -350,7 +350,7 @@ export const week1 = [
                 "seconds": 4174.0,
                 "minutes": 69.56666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 5609,
                 "minutes": 93.48333333
             }
@@ -367,7 +367,7 @@ export const week1 = [
                 "seconds": 1090.0,
                 "minutes": 18.16666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 1125,
                 "minutes": 18.75
             }
@@ -384,7 +384,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -401,7 +401,7 @@ export const week1 = [
                 "seconds": 0.0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0,
                 "minutes": 0.0
             }
@@ -421,7 +421,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -438,7 +438,7 @@ export const week2 = [
                 "seconds": 10,
                 "minutes": 0.1666666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -455,7 +455,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -472,7 +472,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -489,7 +489,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -506,7 +506,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -523,7 +523,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -540,7 +540,7 @@ export const week2 = [
                 "seconds": 10355,
                 "minutes": 172.5833333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 8578.0,
                 "minutes": 142.9666667
             }
@@ -557,7 +557,7 @@ export const week2 = [
                 "seconds": 10762,
                 "minutes": 179.3666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 9366.0,
                 "minutes": 156.1
             }
@@ -574,7 +574,7 @@ export const week2 = [
                 "seconds": 11069,
                 "minutes": 184.4833333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 8736.0,
                 "minutes": 145.6
             }
@@ -591,7 +591,7 @@ export const week2 = [
                 "seconds": 9564,
                 "minutes": 159.4
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 8594.0,
                 "minutes": 143.2333333
             }
@@ -608,7 +608,7 @@ export const week2 = [
                 "seconds": 8543,
                 "minutes": 142.3833333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 7621.0,
                 "minutes": 127.0166667
             }
@@ -625,7 +625,7 @@ export const week2 = [
                 "seconds": 8552,
                 "minutes": 142.5333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 7100.0,
                 "minutes": 118.3333333
             }
@@ -642,7 +642,7 @@ export const week2 = [
                 "seconds": 8010,
                 "minutes": 133.5
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 6180.0,
                 "minutes": 103.0
             }
@@ -659,7 +659,7 @@ export const week2 = [
                 "seconds": 6368,
                 "minutes": 106.1333333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 5845.0,
                 "minutes": 97.41666667
             }
@@ -676,7 +676,7 @@ export const week2 = [
                 "seconds": 6300,
                 "minutes": 105.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 5979.0,
                 "minutes": 99.65
             }
@@ -693,7 +693,7 @@ export const week2 = [
                 "seconds": 7128,
                 "minutes": 118.8
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 5832.0,
                 "minutes": 97.2
             }
@@ -710,7 +710,7 @@ export const week2 = [
                 "seconds": 9586,
                 "minutes": 159.7666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 6584.0,
                 "minutes": 109.7333333
             }
@@ -727,7 +727,7 @@ export const week2 = [
                 "seconds": 9965,
                 "minutes": 166.0833333
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 9537.0,
                 "minutes": 158.95
             }
@@ -744,7 +744,7 @@ export const week2 = [
                 "seconds": 7210,
                 "minutes": 120.1666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 9313.0,
                 "minutes": 155.2166667
             }
@@ -761,7 +761,7 @@ export const week2 = [
                 "seconds": 5161,
                 "minutes": 86.01666667
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 7639.0,
                 "minutes": 127.3166667
             }
@@ -778,7 +778,7 @@ export const week2 = [
                 "seconds": 618,
                 "minutes": 10.3
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 595.0,
                 "minutes": 9.916666667
             }
@@ -795,7 +795,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }
@@ -812,7 +812,7 @@ export const week2 = [
                 "seconds": 0,
                 "minutes": 0.0
             },
-            "Suriyan": {
+            "Suryan": {
                 "seconds": 0.0,
                 "minutes": 0.0
             }

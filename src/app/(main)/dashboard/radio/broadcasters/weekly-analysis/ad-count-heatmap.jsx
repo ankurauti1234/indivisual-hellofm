@@ -21,7 +21,7 @@ const RadioAdHeatmap = () => {
   const processData = (data) => {
     // Match data's hour format: "0:00", "1:00", ..., "23:00"
     const hours = Array.from({ length: 24 }, (_, i) => `${i}:00`);
-    const stations = ["Hello","Suriyan"];
+    const stations = ["Hello","Suryan"];
 
     console.log("Selected data:", data); // Debug: Log input data
 

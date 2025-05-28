@@ -9,8 +9,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Radio, Info } from "lucide-react";
-import { hello as helloWeek1, suriyan as suriyanWeek1 } from "./treemap-data.js";
-import { hello as helloWeek2, suriyan as suriyanWeek2 } from "./treemap-data_2.js";
+import { hello as helloWeek1, Suryan as SuryanWeek1 } from "./treemap-data.js";
+import { hello as helloWeek2, Suryan as SuryanWeek2 } from "./treemap-data_2.js";
 
 // Define colors based on percentage ranges (accessible palette)
 const getColorByRange = (percentage) => {
@@ -50,7 +50,7 @@ const SectorTreemap = () => {
 
   const stations = [
     { id: "hello", name: "Hello FM" },
-    { id: "suriyan", name: "Suriyan FM" },
+    { id: "Suryan", name: "Suryan FM" },
   ];
 
   const weeks = [
@@ -62,11 +62,11 @@ const SectorTreemap = () => {
   const stationData = {
     week1: {
       hello: { name: "Hello FM", children: aggregateData(helloWeek1) },
-      suriyan: { name: "Suriyan FM", children: aggregateData(suriyanWeek1) },
+      Suryan: { name: "Suryan FM", children: aggregateData(SuryanWeek1) },
     },
     week2: {
       hello: { name: "Hello FM", children: aggregateData(helloWeek2) },
-      suriyan: { name: "Suriyan FM", children: aggregateData(suriyanWeek2) },
+      Suryan: { name: "Suryan FM", children: aggregateData(SuryanWeek2) },
     },
   };
 

@@ -1,4 +1,4 @@
-export const SuriyanSerctorData = [
+export const SuryanSerctorData = [
   {
     week: "week_1",
     data: {
