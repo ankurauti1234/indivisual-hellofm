@@ -18,31 +18,29 @@ import { SuriyanSerctorData, HelloSerctorData } from "./sector-data";
 
 const RadioSectorAnalysis = () => {
   const [selectedWeeks, setSelectedWeeks] = useState(["week_1"]);
-  const [selectedStation, setSelectedStation] = useState("all");
+  const [selectedStations, setSelectedStations] = useState(["all"]);
 
-  // Define sectors with colors
+  // Define sectors with colors (fixed duplicate keys)
   const sectors = {
-    Accessories: { name: "Accessories", color: "#61C9A8" },
-    Airlines: { name: "Airlines", color: "#ED9B40" },
-    Automobile: { name: "Automobile", color: "#009DDC" },
-    BuildingMaterials: { name: "Building Materials", color: "#A855F7" },
-    Constructions: { name: "Constructions", color: "#F26430" },
-    ConsumerDurables: { name: "Consumer Durables", color: "#FF6B6B" },
-    Education: { name: "Education", color: "#4ECDC4" },
-    Entertainment: { name: "Entertainment", color: "#45B7D1" },
-    FMCG: { name: "FMCG", color: "#2ed343" },
-    Finance: { name: "Finance", color: "#D4A5A5" },
-    Government: { name: "Government", color: "#FFEEAD" },
-    HomeFurnishing: { name: "Home Furnishing", color: "#D72638" },
-    Manufacturing: { name: "Manufacturing", color: "#3F88C5" },
-    Medicine: { name: "Medicine", color: "#A8DA1C" },
-    Property: { name: "Property", color: "#457B9D" },
-    Retail: { name: "Retail", color: "#1D3557" },
-    Services: { name: "Services", color: "#E63946" },
-    "Consumer Durables": { name: "Aduthaduthu Moonu Pattu", color: "#111" },
-    Radio: { name: "Aduthaduthu Moonu Pattu", color: "#fe3421" },
-
-    Hospitality: { name: "Hospitality", color: "#2A9D8F" },
+    Accessories: { name: "Accessories", color: "#61C9A8" }, // Emerald
+    Airlines: { name: "Airlines", color: "#ED9B40" }, // Orange
+    Automobile: { name: "Automobile", color: "#009DDC" }, // Cyan
+    BuildingMaterials: { name: "Building Materials", color: "#A855F7" }, // Purple
+    Constructions: { name: "Constructions", color: "#F26430" }, // Coral
+    ConsumerDurables: { name: "Consumer Durables", color: "#FF6B6B" }, // Red
+    Education: { name: "Education", color: "#4ECDC4" }, // Teal
+    Entertainment: { name: "Entertainment", color: "#45B7D1" }, // Light Blue
+    FMCG: { name: "FMCG", color: "#2ED343" }, // Green
+    Finance: { name: "Finance", color: "#D4A5A5" }, // Light Pink
+    Government: { name: "Government", color: "#FFEEAD" }, // Light Yellow
+    HomeFurnishing: { name: "Home Furnishing", color: "#D72638" }, // Crimson
+    Manufacturing: { name: "Manufacturing", color: "#3F88C5" }, // Blue
+    Medicine: { name: "Medicine", color: "#A8DA1C" }, // Lime
+    Property: { name: "Property", color: "#457B9D" }, // Slate Blue
+    Retail: { name: "Retail", color: "#1D3557" }, // Dark Blue
+    Services: { name: "Services", color: "#E63946" }, // Bright Red
+    AduthaduthuMoonuPattu: { name: "Aduthaduthu Moonu Pattu", color: "#111" }, // Black
+    Hospitality: { name: "Hospitality", color: "#2A9D8F" }, // Dark Teal
   };
 
   // Define weeks
@@ -82,11 +80,12 @@ const RadioSectorAnalysis = () => {
     ...data,
   }));
 
-  // Filter data based on selected station and weeks
+  // Filter data based on selected stations and weeks
   const filteredData = useMemo(() => {
+    const isAllSelected = selectedStations.includes("all");
     return flattenedData
       .filter((stationData) => {
-        return selectedStation === "all" || stationData.station.toLowerCase() === selectedStation;
+        return isAllSelected || selectedStations.includes(stationData.station.toLowerCase());
       })
       .map((stationData) => ({
         station: stationData.station,
@@ -97,7 +96,7 @@ const RadioSectorAnalysis = () => {
         region: stationData.region,
         language: stationData.language,
       }));
-  }, [selectedWeeks, selectedStation]);
+  }, [selectedWeeks, selectedStations]);
 
   // Calculate maximum total percentage for scaling
   const maxTotalPercentage = useMemo(() => {
@@ -111,26 +110,50 @@ const RadioSectorAnalysis = () => {
           return Math.max(sum, total);
         }, 0)
       ),
-      100 // Ensure max is at least 100 for percentage scaling
+      100
     );
-    console.log("maxTotalPercentage:", max); // Debug
+    console.log("maxTotalPercentage:", max);
     return max;
   }, [filteredData]);
 
   const formatSelectedWeeks = (selected) => {
     if (selected.length === 0) return "Select weeks";
-    if (selected.length === 2) return "Weeks 1-2";
     return selected
       .map((week) => weeks.find((w) => w.value === week)?.shortLabel)
-      .sort((a, b) => weeks.findIndex((w) => w.shortLabel === a) - weeks.findIndex((w) => w.shortLabel === b))
-      .join("-");
+      .sort(
+        (a, b) =>
+          weeks.findIndex((w) => w.shortLabel === a) -
+          weeks.findIndex((w) => w.shortLabel === b)
+      )
+      .join(", ");
+  };
+
+  const formatSelectedStations = (selected) => {
+    if (selected.length === 0) return "Select stations";
+    if (selected.includes("all")) return "All Stations";
+    return selected
+      .map((station) => stations.find((s) => s.value === station)?.label || station)
+      .join(", ");
   };
 
   const handleWeekSelection = (value) => {
-    if (selectedWeeks.includes(value)) {
-      setSelectedWeeks(selectedWeeks.filter((week) => week !== value));
+    setSelectedWeeks((prev) =>
+      prev.includes(value)
+        ? prev.filter((week) => week !== value)
+        : [...prev, value]
+    );
+  };
+
+  const handleStationSelection = (value) => {
+    if (value === "all") {
+      setSelectedStations(["all"]);
     } else {
-      setSelectedWeeks([...selectedWeeks, value]);
+      setSelectedStations((prev) => {
+        const newSelection = prev.includes(value)
+          ? prev.filter((station) => station !== value)
+          : [...prev.filter((station) => station !== "all"), value];
+        return newSelection.length === 0 ? ["all"] : newSelection;
+      });
     }
   };
 
@@ -155,12 +178,9 @@ const RadioSectorAnalysis = () => {
             <div className="flex items-center gap-3 flex-wrap">
               <Filter className="h-5 w-5 text-gray-500" />
               <div className="flex gap-2">
-                <Select
-                  value={selectedWeeks[0]}
-                  onValueChange={handleWeekSelection}
-                >
-                  <SelectTrigger className="w-40 bg-white shadow-sm border-gray-200">
-                    <SelectValue>{formatSelectedWeeks(selectedWeeks)}</SelectValue>
+                <Select value="" onValueChange={handleWeekSelection}>
+                  <SelectTrigger className="w-40 bg-white shadow-sm border-gray-200 hover:bg-gray-100 transition-colors">
+                    <SelectValue placeholder={formatSelectedWeeks(selectedWeeks)} />
                   </SelectTrigger>
                   <SelectContent>
                     {weeks.map((week) => (
@@ -172,7 +192,7 @@ const RadioSectorAnalysis = () => {
                         <input
                           type="checkbox"
                           checked={selectedWeeks.includes(week.value)}
-                          onChange={() => {}}
+                          onChange={() => handleWeekSelection(week.value)}
                           className="mr-2"
                         />
                         {week.label}
@@ -180,13 +200,23 @@ const RadioSectorAnalysis = () => {
                     ))}
                   </SelectContent>
                 </Select>
-                <Select value={selectedStation} onValueChange={setSelectedStation}>
-                  <SelectTrigger className="w-36 bg-white shadow-sm border-gray-200">
-                    <SelectValue placeholder="Select station" />
+                <Select value="" onValueChange={handleStationSelection}>
+                  <SelectTrigger className="w-48 bg-white shadow-sm border-gray-200 hover:bg-gray-100 transition-colors">
+                    <SelectValue placeholder={formatSelectedStations(selectedStations)} />
                   </SelectTrigger>
                   <SelectContent>
                     {stations.map((station) => (
-                      <SelectItem key={station.value} value={station.value}>
+                      <SelectItem
+                        key={station.value}
+                        value={station.value}
+                        className="flex items-center gap-2"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={selectedStations.includes(station.value)}
+                          onChange={() => handleStationSelection(station.value)}
+                          className="mr-2"
+                        />
                         {station.label}
                       </SelectItem>
                     ))}
@@ -221,8 +251,8 @@ const RadioSectorAnalysis = () => {
               <div className="flex items-start gap-4">
                 <div className="w-36 flex-shrink-0">
                   <div className="text-sm font-semibold text-gray-800">{station.station}</div>
-                  <div className="text-xs text-gray-500 mt-1">Chennai</div>
-                  <div className="text-xs text-gray-500">Tamil</div>
+                  <div className="text-xs text-gray-500 mt-1">{station.region}</div>
+                  <div className="text-xs text-gray-500">{station.language}</div>
                 </div>
                 <div className="flex-1">
                   <div className="space-y-3">
@@ -231,7 +261,7 @@ const RadioSectorAnalysis = () => {
                         (sum, sector) => sum + (sector.total_percentage || 0),
                         0
                       );
-                      console.log(`Station: ${station.station}, Week: ${weekData.week}, Total: ${totalWeekPercentage}`); // Debug
+                      console.log(`Station: ${station.station}, Week: ${weekData.week}, Total: ${totalWeekPercentage}`);
                       if (totalWeekPercentage === 0) {
                         return (
                           <div key={weekData.week} className="relative">
@@ -247,17 +277,17 @@ const RadioSectorAnalysis = () => {
                           <div className="text-xs font-medium text-gray-600 mb-1.5">
                             {weeks.find((w) => w.value === weekData.week)?.label}
                           </div>
-                          <div className="relative h-8 w-full">
+                          <div className="relative h-10 w-full">
                             <div className="absolute inset-y-0 w-full bg-gray-200/50 rounded-full" />
                             <div
-                              className="relative h-full rounded-full flex  shadow-sm"
+                              className="relative h-full rounded-full flex shadow-sm"
                               style={{
                                 width: `${Math.min((totalWeekPercentage / maxTotalPercentage) * 100, 100)}%`,
                               }}
                             >
                               {Object.entries(weekData.sectors).map(([sectorKey, sectorData]) => {
                                 const percentage = sectorData.total_percentage || 0;
-                                if (percentage === 0) return null; // Skip zero percentages
+                                if (percentage === 0) return null;
                                 const barWidth = (percentage / totalWeekPercentage) * 100;
                                 return (
                                   <div
@@ -266,14 +296,16 @@ const RadioSectorAnalysis = () => {
                                     style={{
                                       width: `${barWidth}%`,
                                       backgroundColor: sectors[sectorKey]?.color || "#CCCCCC",
-                                      minWidth: percentage > 0 ? "20px" : "0px", // Ensure visibility for small percentages
+                                      minWidth: percentage > 0 ? "24px" : "0px",
                                     }}
                                   >
-                                    <div className="text-xs font-medium text-white px-1 truncate">
+                                    <div className="text-xs font-medium text-white px-1.5">
                                       {percentage.toFixed(1)}%
                                     </div>
-                                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900/90 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                      {sectors[sectorKey]?.name || sectorKey}: {percentage.toFixed(1)}%
+                                    <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900/95 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none max-w-[200px]">
+                                      <span className="block whitespace-normal break-words">
+                                        {sectors[sectorKey]?.name || sectorKey}: {percentage.toFixed(1)}%
+                                      </span>
                                     </div>
                                   </div>
                                 );
