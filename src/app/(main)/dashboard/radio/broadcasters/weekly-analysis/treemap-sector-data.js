@@ -2,11 +2,9 @@ export const sectorData = {
   week16: {
     "Hello FM": {
       ACCESSORIES: {
-        
         sum: 1658,
         categories: {
           "ACCESSORIES-JEWELLERY": {
-            
             sum: 1658,
             brands: {
               "AATHISHA JEWELLERY": {
@@ -78,11 +76,9 @@ export const sectorData = {
         },
       },
       AUTOMOBILE: {
-        
         sum: 517,
         categories: {
           "AUTOMOBILE-ACCESSORIES": {
-            
             sum: 173,
             brands: {
               "HYPER ENGINE OIL": {
@@ -92,7 +88,6 @@ export const sectorData = {
             },
           },
           "AUTOMOBILE-CAR": {
-            
             sum: 258,
             brands: {
               "RAMANI KIA": {
@@ -106,7 +101,6 @@ export const sectorData = {
             },
           },
           "AUTOMOBILE-USED CAR": {
-            
             sum: 86,
             brands: {
               "VANDI MANDI": {
@@ -118,11 +112,9 @@ export const sectorData = {
         },
       },
       CONSTRUCTIONS: {
-        
         sum: 300,
         categories: {
           "BUILDING MATERIALS": {
-            
             sum: 300,
             brands: {
               "CHETTINAD CEMENT": {
@@ -146,11 +138,9 @@ export const sectorData = {
         },
       },
       "CONSUMER DURABLES": {
-        
         sum: 1083,
         categories: {
           "CONSUMER DURABLES": {
-            
             sum: 391,
             brands: {
               "ABIRAMI ELECTRICALS": {
@@ -172,7 +162,6 @@ export const sectorData = {
             },
           },
           "CONSUMER DURABLES-AIR CONDITIONER": {
-            
             sum: 262,
             brands: {
               "VASANTH&CO": {
@@ -182,7 +171,6 @@ export const sectorData = {
             },
           },
           "CONSUMER DURABLES-SMART PHONE&ACCESSORIES": {
-            
             sum: 430,
             brands: {
               "POORVIKA MOBILES": {
@@ -194,11 +182,9 @@ export const sectorData = {
         },
       },
       EDUCATION: {
-        
         sum: 539,
         categories: {
           ACADEMY: {
-            
             sum: 143,
             brands: {
               "CARE ACADEMY": {
@@ -208,7 +194,6 @@ export const sectorData = {
             },
           },
           COLLEGE: {
-            
             sum: 232,
             brands: {
               "K.RAMAKRISHNAN COLLEGE OF ENGINEERING": {
@@ -226,7 +211,6 @@ export const sectorData = {
             },
           },
           SCHOOL: {
-            
             sum: 164,
             brands: {
               "SOWMA PUBLIC SCHOOL": {
@@ -238,11 +222,9 @@ export const sectorData = {
         },
       },
       ENTERTAINMENT: {
-        
         sum: 497,
         categories: {
           ENTERTAINMENT: {
-            
             sum: 38,
             brands: {
               "DARLING SONG OF THE HOUR": {
@@ -268,7 +250,6 @@ export const sectorData = {
             },
           },
           "ENTERTAINMENT-AMUSEMENT PARK": {
-            
             sum: 87,
             brands: {
               "BLACK THUNDER": {
@@ -278,7 +259,6 @@ export const sectorData = {
             },
           },
           "ENTERTAINMENT-SPORTS": {
-            
             sum: 103,
             brands: {
               "CHENNAI SUPER KINGS (CSK)": {
@@ -288,7 +268,6 @@ export const sectorData = {
             },
           },
           PUBLICATION: {
-            
             sum: 269,
             brands: {
               "DAILY THANTHI": {
@@ -304,11 +283,9 @@ export const sectorData = {
         },
       },
       FINANCE: {
-        
         sum: 154,
         categories: {
           "FINANCE-BANK": {
-            
             sum: 127,
             brands: {
               "EQUITAS BANK": {
@@ -322,7 +299,6 @@ export const sectorData = {
             },
           },
           "FINANCE-INSURANCE": {
-            
             sum: 6,
             brands: {
               LIC: {
@@ -332,7 +308,6 @@ export const sectorData = {
             },
           },
           "FINANCE-LOAN": {
-            
             sum: 21,
             brands: {
               "AATH ISHA GOLD FINANCE": {
@@ -344,11 +319,9 @@ export const sectorData = {
         },
       },
       FMCG: {
-        
         sum: 796,
         categories: {
           BEVERAGES: {
-            
             sum: 123,
             brands: {
               AACHI: {
@@ -358,7 +331,6 @@ export const sectorData = {
             },
           },
           CONFECTIONARY: {
-            
             sum: 473,
             brands: {
               "ASWIN SWEETS": {
@@ -372,7 +344,6 @@ export const sectorData = {
             },
           },
           "FOOD PRODUCTS": {
-            
             sum: 53,
             brands: {
               OOTYFRESH: {
@@ -382,7 +353,6 @@ export const sectorData = {
             },
           },
           SPICES: {
-            
             sum: 147,
             brands: {
               "SAKTHI MASALE": {
@@ -394,11 +364,9 @@ export const sectorData = {
         },
       },
       HEALTHCARE: {
-        
         sum: 912,
         categories: {
           PHARMACEUTICAL: {
-            
             sum: 37,
             brands: {
               "ANJOL MEDICINE": {
@@ -408,7 +376,6 @@ export const sectorData = {
             },
           },
           "SERVICES-MEDICAL": {
-            
             sum: 875,
             brands: {
               "ARC FERTILITY HOSPITAL": {
@@ -456,11 +423,9 @@ export const sectorData = {
         },
       },
       "HOME FURNISHING": {
-        
         sum: 78,
         categories: {
           "HOME FURNISHING PRODUCTS": {
-            
             sum: 78,
             brands: {
               "AVIRA WORLD": {
@@ -472,11 +437,9 @@ export const sectorData = {
         },
       },
       HOSPITALITY: {
-        
         sum: 145,
         categories: {
           HOTEL: {
-            
             sum: 40,
             brands: {
               "JENNEYS ACADEMY OF HOTEL MANAGEMENT": {
@@ -494,7 +457,6 @@ export const sectorData = {
             },
           },
           RESTAURANT: {
-            
             sum: 105,
             brands: {
               "SHRI SANGEETHAS": {
@@ -505,12 +467,10 @@ export const sectorData = {
           },
         },
       },
-      "ORAL CARE": {
-        
+      "PERSONAL CARE": {
         sum: 49,
         categories: {
           "TOOTH POWDER": {
-            
             sum: 49,
             brands: {
               "GOPAL PALPODI": {
@@ -522,11 +482,9 @@ export const sectorData = {
         },
       },
       PROPERTY: {
-        
         sum: 262,
         categories: {
           "PROPERTY-HOUSING": {
-            
             sum: 262,
             brands: {
               "ISHA GRAND VALLEY": {
@@ -546,11 +504,9 @@ export const sectorData = {
         },
       },
       "PUBLIC INTEREST": {
-        
         sum: 60,
         categories: {
           "PUBLIC SERVICE ADS": {
-            
             sum: 60,
             brands: {
               "GOVERNMENT OF INDIA": {
@@ -570,11 +526,9 @@ export const sectorData = {
         },
       },
       "PUBLIC SERVICEs": {
-        
         sum: 3,
         categories: {
           HEALTHCARE: {
-            
             sum: 3,
             brands: {
               "LIVER AWARENESS DAY": {
@@ -586,11 +540,9 @@ export const sectorData = {
         },
       },
       RETAIL: {
-        
         sum: 1445,
         categories: {
           "TEXTILES AND APPARELS": {
-            
             sum: 1445,
             brands: {
               "ANAND INNERWEAR": {
@@ -618,11 +570,9 @@ export const sectorData = {
         },
       },
       "TRAVEL&TOURISM": {
-        
         sum: 72,
         categories: {
           AIRLINE: {
-            
             sum: 72,
             brands: {
               AIRASIA: {
@@ -636,11 +586,9 @@ export const sectorData = {
     },
     "Suryan FM": {
       ACCESSORIES: {
-        
         sum: 1291,
         categories: {
           "ACCESSORIES-JEWELLERY": {
-            
             sum: 1291,
             brands: {
               "AK THANGA MALIGAI JEWELLERS": {
@@ -724,11 +672,9 @@ export const sectorData = {
         },
       },
       AUTOMOBILE: {
-        
         sum: 371,
         categories: {
           "AUTOMOBILE-CAR": {
-            
             sum: 336,
             brands: {
               "GT HYUNDAI": {
@@ -750,7 +696,6 @@ export const sectorData = {
             },
           },
           "AUTOMOBILE-USED CAR": {
-            
             sum: 35,
             brands: {
               "VANDI MANDI": {
@@ -762,11 +707,9 @@ export const sectorData = {
         },
       },
       CONSTRUCTIONS: {
-        
         sum: 343,
         categories: {
           "BUILDING MATERIALS": {
-            
             sum: 343,
             brands: {
               "ANUJ TILES": {
@@ -786,11 +729,9 @@ export const sectorData = {
         },
       },
       "CONSUMER DURABLES": {
-        
         sum: 798,
         categories: {
           "CONSUMER DURABLES": {
-            
             sum: 549,
             brands: {
               "BHARATH ELECTRONICS AND APPLIANCES": {
@@ -824,7 +765,6 @@ export const sectorData = {
             },
           },
           "CONSUMER DURABLES-AIR CONDITIONER": {
-            
             sum: 149,
             brands: {
               "BPL AC": {
@@ -838,7 +778,6 @@ export const sectorData = {
             },
           },
           "CONSUMER DURABLES-SMART PHONE&ACCESSORIES": {
-            
             sum: 100,
             brands: {
               "POORVIKA MOBILES": {
@@ -850,11 +789,9 @@ export const sectorData = {
         },
       },
       EDUCATION: {
-        
         sum: 501,
         categories: {
           COLLEGE: {
-            
             sum: 315,
             brands: {
               "HINDUSTAN COLLEGE": {
@@ -884,7 +821,6 @@ export const sectorData = {
             },
           },
           SCHOOL: {
-            
             sum: 47,
             brands: {
               "SAMADH SENIOR SECONDARY SCHOOL": {
@@ -902,7 +838,6 @@ export const sectorData = {
             },
           },
           UNIVERSITY: {
-            
             sum: 139,
             brands: {
               "DHANALAKSHMI SRINIVASAN UNIVERSITY": {
@@ -914,11 +849,9 @@ export const sectorData = {
         },
       },
       ENTERTAINMENT: {
-        
         sum: 8,
         categories: {
           ENTERTAINMENT: {
-            
             sum: 8,
             brands: {
               "CINECAFE PROGRAM": {
@@ -942,11 +875,9 @@ export const sectorData = {
         },
       },
       FINANCE: {
-        
         sum: 120,
         categories: {
           "FINANCE-BANK": {
-            
             sum: 55,
             brands: {
               SBI: {
@@ -956,7 +887,6 @@ export const sectorData = {
             },
           },
           "FINANCE-ONLINE PAYMENT": {
-            
             sum: 65,
             brands: {
               BHIM: {
@@ -968,11 +898,9 @@ export const sectorData = {
         },
       },
       FMCG: {
-        
         sum: 340,
         categories: {
           CONFECTIONARY: {
-            
             sum: 168,
             brands: {
               "ASWIN SWEETS": {
@@ -990,7 +918,6 @@ export const sectorData = {
             },
           },
           NAN: {
-            
             sum: 22,
             brands: {
               "PLUNGE LEMON SALT": {
@@ -1000,7 +927,6 @@ export const sectorData = {
             },
           },
           SPICES: {
-            
             sum: 150,
             brands: {
               "SAKTHI MASALE": {
@@ -1012,11 +938,9 @@ export const sectorData = {
         },
       },
       HEALTHCARE: {
-        
         sum: 546,
         categories: {
           PHARMACEUTICAL: {
-            
             sum: 63,
             brands: {
               "ANJOL MEDICINE": {
@@ -1034,7 +958,6 @@ export const sectorData = {
             },
           },
           "SERVICES-MEDICAL": {
-            
             sum: 483,
             brands: {
               "APOLLO HOSPITAL": {
@@ -1066,11 +989,9 @@ export const sectorData = {
         },
       },
       "HOME FURNISHING": {
-        
         sum: 2,
         categories: {
           "SPIRITUAL PRODUCTS": {
-            
             sum: 2,
             brands: {
               DEVDARSHAN: {
@@ -1082,11 +1003,9 @@ export const sectorData = {
         },
       },
       HOSPITALITY: {
-        
         sum: 16,
         categories: {
           RESTAURANT: {
-            
             sum: 16,
             brands: {
               "MASALA DOOR": {
@@ -1097,12 +1016,10 @@ export const sectorData = {
           },
         },
       },
-      "ORAL CARE": {
-        
+      "PERSONAL CARE": {
         sum: 7,
         categories: {
           "TOOTH POWDER": {
-            
             sum: 7,
             brands: {
               "GOPAL PALPODI": {
@@ -1114,11 +1031,9 @@ export const sectorData = {
         },
       },
       PROPERTY: {
-        
         sum: 52,
         categories: {
           "PROPERTY-HOUSING": {
-            
             sum: 52,
             brands: {
               "SREE NIDHI PROMOTERS": {
@@ -1130,11 +1045,9 @@ export const sectorData = {
         },
       },
       "PUBLIC INTEREST": {
-        
         sum: 78,
         categories: {
           HEALTHCARE: {
-            
             sum: 1,
             brands: {
               "YOUR'S LIVER FRIENDLY": {
@@ -1144,7 +1057,6 @@ export const sectorData = {
             },
           },
           "PUBLIC SERVICE ADS": {
-            
             sum: 77,
             brands: {
               "GOVERNMENT OF INDIA": {
@@ -1164,11 +1076,9 @@ export const sectorData = {
         },
       },
       "RENEWABLE ENERGY": {
-        
         sum: 95,
         categories: {
           "SOLAR ENERGY": {
-            
             sum: 95,
             brands: {
               "RAYZON SOLAR": {
@@ -1180,11 +1090,9 @@ export const sectorData = {
         },
       },
       RETAIL: {
-        
         sum: 1554,
         categories: {
           "TEXTILES AND APPARELS": {
-            
             sum: 1554,
             brands: {
               "ANANTHA SILKS PARADISE": {
@@ -1216,11 +1124,9 @@ export const sectorData = {
         },
       },
       "TRAVEL&TOURISM": {
-        
         sum: 80,
         categories: {
           AIRLINE: {
-            
             sum: 80,
             brands: {
               AIRASIA: {
@@ -1236,11 +1142,9 @@ export const sectorData = {
   week17: {
     "Hello FM": {
       ACCESSORIES: {
-        
-        sum: 3657,
+        sum: 3657 + 26,
         categories: {
           "ACCESSORIES-JEWELLERY": {
-            
             sum: 3657,
             brands: {
               "AATHISHA JEWELLERY": {
@@ -1319,16 +1223,22 @@ export const sectorData = {
                 sum: 273,
                 products: [],
               },
+              "NR THANGA MALIGAI": {
+                sum: 23,
+                products: [],
+              },
+              "SRI MOOGAMBIGAI JEWELLERS": {
+                sum: 3,
+                products: [],
+              },
             },
           },
         },
       },
       AUTOMOBILE: {
-        
         sum: 613,
         categories: {
           "AUTOMOBILE-ACCESSORIES": {
-            
             sum: 219,
             brands: {
               "HYPER ENGINE OIL": {
@@ -1338,7 +1248,6 @@ export const sectorData = {
             },
           },
           "AUTOMOBILE-CAR": {
-            
             sum: 282,
             brands: {
               "RAMANI KIA": {
@@ -1352,7 +1261,6 @@ export const sectorData = {
             },
           },
           "AUTOMOBILE-USED CAR": {
-            
             sum: 112,
             brands: {
               "VANDI MANDI": {
@@ -1364,11 +1272,9 @@ export const sectorData = {
         },
       },
       CONSTRUCTIONS: {
-        
         sum: 311,
         categories: {
           "BUILDING MATERIALS": {
-            
             sum: 311,
             brands: {
               "CHETTINAD CEMENT": {
@@ -1392,11 +1298,9 @@ export const sectorData = {
         },
       },
       "CONSUMER DURABLES": {
-        
         sum: 1140,
         categories: {
           "CONSUMER DURABLES": {
-            
             sum: 476,
             brands: {
               "ABIRAMI ELECTRICALS": {
@@ -1418,7 +1322,6 @@ export const sectorData = {
             },
           },
           "CONSUMER DURABLES-AIR CONDITIONER": {
-            
             sum: 372,
             brands: {
               "DARLING SHOWROOM": {
@@ -1432,7 +1335,6 @@ export const sectorData = {
             },
           },
           "CONSUMER DURABLES-SMART PHONE&ACCESSORIES": {
-            
             sum: 292,
             brands: {
               "POORVIKA MOBILES": {
@@ -1444,11 +1346,9 @@ export const sectorData = {
         },
       },
       EDUCATION: {
-        
         sum: 711,
         categories: {
           ACADEMY: {
-            
             sum: 104,
             brands: {
               "CARE ACADEMY": {
@@ -1458,7 +1358,6 @@ export const sectorData = {
             },
           },
           COLLEGE: {
-            
             sum: 292,
             brands: {
               "CARE COLLEGE OF ENGINEERING": {
@@ -1480,7 +1379,6 @@ export const sectorData = {
             },
           },
           EDUCATION: {
-            
             sum: 63,
             brands: {
               "NEHRU MEMORIAL COLLEGE": {
@@ -1490,7 +1388,6 @@ export const sectorData = {
             },
           },
           SCHOLL: {
-            
             sum: 39,
             brands: {
               "SARASWATHI VIDYALAYA SCHOOL": {
@@ -1500,7 +1397,6 @@ export const sectorData = {
             },
           },
           SCHOOL: {
-            
             sum: 213,
             brands: {
               "SOWMA PUBLIC SCHOOL": {
@@ -1512,11 +1408,9 @@ export const sectorData = {
         },
       },
       ENTERTAINMENT: {
-        
         sum: 857,
         categories: {
           ENTERTAINMENT: {
-            
             sum: 118,
             brands: {
               "DARLING SONG OF THE HOUR": {
@@ -1530,7 +1424,6 @@ export const sectorData = {
             },
           },
           "ENTERTAINMENT-AMUSEMENT PARK": {
-            
             sum: 161,
             brands: {
               "BLACK THUNDER": {
@@ -1540,7 +1433,6 @@ export const sectorData = {
             },
           },
           "ENTERTAINMENT-MOVIE": {
-            
             sum: 71,
             brands: {
               "RETRO MOVIE AD": {
@@ -1550,7 +1442,6 @@ export const sectorData = {
             },
           },
           "ENTERTAINMENT-SPORTS": {
-            
             sum: 191,
             brands: {
               "CHENNAI SUPER KINGS (CSK)": {
@@ -1560,7 +1451,6 @@ export const sectorData = {
             },
           },
           PUBLICATION: {
-            
             sum: 316,
             brands: {
               "DAILY THANTHI": {
@@ -1576,11 +1466,9 @@ export const sectorData = {
         },
       },
       FINANCE: {
-        
         sum: 505,
         categories: {
           "FINANCE-BANK": {
-            
             sum: 474,
             brands: {
               "EQUITAS BANK": {
@@ -1598,7 +1486,6 @@ export const sectorData = {
             },
           },
           "FINANCE-INSURANCE": {
-            
             sum: 6,
             brands: {
               LIC: {
@@ -1608,7 +1495,6 @@ export const sectorData = {
             },
           },
           "FINANCE-LOAN": {
-            
             sum: 25,
             brands: {
               "AATH ISHA GOLD FINANCE": {
@@ -1620,11 +1506,9 @@ export const sectorData = {
         },
       },
       FMCG: {
-        
         sum: 1163,
         categories: {
           BEVERAGES: {
-            
             sum: 170,
             brands: {
               AACHI: {
@@ -1638,7 +1522,6 @@ export const sectorData = {
             },
           },
           CONFECTIONARY: {
-            
             sum: 766,
             brands: {
               "ASWIN SWEETS": {
@@ -1652,7 +1535,6 @@ export const sectorData = {
             },
           },
           "FOOD PRODUCTS": {
-            
             sum: 61,
             brands: {
               OOTYFRESH: {
@@ -1662,7 +1544,6 @@ export const sectorData = {
             },
           },
           SPICES: {
-            
             sum: 166,
             brands: {
               "SAKTHI MASALE": {
@@ -1673,28 +1554,10 @@ export const sectorData = {
           },
         },
       },
-      "FURNITURE-RETAIL": {
-        
-        sum: 11,
-        categories: {
-          "HOME&OFFICE FURNITURE": {
-            
-            sum: 11,
-            brands: {
-              "MANGAL AND MANGAL FURNITURE": {
-                sum: 11,
-                products: [],
-              },
-            },
-          },
-        },
-      },
       HEALTHCARE: {
-        
         sum: 1023,
         categories: {
           PHARMACEUTICAL: {
-            
             sum: 56,
             brands: {
               "ANJOL MEDICINE": {
@@ -1704,7 +1567,6 @@ export const sectorData = {
             },
           },
           "SERVICES-MEDICAL": {
-            
             sum: 967,
             brands: {
               "ARC FERTILITY HOSPITAL": {
@@ -1748,11 +1610,9 @@ export const sectorData = {
         },
       },
       "HOME FURNISHING": {
-        
-        sum: 183,
+        sum: 194,
         categories: {
           "HOME FURNISHING PRODUCTS": {
-            
             sum: 183,
             brands: {
               "AVIRA WORLD": {
@@ -1765,14 +1625,21 @@ export const sectorData = {
               },
             },
           },
+          "HOME&OFFICE FURNITURE": {
+            sum: 11,
+            brands: {
+              "MANGAL AND MANGAL FURNITURE": {
+                sum: 11,
+                products: [],
+              },
+            },
+          },
         },
       },
       HOSPITALITY: {
-        
         sum: 338,
         categories: {
           HOTEL: {
-            
             sum: 155,
             brands: {
               "JENNEYS ACADEMY OF HOTEL MANAGEMENT": {
@@ -1790,7 +1657,6 @@ export const sectorData = {
             },
           },
           RESTAURANT: {
-            
             sum: 183,
             brands: {
               "SHRI SANGEETHAS": {
@@ -1801,38 +1667,10 @@ export const sectorData = {
           },
         },
       },
-      "JEWELLERY-RETAIL": {
-        
-        sum: 26,
-        categories: {
-          "GOLD&DIAMOND JEWELLERY": {
-            
-            sum: 23,
-            brands: {
-              "NR THANGA MALIGAI": {
-                sum: 23,
-                products: [],
-              },
-            },
-          },
-          "GOLD&SILVER JEWELLERY": {
-            
-            sum: 3,
-            brands: {
-              "SRI MOOGAMBIGAI JEWELLERS": {
-                sum: 3,
-                products: [],
-              },
-            },
-          },
-        },
-      },
-      "ORAL CARE": {
-        
+      "PERSONAL CARE": {
         sum: 60,
         categories: {
           "TOOTH POWDER": {
-            
             sum: 60,
             brands: {
               "GOPAL PALPODI": {
@@ -1844,11 +1682,9 @@ export const sectorData = {
         },
       },
       PROPERTY: {
-        
         sum: 211,
         categories: {
           "PROPERTY-HOUSING": {
-            
             sum: 211,
             brands: {
               "ISHA GRAND VALLEY": {
@@ -1868,11 +1704,9 @@ export const sectorData = {
         },
       },
       "PUBLIC INTEREST": {
-        
         sum: 33,
         categories: {
           "PUBLIC SERVICE ADS": {
-            
             sum: 33,
             brands: {
               "GOVERNMENT OF INDIA": {
@@ -1892,11 +1726,9 @@ export const sectorData = {
         },
       },
       RETAIL: {
-        
         sum: 1637,
         categories: {
           "TEXTILES AND APPARELS": {
-            
             sum: 1637,
             brands: {
               "ANANTHA SILKS PARADISE": {
@@ -1920,11 +1752,9 @@ export const sectorData = {
         },
       },
       "TRAVEL&TOURISM": {
-        
         sum: 93,
         categories: {
           AIRLINE: {
-            
             sum: 93,
             brands: {
               AIRASIA: {
@@ -1938,11 +1768,9 @@ export const sectorData = {
     },
     "Suryan FM": {
       ACCESSORIES: {
-        
         sum: 2293,
         categories: {
           "ACCESSORIES-JEWELLERY": {
-            
             sum: 2293,
             brands: {
               "AKSHAYA TRITIYA SENTIMENTS": {
@@ -2034,11 +1862,9 @@ export const sectorData = {
         },
       },
       AUTOMOBILE: {
-        
         sum: 270,
         categories: {
           "AUTOMOBILE-CAR": {
-            
             sum: 233,
             brands: {
               "GT HYUNDAI": {
@@ -2056,7 +1882,6 @@ export const sectorData = {
             },
           },
           "AUTOMOBILE-USED CAR": {
-            
             sum: 37,
             brands: {
               "VANDI MANDI": {
@@ -2068,11 +1893,9 @@ export const sectorData = {
         },
       },
       CONSTRUCTIONS: {
-        
         sum: 357,
         categories: {
           "BUILDING MATERIALS": {
-            
             sum: 357,
             brands: {
               "ANUJ TILES": {
@@ -2092,11 +1915,9 @@ export const sectorData = {
         },
       },
       "CONSUMER DURABLES": {
-        
         sum: 660,
         categories: {
           "CONSUMER DURABLES": {
-            
             sum: 544,
             brands: {
               "BHARATH ELECTRONICS AND APPLIANCES": {
@@ -2122,7 +1943,6 @@ export const sectorData = {
             },
           },
           "CONSUMER DURABLES-AIR CONDITIONER": {
-            
             sum: 116,
             brands: {
               "BPL AC": {
@@ -2138,11 +1958,9 @@ export const sectorData = {
         },
       },
       EDUCATION: {
-        
         sum: 762,
         categories: {
           COLLEGE: {
-            
             sum: 488,
             brands: {
               "BISHOP COLLEGE": {
@@ -2184,7 +2002,6 @@ export const sectorData = {
             },
           },
           SCHOLL: {
-            
             sum: 32,
             brands: {
               "SARASWATHI VIDYALAYA SCHOOL": {
@@ -2194,7 +2011,6 @@ export const sectorData = {
             },
           },
           SCHOOL: {
-            
             sum: 89,
             brands: {
               "SAMADH SENIOR SECONDARY SCHOOL": {
@@ -2212,7 +2028,6 @@ export const sectorData = {
             },
           },
           UNIVERSITY: {
-            
             sum: 153,
             brands: {
               "DHANALAKSHMI SRINIVASAN UNIVERSITY": {
@@ -2224,11 +2039,9 @@ export const sectorData = {
         },
       },
       ENTERTAINMENT: {
-        
         sum: 24,
         categories: {
           ENTERTAINMENT: {
-            
             sum: 12,
             brands: {
               "GANGERS MOVIE AD": {
@@ -2238,7 +2051,6 @@ export const sectorData = {
             },
           },
           "ENTERTAINMENT-MOVIE": {
-            
             sum: 12,
             brands: {
               "RETRO MOVIE AD": {
@@ -2250,11 +2062,9 @@ export const sectorData = {
         },
       },
       FINANCE: {
-        
         sum: 511,
         categories: {
           "FINANCE-BANK": {
-            
             sum: 417,
             brands: {
               "FEDERAL BANK": {
@@ -2272,7 +2082,6 @@ export const sectorData = {
             },
           },
           "FINANCE-ONLINE PAYMENT": {
-            
             sum: 94,
             brands: {
               BHIM: {
@@ -2284,11 +2093,9 @@ export const sectorData = {
         },
       },
       FMCG: {
-        
         sum: 444,
         categories: {
           CONFECTIONARY: {
-            
             sum: 182,
             brands: {
               "ASWIN SWEETS": {
@@ -2306,7 +2113,6 @@ export const sectorData = {
             },
           },
           "COOKING OIL": {
-            
             sum: 95,
             brands: {
               "BE-RITE SUNFLOWER OIL": {
@@ -2316,7 +2122,6 @@ export const sectorData = {
             },
           },
           NAN: {
-            
             sum: 25,
             brands: {
               "PLUNGE LEMON SALT": {
@@ -2326,7 +2131,6 @@ export const sectorData = {
             },
           },
           SPICES: {
-            
             sum: 142,
             brands: {
               "SAKTHI MASALE": {
@@ -2338,11 +2142,9 @@ export const sectorData = {
         },
       },
       HEALTHCARE: {
-        
         sum: 543,
         categories: {
           PHARMACEUTICAL: {
-            
             sum: 76,
             brands: {
               "ANJOL MEDICINE": {
@@ -2360,7 +2162,6 @@ export const sectorData = {
             },
           },
           "SERVICES-MEDICAL": {
-            
             sum: 467,
             brands: {
               "APOLLO HOSPITAL": {
@@ -2388,11 +2189,9 @@ export const sectorData = {
         },
       },
       "HOME FURNISHING": {
-        
         sum: 34,
         categories: {
           "HOME FURNISHING PRODUCTS": {
-            
             sum: 31,
             brands: {
               "ROYAL FURNITURE": {
@@ -2402,7 +2201,6 @@ export const sectorData = {
             },
           },
           "SPIRITUAL PRODUCTS": {
-            
             sum: 3,
             brands: {
               DEVDARSHAN: {
@@ -2414,11 +2212,9 @@ export const sectorData = {
         },
       },
       HOSPITALITY: {
-        
         sum: 53,
         categories: {
           HOTEL: {
-            
             sum: 36,
             brands: {
               "MERIDIAN RAMYAS HOTEL": {
@@ -2432,7 +2228,6 @@ export const sectorData = {
             },
           },
           RESTAURANT: {
-            
             sum: 17,
             brands: {
               "MASALA DOOR": {
@@ -2443,12 +2238,10 @@ export const sectorData = {
           },
         },
       },
-      "ORAL CARE": {
-        
+      "PERSONAL CARE": {
         sum: 9,
         categories: {
           "TOOTH POWDER": {
-            
             sum: 9,
             brands: {
               "GOPAL PALPODI": {
@@ -2460,11 +2253,9 @@ export const sectorData = {
         },
       },
       PROPERTY: {
-        
         sum: 74,
         categories: {
           "PROPERTY-HOUSING": {
-            
             sum: 74,
             brands: {
               "SREE NIDHI PROMOTERS": {
@@ -2476,11 +2267,9 @@ export const sectorData = {
         },
       },
       "PUBLIC INTEREST": {
-        
         sum: 36,
         categories: {
           CAREER: {
-            
             sum: 1,
             brands: {
               JOBFAIR: {
@@ -2490,7 +2279,6 @@ export const sectorData = {
             },
           },
           "PUBLIC SERVICE ADS": {
-            
             sum: 35,
             brands: {
               "GOVERNMENT OF INDIA": {
@@ -2510,11 +2298,9 @@ export const sectorData = {
         },
       },
       "RENEWABLE ENERGY": {
-        
         sum: 106,
         categories: {
           "SOLAR ENERGY": {
-            
             sum: 106,
             brands: {
               "RAYZON SOLAR": {
@@ -2526,11 +2312,9 @@ export const sectorData = {
         },
       },
       RETAIL: {
-        
         sum: 1741,
         categories: {
           SUPERMARKET: {
-            
             sum: 78,
             brands: {
               "SMART BAZAAR": {
@@ -2540,7 +2324,6 @@ export const sectorData = {
             },
           },
           "TEXTILES AND APPARELS": {
-            
             sum: 1663,
             brands: {
               "ANANTHA SILKS PARADISE": {
@@ -2568,11 +2351,9 @@ export const sectorData = {
         },
       },
       "TRAVEL&TOURISM": {
-        
         sum: 92,
         categories: {
           AIRLINE: {
-            
             sum: 92,
             brands: {
               AIRASIA: {

@@ -35,7 +35,7 @@ const HelloSectorData = [
       "TRAVEL&TOURISM": 1440,
       "HOSPITALITY": 1223,
       "HOME FURNISHING": 379,
-      "ORAL CARE": 108
+      "PERSONAL CARE": 108
     },
     "plays": {
       "ACCESSORIES": 1658,
@@ -53,13 +53,13 @@ const HelloSectorData = [
       "TRAVEL&TOURISM": 72,
       "HOSPITALITY": 145,
       "HOME FURNISHING": 78,
-      "ORAL CARE": 49
+      "PERSONAL CARE": 49
     }
   },
   {
     "week": "week_2",
     "seconds": {
-      "ACCESSORIES": 42646,
+      "ACCESSORIES": 42646+363,
       "RETAIL": 12447,
       "CONSUMER DURABLES": 9479,
       "FINANCE": 7914,
@@ -74,12 +74,11 @@ const HelloSectorData = [
       "TRAVEL&TOURISM": 1833,
       "HOME FURNISHING": 1086,
       "PROPERTY": 897,
-      "JEWELLERY-RETAIL": 363,
-      "ORAL CARE": 130,
+      "PERSONAL CARE": 130,
       "FURNITURE-RETAIL": 97
     },
     "plays": {
-      "ACCESSORIES": 3657,
+      "ACCESSORIES": 3657+26,
       "RETAIL": 1637,
       "CONSUMER DURABLES": 1140,
       "FINANCE": 505,
@@ -92,11 +91,9 @@ const HelloSectorData = [
       "HOSPITALITY": 338,
       "CONSTRUCTIONS": 311,
       "TRAVEL&TOURISM": 93,
-      "HOME FURNISHING": 183,
+      "HOME FURNISHING": 183+11,
       "PROPERTY": 211,
-      "JEWELLERY-RETAIL": 26,
-      "ORAL CARE": 60,
-      "FURNITURE-RETAIL": 11
+      "PERSONAL CARE": 60,
     }
   }
 ]
@@ -120,7 +117,7 @@ const SuryanSectorData = [
       "RENEWABLE ENERGY": 950,
       "ENTERTAINMENT": 181,
       "HOSPITALITY": 112,
-      "ORAL CARE": 70,
+      "PERSONAL CARE": 70,
       "HOME FURNISHING": 43
     },
     "plays": {
@@ -139,7 +136,7 @@ const SuryanSectorData = [
       "RENEWABLE ENERGY": 95,
       "ENTERTAINMENT": 8,
       "HOSPITALITY": 16,
-      "ORAL CARE": 7,
+      "PERSONAL CARE": 7,
       "HOME FURNISHING": 2
     }
   },
@@ -162,7 +159,7 @@ const SuryanSectorData = [
       "PROPERTY": 324,
       "HOME FURNISHING": 286,
       "ENTERTAINMENT": 240,
-      "ORAL CARE": 101
+      "PERSONAL CARE": 101
     },
     "plays": {
       "ACCESSORIES": 2293,
@@ -181,7 +178,7 @@ const SuryanSectorData = [
       "PROPERTY": 74,
       "HOME FURNISHING": 34,
       "ENTERTAINMENT": 24,
-      "ORAL CARE": 9
+      "PERSONAL CARE": 9
     }
   }
 ]
@@ -201,12 +198,10 @@ const RadioSectorAnalysis = () => {
   "ENTERTAINMENT": { name: "Entertainment", color: "#F87171" },           // Red
   "FINANCE": { name: "Finance", color: "#60A5FA" },                       // Light Blue
   "FMCG": { name: "FMCG", color: "#A78BFA" },                             // Purple
-  "FURNITURE-RETAIL": { name: "Furniture - Retail", color: "#FB7185" },   // Rose
   "HEALTHCARE": { name: "Healthcare", color: "#10B981" },                // Teal
   "HOME FURNISHING": { name: "Home Furnishing", color: "#E879F9" },       // Orchid
   "HOSPITALITY": { name: "Hospitality", color: "#FCD34D" },               // Yellow
-  "JEWELLERY-RETAIL": { name: "Jewellery - Retail", color: "#FBBF24" },   // Golden
-  "ORAL CARE": { name: "Oral Care", color: "#818CF8" },                   // Indigo
+  "PERSONAL CARE": { name: "Personal Care", color: "#818CF8" },            // Indigo
   "PROPERTY": { name: "Property", color: "#FB923C" },                     // Orange
   "PUBLIC INTEREST": { name: "Public Interest", color: "#93C5FD" },       // Sky Blue
   "RENEWABLE ENERGY": { name: "Renewable Energy", color: "#6EE7B7" },     // Mint
