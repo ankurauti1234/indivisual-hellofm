@@ -9,20 +9,50 @@ import { Input } from "@/components/ui/input";
 import { format } from "date-fns";
 import Papa from "papaparse";
 import * as XLSX from "xlsx";
-import { epgData } from "./epg-data";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { availableData } from "@/data/available_data";
 
 const DownloadDialog = ({ selectedDate }) => {
   const [fileFormat, setFileFormat] = useState("csv");
   const [date, setDate] = useState(selectedDate || format(new Date(), "yyyy-MM-dd"));
   const [startTime, setStartTime] = useState("00:00:00");
   const [endTime, setEndTime] = useState("23:59:59");
-  const [selectedChannels, setSelectedChannels] = useState([]); // Changed to array for multi-select
+  const [selectedChannels, setSelectedChannels] = useState([]);
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [open, setOpen] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [noDataAlert, setNoDataAlert] = useState(false);
+  const [epgData, setEpgData] = useState([]);
   const { toast } = useToast();
+
+  // Fetch EPG data for the selected date
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const stations = Object.keys(availableData).filter((station) =>
+          availableData[station].dates.includes(date)
+        );
+        const dataPromises = stations.map(async (station) => {
+          const response = await fetch(`/data/${station}/${date}.json`);
+          if (!response.ok) {
+            console.error(`Failed to fetch data for ${station} on ${date}: ${response.statusText}`);
+            return [];
+          }
+          const data = await response.json();
+          return data.map((item) => ({ ...item, channel: station }));
+        });
+
+        const results = await Promise.all(dataPromises);
+        const combinedData = results.flat();
+        setEpgData(combinedData);
+      } catch (err) {
+        console.error("Fetch error:", err);
+        setEpgData([]);
+      }
+    };
+
+    fetchData();
+  }, [date]);
 
   // Get unique channels and regions for the selected date
   const getAvailableChannels = (data, selectedDate) => {
@@ -70,7 +100,7 @@ const DownloadDialog = ({ selectedDate }) => {
   // Update no-data alert whenever date, time, channels, or region changes
   useEffect(() => {
     validateAndCheckData();
-  }, [date, startTime, endTime, selectedChannels, selectedRegion]);
+  }, [date, startTime, endTime, selectedChannels, selectedRegion, epgData]);
 
   const handleDownload = () => {
     setIsDownloading(true);

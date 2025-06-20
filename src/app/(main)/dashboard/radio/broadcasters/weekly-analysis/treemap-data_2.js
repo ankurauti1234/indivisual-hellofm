@@ -1,2938 +1,3455 @@
-export const hello=[
+export const club=[
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 27.64,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Airlines",
-        "Percentage": 0.91,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Auto Care",
-        "Percentage": 1.35,
+        "Percentage": 19.88,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
         "Category": "Automobile - Dealers",
-        "Percentage": 2.52,
+        "Percentage": 5.33,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
-        "Category": "Beverages",
-        "Percentage": 0.63,
+        "Category": "Cable Service Provider",
+        "Percentage": 1.49,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
-        "Category": "Beverages-Water",
-        "Percentage": 0.18,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Confectioneries",
-        "Percentage": 6.61,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Construction products",
-        "Percentage": 0.25,
+        "Category": "Consumer Durables",
+        "Percentage": 4.78,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
         "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 1.33,
+        "Percentage": 2.01,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
-        "Category": "Electrical Equipments",
-        "Percentage": 4.33,
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 4.35,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
-        "Category": "Entertainment - Amusement Park",
-        "Percentage": 1.53,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 0.21,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Sports",
-        "Percentage": 1.87,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 4.15,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Insurance",
-        "Percentage": 0.01,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Loans",
-        "Percentage": 0.21,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 0.79,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 1.89,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Furnishings & Home Decor",
-        "Percentage": 1.59,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Furniture Retail",
-        "Percentage": 0.23,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Hotels & Restaurants",
-        "Percentage": 0.79,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Medicinal Products",
-        "Percentage": 0.46,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 1.62,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 0.31,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Publications",
-        "Percentage": 2.43,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Radio",
-        "Percentage": 4.25,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Radio ",
-        "Percentage": 3.53,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Schools & Camps",
-        "Percentage": 1.81,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 2.75,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Catering",
-        "Percentage": 1.12,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 6.52,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Shopping",
-        "Percentage": 1.98,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 13.01,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Vocational & Training Schools",
-        "Percentage": 1.17,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 9.86,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "AK Thanga Maligai Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 0.81,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Aathisha Jewellery",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 0.53,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Anantha Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 4.24,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "GRT Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 5.44,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Harini Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 6.96,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Jodi Premium Jewellery",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 7.03,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Kalyan Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 4.03,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Kongu Thanga Maligai",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 2.44,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Malabar Gold and Diamonds",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 2.83,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Malabar and Malabar",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 4.98,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Mangal & Mangal Thanga Maligai",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 0.81,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "NR Thanga Maligai",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 5.02,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "New Lakshmi Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 8.87,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Pothys Swarna Mahal",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 11.8,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Rangas Thanga Maligai",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 4.34,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Shree Gokulam Jewels",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 0.92,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sri Mahamaayi Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 0.11,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sri Moogambigai Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 3.6,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sri Thaila Jewellers",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 4.73,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Tanishq Jewellery",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 6.39,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "jos alukkas",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 4.27,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "joy alukkas",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Airlines",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "AirAsia",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Auto Care",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Hyper Engine Oil",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Dealers",
-        "Percentage": 63.57,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Ramani Kia",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Dealers",
-        "Percentage": 11.24,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Ramani Volkswagen",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Dealers",
-        "Percentage": 25.19,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Vandi Mandi",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Beverages",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Aachi",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Beverages-Water",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Andavar Plus",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Confectioneries",
-        "Percentage": 76.22,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Aswin Sweets",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Confectioneries",
-        "Percentage": 23.78,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "SNJ 10000 Granulated Sugar",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Construction products",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Chettinad Cement",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Vasanth & Co",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 5.42,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Abirami Electricals",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 65.91,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Darling Retail",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 14.9,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Manna corporation",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 13.77,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Saravana Electricals",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Amusement Park",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Black Thunder",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Retro",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Sports",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Chennai Super Kings (CSK)",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 36.94,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Equitas Bank",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 53.18,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Karur Vysya Bank",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 9.88,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "SBI",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Insurance",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "LIC",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Loans",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Aath Isha Gold Finance",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 49.38,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "KAG Tiles",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 50.62,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Visala Agencies",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 23.71,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "OotyFresh",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 76.29,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sakthi Masale",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Furnishings & Home Decor",
-        "Percentage": 66.87,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Avira World",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Furnishings & Home Decor",
-        "Percentage": 33.13,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sri Sathya Plywoods",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Furniture Retail",
-        "Percentage": 25.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Mangal and Mangal Furniture",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Furniture Retail",
-        "Percentage": 75.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Royal Furniture",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Hotels & Restaurants",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Meridian Ramyas Hotel",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Medicinal Products",
-        "Percentage": 51.06,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Anjol Medicine",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Medicinal Products",
-        "Percentage": 48.94,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Gopal Palpodi",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 75.9,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Isha Grand Valley",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 2.41,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Madhura Properties",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 21.69,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sree Nidhi Promoters",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 18.75,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Government of India (Obesity Awareness)",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 40.62,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "RBI",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 40.62,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Reserve Bank of India (RBI)",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Publications",
-        "Percentage": 82.33,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Daily Thanthi",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Publications",
-        "Percentage": 17.67,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Malai Malar",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Radio",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Hello Fm",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Radio ",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Hello FM",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Schools & Camps",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sowma Public School",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 13.83,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": " Saraswathi Vidyalaya School",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 28.72,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "CARE College of Engineering",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 36.88,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "K.Ramakrishnan College of Engineering",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 10.99,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Nehru Memorial College",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 6.03,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Shrimati Indira Gandhi College",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 3.55,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Srimad Andavan Arts and Science College",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Catering",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Shri Sangeethas",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 25.15,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "ARC Fertility Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 3.74,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Atlas Hospitals",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 26.8,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "GVN Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 3.74,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Harshmitra Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 4.79,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Iswarya Fertility Centre Trichy",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 2.99,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Kerala Ayurveda Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 22.75,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Maa Kauvery Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 6.44,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Retna Global Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 3.59,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sudha Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Shopping",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Poorvika Mobiles",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 11.11,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Anantha Silks Paradise",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 18.32,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Navaneetha Silks",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 17.27,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Pothys Silks",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 53.3,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sarathas Clothing",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Vocational & Training Schools",
-        "Percentage": 69.17,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Care Academy",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Vocational & Training Schools",
-        "Percentage": 30.83,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Jenneys Academy of Hotel Management",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "AK Thanga Maligai Jewellers",
-        "Brand - Product": "Traditional Gold\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Aathisha Jewellery",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Anantha Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "GRT Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Harini Jewellers",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Jodi Premium Jewellery",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Kalyan Jewellers",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Kongu Thanga Maligai",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Malabar Gold and Diamonds",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Malabar and Malabar",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Mangal & Mangal Thanga Maligai",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "NR Thanga Maligai",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "New Lakshmi Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Pothys Swarna Mahal",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Rangas Thanga Maligai",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Shree Gokulam Jewels",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sri Mahamaayi Jewellers",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sri Moogambigai Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sri Thaila Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Tanishq Jewellery",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "jos alukkas",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "joy alukkas",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Airlines",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "AirAsia",
-        "Brand - Product": " low-cost airline services"
-    },
-    {
-        "Category": "Automobile - Auto Care",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Hyper Engine Oil",
-        "Brand - Product": "automotive lubricants"
-    },
-    {
-        "Category": "Automobile - Dealers",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Ramani Kia",
-        "Brand - Product": "kia passenger vehicles"
-    },
-    {
-        "Category": "Automobile - Dealers",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Ramani Volkswagen",
-        "Brand - Product": " volkswagen passenger vehicles"
-    },
-    {
-        "Category": "Automobile - Dealers",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Vandi Mandi",
-        "Brand - Product": "second-hand car sales platform"
-    },
-    {
-        "Category": "Beverages",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Aachi",
-        "Brand - Product": "almond drink mix"
-    },
-    {
-        "Category": "Beverages-Water",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Andavar Plus",
-        "Brand - Product": "Packaged Drinking Water"
-    },
-    {
-        "Category": "Confectioneries",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Aswin Sweets",
-        "Brand - Product": "traditional south indian sweets"
-    },
-    {
-        "Category": "Confectioneries",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "SNJ 10000 Granulated Sugar",
-        "Brand - Product": "refined granulated sugar"
-    },
-    {
-        "Category": "Construction products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Chettinad Cement",
-        "Brand - Product": "cement products"
-    },
-    {
-        "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Vasanth & Co",
-        "Brand - Product": "air conditioners"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Abirami Electricals",
-        "Brand - Product": "electrical equipment & appliances"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Darling Retail",
-        "Brand - Product": "home appliances"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Manna corporation",
-        "Brand - Product": "electrical & home appliances"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Saravana Electricals",
-        "Brand - Product": " electrical & home appliances"
-    },
-    {
-        "Category": "Entertainment - Amusement Park",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Black Thunder",
-        "Brand - Product": " theme park and resort"
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Retro",
-        "Brand - Product": "Retro"
-    },
-    {
-        "Category": "Entertainment - Sports",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Chennai Super Kings (CSK)",
-        "Brand - Product": " cricket players"
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Equitas Bank",
-        "Brand - Product": "retail & sme banking services"
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Karur Vysya Bank",
-        "Brand - Product": "banking services"
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "SBI",
-        "Brand - Product": " banking & financial services"
-    },
-    {
-        "Category": "Finance - Insurance",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "LIC",
-        "Brand - Product": "Life Insurance"
-    },
-    {
-        "Category": "Finance - Loans",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Aath Isha Gold Finance",
-        "Brand - Product": "gold loans"
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "KAG Tiles",
-        "Brand - Product": " floor tiles"
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Visala Agencies",
-        "Brand - Product": "tiles & sanitaryware"
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "OotyFresh",
-        "Brand - Product": "vegetables & groceries"
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sakthi Masale",
-        "Brand - Product": "spice powders"
-    },
-    {
-        "Category": "Furnishings & Home Decor",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Avira World",
-        "Brand - Product": "home furnishing products"
-    },
-    {
-        "Category": "Furnishings & Home Decor",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sri Sathya Plywoods",
-        "Brand - Product": "plywood & wood products"
-    },
-    {
-        "Category": "Furniture Retail",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Mangal and Mangal Furniture",
-        "Brand - Product": "Furniture Retail"
-    },
-    {
-        "Category": "Furniture Retail",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Royal Furniture",
-        "Brand - Product": "Furniture Retail"
-    },
-    {
-        "Category": "Hotels & Restaurants",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Meridian Ramyas Hotel",
-        "Brand - Product": "hotel & accommodation"
-    },
-    {
-        "Category": "Medicinal Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Anjol Medicine",
-        "Brand - Product": "ayurvedic tablets"
-    },
-    {
-        "Category": "Medicinal Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Gopal Palpodi",
-        "Brand - Product": "tooth powder"
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Isha Grand Valley",
-        "Brand - Product": " residential plots & villas"
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Madhura Properties",
-        "Brand - Product": "residential properties"
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sree Nidhi Promoters",
-        "Brand - Product": " residential plots"
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Government of India (Obesity Awareness)",
-        "Brand - Product": "obesity awareness & low-oil diet promotion"
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 15.38,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "RBI",
-        "Brand - Product": "Saty Safe"
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 84.62,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "RBI",
-        "Brand - Product": "Savibg money"
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Reserve Bank of India (RBI)",
-        "Brand - Product": " public awareness campaign"
-    },
-    {
-        "Category": "Publications",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Daily Thanthi",
-        "Brand - Product": "tamil daily newspaper"
-    },
-    {
-        "Category": "Publications",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Malai Malar",
-        "Brand - Product": "newspaper"
-    },
-    {
-        "Category": "Radio",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Hello Fm",
-        "Brand - Product": "program"
-    },
-    {
-        "Category": "Schools & Camps",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sowma Public School",
-        "Brand - Product": "cbse schooling"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": " Saraswathi Vidyalaya School",
-        "Brand - Product": "Secondary School"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "CARE College of Engineering",
-        "Brand - Product": "Engineering Programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "K.Ramakrishnan College of Engineering",
-        "Brand - Product": "engineering programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Nehru Memorial College",
-        "Brand - Product": "Degree Programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Shrimati Indira Gandhi College",
-        "Brand - Product": "arts & science college programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Srimad Andavan Arts and Science College",
-        "Brand - Product": "Graduation Courses"
-    },
-    {
-        "Category": "Services - Catering",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Shri Sangeethas",
-        "Brand - Product": "vegetarian restaurant services"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "ARC Fertility Hospital",
-        "Brand - Product": " ivf"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Atlas Hospitals",
-        "Brand - Product": "multispecialty hospital services"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "GVN Hospital",
-        "Brand - Product": "multispecialty medical services"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Harshmitra Hospital",
-        "Brand - Product": "oncology & cancer care services"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Iswarya Fertility Centre Trichy",
-        "Brand - Product": "fertility treatments"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Kerala Ayurveda Hospital",
-        "Brand - Product": "ayurvedic treatments"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Maa Kauvery Hospital",
-        "Brand - Product": "women & child healthcare services"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Retna Global Hospital",
-        "Brand - Product": "multispecialty medical services"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sudha Hospital",
-        "Brand - Product": "multispecialty"
-    },
-    {
-        "Category": "Shopping",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Poorvika Mobiles",
-        "Brand - Product": "smartphones & accessories"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Anantha Silks Paradise",
-        "Brand - Product": "silk sarees"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Navaneetha Silks",
-        "Brand - Product": "silk sarees & traditional wear"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Pothys Silks",
-        "Brand - Product": "silk sarees & traditional wear"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sarathas Clothing",
-        "Brand - Product": "Silk Sarees Cotton Sarees"
-    },
-    {
-        "Category": "Vocational & Training Schools",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Care Academy",
-        "Brand - Product": "coaching & training programs"
-    },
-    {
-        "Category": "Vocational & Training Schools",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Jenneys Academy of Hotel Management",
-        "Brand - Product": "hotel management courses"
-    }
-]
-
-export const Suryan = [
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 28.11,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Aduthaduthu Moonu Pattu",
-        "Percentage": 0.22,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Airlines",
-        "Percentage": 1.12,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Car",
-        "Percentage": 0.81,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Cars",
-        "Percentage": 0.2,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Automobile - Dealers",
-        "Percentage": 2.3,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Confectioneries",
-        "Percentage": 2.13,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Construction products",
-        "Percentage": 1.68,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 1.42,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 6.64,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 0.28,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance ",
-        "Percentage": 1.15,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 5.1,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 2.68,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 3.31,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Furniture Retail",
-        "Percentage": 0.38,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Hotels & Restaurants",
-        "Percentage": 0.43,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Manufacturing - Renewable Energy",
-        "Percentage": 1.28,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Medicinal Products",
-        "Percentage": 1.04,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Property - Housing",
-        "Percentage": 0.9,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Public Service Ads",
-        "Percentage": 0.43,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Radio",
-        "Percentage": 1.98,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Retail - Hypermarket",
-        "Percentage": 0.95,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Schools & Camps",
-        "Percentage": 0.11,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 8.24,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Catering",
-        "Percentage": 0.21,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 6.64,
-        "Level": "Category",
-        "Brand Name/Parent Comany": "",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Spiritual\u00a0Products",
+        "Category": "Consumer Durables - Refrigerator",
         "Percentage": 0.04,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 1.71,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Contest",
+        "Percentage": 21.29,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Dairy Products",
+        "Percentage": 1.11,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 5.33,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 1.11,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment-Amusement Park",
+        "Percentage": 0.34,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 5.76,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Inauguration",
+        "Percentage": 1.28,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 6.95,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Medical Equipments & Supplies",
+        "Percentage": 2.05,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 2.69,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 0.73,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 1.96,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Retail Garments",
+        "Percentage": 0.85,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Service-Medical",
+        "Percentage": 1.07,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Skill Development Programs",
+        "Percentage": 0.81,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
         "Category": "Textiles & Apparels",
-        "Percentage": 20.23,
+        "Percentage": 7.08,
         "Level": "Category",
         "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 2.13,
+        "Percentage": 12.66,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Akshaya Tritiya Sentiments",
+        "Brand Name/Parent Comany": "AGD Gold&Diamonds",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 1.48,
+        "Percentage": 24.46,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Anantha Jewellers",
+        "Brand Name/Parent Comany": "Bhima Gold&Diamonds",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 6.18,
+        "Percentage": 22.32,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Bhima Jewellery",
+        "Brand Name/Parent Comany": "Joyalukkas Gold& Diamonds",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 5.0,
+        "Percentage": 28.97,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "GRT Jewellers",
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 1.48,
+        "Percentage": 9.87,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Gopaldas Jewellers & Co",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 3.18,
+        "Percentage": 1.72,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Harini Jewellers",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds Jewellry",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automobile - Dealers",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "MG Motor India",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Cable Service Provider",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Asianet",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "MyG Future",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Kelvinator",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 83.33,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Daikin",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 16.67,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Refrigerator",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Ajmal Bismi",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Contest",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Image\n Mobiles&Computers",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Dairy Products",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Muralya Dairy",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 28.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Hindustan Institute of Technology",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 4.8,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Hindusthan Institute of Techonology",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 11.2,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "KCG College of Technology",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 56.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Madrubhoomi Books",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Club FM",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment-Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Inter Square Mall",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 51.85,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Nolta",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 48.15,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Inauguration",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Euro Guard",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Medical Equipments & Supplies",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "DDRC Agilus",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 53.97,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 41.27,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Reserve Bank of India",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 4.76,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Aqua Star",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Retail Garments",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Cotton Fab",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Service-Medical",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Rajagiri Hospital",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Skill Development Programs",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Textiles & Apparels",
+        "Percentage": 50.6,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Brida",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Textiles & Apparels",
+        "Percentage": 49.4,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Pulimoottil Silks",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 6.44,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Jodi Premium Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "AGD Gold&Diamonds",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Bhima Gold&Diamonds",
+        "Brand - Product": "Akshaya Thrithiya Offer"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Joyalukkas Gold& Diamonds",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds",
+        "Brand - Product": "Akshaya Thrithiya Offer"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds Jewellry",
+        "Brand - Product": "Gold & Diamonds\nJewellry"
+    },
+    {
+        "Category": "Automobile - Dealers",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MG Motor India",
+        "Brand - Product": "MG Midnight Carnival"
+    },
+    {
+        "Category": "Cable Service Provider",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Asianet",
+        "Brand - Product": "Asianet Fiber Connection"
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MyG Future",
+        "Brand - Product": "Electronics&Home Appliances"
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Kelvinator",
+        "Brand - Product": "Air Conditioner"
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Daikin",
+        "Brand - Product": "Air Conditioner & Fan"
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": "Air Conditioner & Fan"
+    },
+    {
+        "Category": "Consumer Durables - Refrigerator",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Ajmal Bismi",
+        "Brand - Product": "Refrigerator"
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": "Air Conditioner"
+    },
+    {
+        "Category": "Contest",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Image\n Mobiles&Computers",
+        "Brand - Product": "Photography Contest"
+    },
+    {
+        "Category": "Dairy Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Muralya Dairy",
+        "Brand - Product": "Muralya Ghee"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Hindustan Institute of Technology",
+        "Brand - Product": "Courses"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Hindusthan Institute of Techonology",
+        "Brand - Product": "Courses"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "KCG College of Technology",
+        "Brand - Product": "Courses"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Madrubhoomi Books",
+        "Brand - Product": "World Book Day,April 23,\nReading"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Club FM",
+        "Brand - Product": "Star Jam Podcast"
+    },
+    {
+        "Category": "Entertainment-Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Inter Square Mall",
+        "Brand - Product": "Dinosour World"
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Nolta",
+        "Brand - Product": "Home Appliances"
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": "Home and Kitchen Appliances"
+    },
+    {
+        "Category": "Inauguration",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Vizhinjam International Seaport"
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Euro Guard",
+        "Brand - Product": "UPVC Rain Water Gutters"
+    },
+    {
+        "Category": "Medical Equipments & Supplies",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "DDRC Agilus",
+        "Brand - Product": "Lab Reports"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Road Safety is Life Safety"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Reserve Bank of India",
+        "Brand - Product": "Money Saving Initiative"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": "Awareness"
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 52.94,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Obesity Awareness"
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 47.06,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Sahakarana Expo 2025"
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Aqua Star",
+        "Brand - Product": "Rain Water Gutter"
+    },
+    {
+        "Category": "Retail Garments",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Cotton Fab",
+        "Brand - Product": "Cotton Fab"
+    },
+    {
+        "Category": "Service-Medical",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Rajagiri Hospital",
+        "Brand - Product": "Cardiology"
+    },
+    {
+        "Category": "Skill Development Programs",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "ASAP Kerala"
+    },
+    {
+        "Category": "Textiles & Apparels",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Brida",
+        "Brand - Product": "Brida Innerwear"
+    },
+    {
+        "Category": "Textiles & Apparels",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Pulimoottil Silks",
+        "Brand - Product": "Almarah by Pulimoottil New Showroom"
+    }
+]
+
+export const mango = [
+    {
+        "Category": "Academic Conference",
+        "Percentage": 0.42,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 6.18,
+        "Percentage": 27.81,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 10.46,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 5.89,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Camp",
+        "Percentage": 0.08,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 8.39,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 2.82,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 0.83,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 3.9,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Electronics&Home Appliances",
+        "Percentage": 1.29,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 5.19,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment - Amusement Park",
+        "Percentage": 5.48,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Financial Services",
+        "Percentage": 2.41,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 1.45,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Government Intiatives",
+        "Percentage": 0.95,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Healthcare Services",
+        "Percentage": 1.74,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Inauguration",
+        "Percentage": 0.71,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 8.8,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Petroleum Products",
+        "Percentage": 2.95,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 2.7,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Publications",
+        "Percentage": 2.2,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Radio",
+        "Percentage": 0.08,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 1.83,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Retail Garments",
+        "Percentage": 1.04,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Super Speciality Boutique Hospital",
+        "Percentage": 0.33,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Super Speciality Boutique Hospital,",
+        "Percentage": 0.25,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Academic Conference",
+        "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Jos alukkas Jewellers",
+        "Brand Name/Parent Comany": "NISAU&Edroots,",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 3.96,
+        "Percentage": 25.07,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Kalyan Jewellers",
+        "Brand Name/Parent Comany": "Arabian Gold&Diamonds Jewelry",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 11.4,
+        "Percentage": 1.34,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Kongu Thanga Maligai",
+        "Brand Name/Parent Comany": "Bhima Gold&Diamonds",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 6.44,
+        "Percentage": 14.93,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Malabar Gold and Diamonds",
+        "Brand Name/Parent Comany": "Bhima Jewellers",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 0.3,
+        "Percentage": 13.88,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Malabar and Malabar",
+        "Brand Name/Parent Comany": "Joyalukkas",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 12.18,
+        "Percentage": 21.49,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Mangal & Mangal Thanga Maligai",
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 0.3,
+        "Percentage": 21.79,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Pothys",
+        "Brand Name/Parent Comany": "TBZ Original",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 3.57,
+        "Percentage": 1.49,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Sree Kumaran Thangamaligai",
+        "Brand Name/Parent Comany": "Vanitha Jewellery",
         "Brand - Product": ""
     },
     {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 9.44,
+        "Category": "Automobile - Car",
+        "Percentage": 42.86,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Sri Thaila Jewellers",
+        "Brand Name/Parent Comany": "Hyundai",
         "Brand - Product": ""
     },
     {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 3.44,
+        "Category": "Automobile - Car",
+        "Percentage": 49.21,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "TNN Gold & Diamonds",
+        "Brand Name/Parent Comany": "MG Motor India",
         "Brand - Product": ""
     },
     {
+        "Category": "Automobile - Car",
+        "Percentage": 7.94,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Skoda",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Chettinad Construction",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Camp",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Malayala Manorama",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "MyG Future",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 29.41,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 70.59,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Kelvinator",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 50.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Hindustan Institute of Technology",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 17.02,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "KCG College of Technology",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 32.98,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "UPES",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Electronics&Home Appliances",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "MyG Future\n\n \n",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 3.2,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Center Square Mall",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 2.4,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Center Squre Mall",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 44.8,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Malayala Manorama",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 49.6,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Mango FM",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment - Amusement Park",
+        "Percentage": 59.09,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Funtura",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment - Amusement Park",
+        "Percentage": 40.91,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Silver Storm",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Financial Services",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Muthoot Finance",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Palat Foods",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Government Intiatives",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Healthcare Services",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Welcare Hospital",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Inauguration",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Euro Guard",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Petroleum Products",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Nayara Energy Petrol Pump",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 67.69,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 32.31,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Reserve Bank of India",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Publications",
+        "Percentage": 30.19,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Karshakasree",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Publications",
+        "Percentage": 69.81,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Manorama",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Radio",
+        "Percentage": 50.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": " Radio Mango",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Radio",
+        "Percentage": 50.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Radio Mango",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Aqua Star",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Retail Garments",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Cotton Fab",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Super Speciality Boutique Hospital",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Futureace Hospital",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Super Speciality Boutique Hospital,",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Futureace Hospital",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Academic Conference",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "NISAU&Edroots,",
+        "Brand - Product": "Uk students educators meet"
+    },
+    {
         "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Arabian Gold&Diamonds Jewelry",
+        "Brand - Product": "Arabian Gold&Diamonds"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Bhima Gold&Diamonds",
+        "Brand - Product": "Akshaya Thrithiya Offer"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Bhima Jewellers",
+        "Brand - Product": "Gold & Diamonds\nJewellry"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Joyalukkas",
+        "Brand - Product": "Gold & Diamonds\nJewellry"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "TBZ Original",
+        "Brand - Product": "Diamond Jewellery"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Vanitha Jewellery",
+        "Brand - Product": "Gold Jewelry"
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Hyundai",
+        "Brand - Product": "Hyundai Cars"
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MG Motor India",
+        "Brand - Product": "MG Hector"
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Skoda",
+        "Brand - Product": "Skoda Kylaq"
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Chettinad Construction",
+        "Brand - Product": "Cement"
+    },
+    {
+        "Category": "Camp",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Malayala Manorama",
+        "Brand - Product": "Free Knee Check-Up"
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MyG Future",
+        "Brand - Product": "Electronics&Home Appliances"
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": "Air Conditioner"
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Kelvinator",
+        "Brand - Product": "Air Conditioner"
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": "Air Conditioner"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Hindustan Institute of Technology",
+        "Brand - Product": "Courses"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "KCG College of Technology",
+        "Brand - Product": "Courses"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "UPES",
+        "Brand - Product": "Educational Programs"
+    },
+    {
+        "Category": "Electronics&Home Appliances",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MyG Future\n\n \n",
+        "Brand - Product": " Vishu Bumber"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Center Square Mall",
+        "Brand - Product": "Dinosaur World"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Center Squre Mall",
+        "Brand - Product": "Dinosaur World"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Malayala Manorama",
+        "Brand - Product": "Pet Show"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 1.61,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Mango FM",
+        "Brand - Product": "Auto Expert Vivek Venugopal"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 20.97,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Mango FM",
+        "Brand - Product": "Bits Top"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 30.65,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Mango FM",
+        "Brand - Product": "Celebrity Playlist"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 24.19,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Mango FM",
+        "Brand - Product": "Mr.Mouse"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 22.58,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Mango FM",
+        "Brand - Product": "Spotlight"
+    },
+    {
+        "Category": "Entertainment - Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Funtura",
+        "Brand - Product": "Amusement Park"
+    },
+    {
+        "Category": "Entertainment - Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Silver Storm",
+        "Brand - Product": "Slides&Rides"
+    },
+    {
+        "Category": "Financial Services",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Muthoot Finance",
+        "Brand - Product": "Investment"
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 28.57,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Palat Foods",
+        "Brand - Product": "Instant Palappam Mix"
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 71.43,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Palat Foods",
+        "Brand - Product": "Steamed White PuttuPodi"
+    },
+    {
+        "Category": "Government Intiatives",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Mizhiv Short Video Contest"
+    },
+    {
+        "Category": "Healthcare Services",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Welcare Hospital",
+        "Brand - Product": "Multispeciality Hospital"
+    },
+    {
+        "Category": "Inauguration",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Vizhinjam International Seaport"
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Euro Guard",
+        "Brand - Product": "UPVC Rain Water Gutters"
+    },
+    {
+        "Category": "Petroleum Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Nayara Energy Petrol Pump",
+        "Brand - Product": "Petrol/Diesel"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 81.82,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Road Safety is Life Safety"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 18.18,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Sahakarana Expo 2025"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Reserve Bank of India",
+        "Brand - Product": "Money Saving Initiative"
+    },
+    {
+        "Category": "Publications",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Karshakasree",
+        "Brand - Product": "Magazine"
+    },
+    {
+        "Category": "Publications",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Manorama",
+        "Brand - Product": "Fast Track - Magazine"
+    },
+    {
+        "Category": "Radio",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": " Radio Mango",
+        "Brand - Product": "Auto Expert Vivek Venugopal"
+    },
+    {
+        "Category": "Radio",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Radio Mango",
+        "Brand - Product": "Auto Expert Vivek Venugopal"
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Aqua Star",
+        "Brand - Product": "Rain Water Gutter"
+    },
+    {
+        "Category": "Retail Garments",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Cotton Fab",
+        "Brand - Product": "Cotton Fab"
+    },
+    {
+        "Category": "Super Speciality Boutique Hospital",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Futureace Hospital",
+        "Brand - Product": "Free Medical Camp"
+    },
+    {
+        "Category": "Super Speciality Boutique Hospital,",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Futureace Hospital",
+        "Brand - Product": "Free Medical Camp"
+    }
+]
+
+export const redfm =[
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 23.86,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Amusement Park",
+        "Percentage": 0.03,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Art Promotion",
+        "Percentage": 0.16,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 2.48,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automotive",
+        "Percentage": 3.32,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automotive-Car",
+        "Percentage": 1.46,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Banking",
+        "Percentage": 0.42,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Banking and Financial Services",
+        "Percentage": 2.0,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Bathroom Fixtures",
+        "Percentage": 1.01,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 3.93,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 6.38,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner",
+        "Percentage": 0.79,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 1.79,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 1.65,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Solar Panels",
+        "Percentage": 1.89,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 0.67,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 5.38,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment - Amusement Park",
+        "Percentage": 3.65,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment-Amusement Park",
         "Percentage": 0.13,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Tahila Jewellers",
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 1.63,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Financial Services",
+        "Percentage": 2.69,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 9.81,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Healthcare Services",
+        "Percentage": 3.65,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Home Furnishings",
+        "Percentage": 0.93,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 2.92,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 8.7,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Petroleum Products",
+        "Percentage": 1.27,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 1.91,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 1.27,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Radio Broadcasting",
+        "Percentage": 0.16,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 0.64,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Ritual Products",
+        "Percentage": 0.19,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Service-Medical",
+        "Percentage": 0.06,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Services-Medical",
+        "Percentage": 2.44,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Television",
+        "Percentage": 0.69,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Travel Services",
+        "Percentage": 0.05,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
-        "Percentage": 4.31,
+        "Percentage": 40.83,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Tanishq Jewels",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 0.65,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Vedha Radha Thanga Maaligai",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 6.26,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Wonder Diamonds",
+        "Brand Name/Parent Comany": "Anaswara Jewellers",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
         "Percentage": 5.57,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "joy alukkas",
+        "Brand Name/Parent Comany": "Bhima Jewellers",
         "Brand - Product": ""
     },
     {
-        "Category": "Aduthaduthu Moonu Pattu",
-        "Percentage": 100.0,
+        "Category": "Accessories - Jewellery",
+        "Percentage": 4.3,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Aduthaduthu Moonu Pattu",
+        "Brand Name/Parent Comany": "Chungam Jewellers",
         "Brand - Product": ""
     },
     {
-        "Category": "Airlines",
+        "Category": "Accessories - Jewellery",
+        "Percentage": 5.1,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "JK Jewellers",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 10.75,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 30.15,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds Jewellry",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 3.29,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Vanitha Jewellery",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Amusement Park",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "AirAsia",
+        "Brand Name/Parent Comany": "Wonderla",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Art Promotion",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Kerala Government",
         "Brand - Product": ""
     },
     {
         "Category": "Automobile - Car",
-        "Percentage": 100.0,
+        "Percentage": 87.1,
         "Level": "Brand",
         "Brand Name/Parent Comany": "Hyundai",
         "Brand - Product": ""
     },
     {
-        "Category": "Automobile - Cars",
-        "Percentage": 93.75,
+        "Category": "Automobile - Car",
+        "Percentage": 12.9,
         "Level": "Brand",
         "Brand Name/Parent Comany": "Skoda",
         "Brand - Product": ""
     },
     {
-        "Category": "Automobile - Cars",
-        "Percentage": 6.25,
+        "Category": "Automotive",
+        "Percentage": 60.87,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Skoda Kylaq",
+        "Brand Name/Parent Comany": "Big Wheels",
         "Brand - Product": ""
     },
     {
-        "Category": "Automobile - Dealers",
-        "Percentage": 78.72,
+        "Category": "Automotive",
+        "Percentage": 39.13,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Ramani KIA Car dealer",
+        "Brand Name/Parent Comany": "Global Tyres",
         "Brand - Product": ""
     },
     {
-        "Category": "Automobile - Dealers",
-        "Percentage": 1.6,
+        "Category": "Automotive-Car",
+        "Percentage": 79.12,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Ramani Volkswagen",
+        "Brand Name/Parent Comany": "Ford India",
         "Brand - Product": ""
     },
     {
-        "Category": "Automobile - Dealers",
-        "Percentage": 19.68,
+        "Category": "Automotive-Car",
+        "Percentage": 20.88,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Vandi Mandi",
+        "Brand Name/Parent Comany": "Honda",
         "Brand - Product": ""
     },
     {
-        "Category": "Confectioneries",
-        "Percentage": 93.68,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Aswin Sweets",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Confectioneries",
-        "Percentage": 6.32,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "CakeBee",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Construction products",
+        "Category": "Banking",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Chettinad Cement",
+        "Brand Name/Parent Comany": "RBI",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Banking and Financial Services",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Canara Bank",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Bathroom Fixtures",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Kartar Valves",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 20.82,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Bharathi Cement",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 15.51,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Bharthi Cement",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 63.67,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Chettinad Construction",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "MyG Future",
         "Brand - Product": ""
     },
     {
         "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 26.72,
+        "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "BPL  AC",
+        "Brand Name/Parent Comany": "Kelvinator",
         "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 37.86,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 62.14,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Panasonic",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Solar Panels",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Rayzon Solar",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 23.81,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "NISAU & Edroots",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Education",
+        "Percentage": 76.19,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "UPES",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 7.44,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Cake Story",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 0.3,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Chattambipparu",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 13.69,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Chittilappilly Square",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 78.57,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment - Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Silver Storm",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment-Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Inter Square Mall",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "BHIM",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Financial Services",
+        "Percentage": 27.38,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Federal Bank",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Financial Services",
+        "Percentage": 72.62,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Unimoni",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 22.39,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Healthy Grocer",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 77.61,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Pavizham Cookoff",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Healthcare Services",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "K P Pathrose Vaidyan's",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Home Furnishings",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Emma Mattress",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Ammini Traders",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 35.36,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Euro Guard",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 8.84,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Varsha",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 13.81,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Varsha Plastics",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 41.99,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "WellWorth",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Petroleum Products",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Nayara Energy Petrol Pump",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 40.34,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 59.66,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 10.13,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 89.87,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Radio Broadcasting",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Aqua Star",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Ritual Products",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "DevDarshan Dhoop",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Service-Medical",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Rajagiri Hospital",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Services-Medical",
+        "Percentage": 81.58,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Saroj Diagnostic Laboratory",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Services-Medical",
+        "Percentage": 18.42,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "SunAct Cancer Institute",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Television",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Surya TV",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Travel Services",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Unimoni",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Anaswara Jewellers",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Bhima Jewellers",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Chungam Jewellers",
+        "Brand - Product": "Gold & Diamond - Ernakulam Showroom"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "JK Jewellers",
+        "Brand - Product": "JK Jewellers"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds Jewellry",
+        "Brand - Product": "Gold & Diamonds\nJewellry"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Vanitha Jewellery",
+        "Brand - Product": "Jewellery"
+    },
+    {
+        "Category": "Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Wonderla",
+        "Brand - Product": "Rap Concert"
+    },
+    {
+        "Category": "Art Promotion",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Kerala Government",
+        "Brand - Product": "Mizhiv Short Video Contest"
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Hyundai",
+        "Brand - Product": "Hyundai Cars"
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Skoda",
+        "Brand - Product": "Skoda Kylaq"
+    },
+    {
+        "Category": "Automotive",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Big Wheels",
+        "Brand - Product": "Tyre Services"
+    },
+    {
+        "Category": "Automotive",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Global Tyres",
+        "Brand - Product": "Yukohama Tyres"
+    },
+    {
+        "Category": "Automotive-Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Ford India",
+        "Brand - Product": "Summer Service Camp"
+    },
+    {
+        "Category": "Automotive-Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Honda",
+        "Brand - Product": "Honda Amaze"
+    },
+    {
+        "Category": "Banking",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "RBI",
+        "Brand - Product": "Awareness"
+    },
+    {
+        "Category": "Banking and Financial Services",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Canara Bank",
+        "Brand - Product": "Canara Bank"
+    },
+    {
+        "Category": "Bathroom Fixtures",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Kartar Valves",
+        "Brand - Product": "Bath Fittings"
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Bharathi Cement",
+        "Brand - Product": "Cement"
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Bharthi Cement",
+        "Brand - Product": "Cement"
+    },
+    {
+        "Category": "Building Materials",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Chettinad Construction",
+        "Brand - Product": "Cement"
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 4.27,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MyG Future",
+        "Brand - Product": "Ac"
+    },
+    {
+        "Category": "Consumer Durables",
+        "Percentage": 95.73,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MyG Future",
+        "Brand - Product": "Electronics&Home Appliances"
     },
     {
         "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 73.28,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Vasanth & Co",
-        "Brand - Product": ""
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Kelvinator",
+        "Brand - Product": "Air Conditioner"
     },
     {
-        "Category": "Electrical Equipments",
-        "Percentage": 2.39,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Bharath Electronics and Appliances",
-        "Brand - Product": ""
+        "Category": "Consumer Durables - Air Conditioner & Fan",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": "Air Conditioner & Fan"
     },
     {
-        "Category": "Electrical Equipments",
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "BPL",
+        "Brand - Product": "Air Conditioner"
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Panasonic",
+        "Brand - Product": "Air Conditioner"
+    },
+    {
+        "Category": "Consumer durables - Solar Panels",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Rayzon Solar",
+        "Brand - Product": "Solar Panel"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "NISAU & Edroots",
+        "Brand - Product": "UK Students Educators Meet Conference"
+    },
+    {
+        "Category": "Education",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "UPES",
+        "Brand - Product": "Educational Programs & World Class Education"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Cake Story",
+        "Brand - Product": "Movie"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Chattambipparu",
+        "Brand - Product": "Program"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Chittilappilly Square",
+        "Brand - Product": "E-Summer Event"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 12.5,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "All Rounder"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 5.68,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "Hello My Dear Wrong Number Broadcasting"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 0.38,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "KL 935"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 8.71,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "RJ vivek &RJ soumya Broadcast"
+    },
+    {
+        "Category": "Entertainment",
         "Percentage": 66.67,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Darling Retail",
-        "Brand - Product": ""
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "Radio Broadcasting"
     },
     {
-        "Category": "Electrical Equipments",
-        "Percentage": 11.05,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Hamsa Electronics",
-        "Brand - Product": ""
+        "Category": "Entertainment",
+        "Percentage": 6.06,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "Red Carpet"
     },
     {
-        "Category": "Electrical Equipments",
-        "Percentage": 6.45,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Kelvinator Digital Expert",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 13.44,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Saravana Electricals",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 47.83,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Gangers (Movie)",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 52.17,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Retro Movie",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Finance ",
+        "Category": "Entertainment - Amusement Park",
         "Percentage": 100.0,
-        "Level": "Brand",
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Silver Storm",
+        "Brand - Product": "Slides&Rides"
+    },
+    {
+        "Category": "Entertainment-Amusement Park",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Inter Square Mall",
+        "Brand - Product": "Dinosour World"
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 100.0,
+        "Level": "Product",
         "Brand Name/Parent Comany": "BHIM",
-        "Brand - Product": ""
+        "Brand - Product": "Payment App"
     },
     {
-        "Category": "Finance - Bank",
-        "Percentage": 6.47,
-        "Level": "Brand",
+        "Category": "Financial Services",
+        "Percentage": 100.0,
+        "Level": "Product",
         "Brand Name/Parent Comany": "Federal Bank",
-        "Brand - Product": ""
+        "Brand - Product": " NRE Prospera Saving account"
     },
     {
-        "Category": "Finance - Bank",
-        "Percentage": 65.23,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Karur Vysya Bank",
-        "Brand - Product": ""
+        "Category": "Financial Services",
+        "Percentage": 0.82,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Unimoni",
+        "Brand - Product": "Gold Loan"
     },
     {
-        "Category": "Finance - Bank",
-        "Percentage": 28.3,
-        "Level": "Brand",
+        "Category": "Financial Services",
+        "Percentage": 99.18,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Unimoni",
+        "Brand - Product": "Money Transfer Services"
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Healthy Grocer",
+        "Brand - Product": "Kayam"
+    },
+    {
+        "Category": "Food&Beverages",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Pavizham Cookoff",
+        "Brand - Product": "Curry Powder"
+    },
+    {
+        "Category": "Healthcare Services",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "K P Pathrose Vaidyan's",
+        "Brand - Product": "Ayurvedic Medicines"
+    },
+    {
+        "Category": "Home Furnishings",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Emma Mattress",
+        "Brand - Product": "Mattress"
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Ammini Traders",
+        "Brand - Product": "Home Appliances"
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Euro Guard",
+        "Brand - Product": "UPVC Rain Water Gutters"
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Varsha",
+        "Brand - Product": "UPVC Rain Water Gutters"
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Varsha Plastics",
+        "Brand - Product": "UPVC Rain Water Gutters"
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "WellWorth",
+        "Brand - Product": "MFT Pipes"
+    },
+    {
+        "Category": "Petroleum Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Nayara Energy Petrol Pump",
+        "Brand - Product": "Petrol/Diesel"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 83.33,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Road Safety is Life Safety"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 16.67,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Sahakarana Expo 2025"
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 100.0,
+        "Level": "Product",
         "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": "Awareness"
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Obesity Awareness"
+    },
+    {
+        "Category": "Public Services",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": "KYC Update"
+    },
+    {
+        "Category": "Radio Broadcasting",
+        "Percentage": 60.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "Cheriya Lokavum Valiya Karyangalum"
+    },
+    {
+        "Category": "Radio Broadcasting",
+        "Percentage": 20.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "Konjjum Personal"
+    },
+    {
+        "Category": "Radio Broadcasting",
+        "Percentage": 20.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Red FM",
+        "Brand - Product": "Morning No.1"
+    },
+    {
+        "Category": "Rain Gutters",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Aqua Star",
+        "Brand - Product": "Rain Water Gutter"
+    },
+    {
+        "Category": "Ritual Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "DevDarshan Dhoop",
+        "Brand - Product": "Agarbatti,Perfume & Pooja Products"
+    },
+    {
+        "Category": "Service-Medical",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Rajagiri Hospital",
+        "Brand - Product": "Cardiology"
+    },
+    {
+        "Category": "Services-Medical",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Saroj Diagnostic Laboratory",
+        "Brand - Product": "Diagnostic Services"
+    },
+    {
+        "Category": "Services-Medical",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "SunAct Cancer Institute",
+        "Brand - Product": "Advanced Cancer Therapies"
+    },
+    {
+        "Category": "Television",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Surya TV",
+        "Brand - Product": "TV Serial"
+    },
+    {
+        "Category": "Travel Services",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Unimoni",
+        "Brand - Product": "Tarvel & Holidays"
+    }
+]
+
+export const mirchi =[
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 21.48,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
         "Brand - Product": ""
     },
     {
-        "Category": "Floorings & Tiles",
-        "Percentage": 68.95,
+        "Category": "Airline",
+        "Percentage": 0.16,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 3.02,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Banking",
+        "Percentage": 2.07,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Banking and Financial Services",
+        "Percentage": 1.27,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Cleaning products",
+        "Percentage": 2.47,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Refrigerator",
+        "Percentage": 2.78,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Smart Phone",
+        "Percentage": 0.16,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 9.55,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Solar Panels",
+        "Percentage": 5.81,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Contest",
+        "Percentage": 1.67,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 4.38,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 8.59,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Finance - Insurance",
+        "Percentage": 4.46,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Health Drink",
+        "Percentage": 3.42,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Healthcare - Pharmaceuticals",
+        "Percentage": 0.56,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Hospital",
+        "Percentage": 0.08,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 3.5,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 10.26,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Public Service Ads",
+        "Percentage": 10.26,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Services-Medical",
+        "Percentage": 0.8,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Skincare",
+        "Percentage": 2.31,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Travel & Tourism",
+        "Percentage": 0.95,
+        "Level": "Category",
+        "Brand Name/Parent Comany": "",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 28.15,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Anuj Tiles",
+        "Brand Name/Parent Comany": "Bhima Jewellers",
         "Brand - Product": ""
     },
     {
-        "Category": "Floorings & Tiles",
-        "Percentage": 31.05,
+        "Category": "Accessories - Jewellery",
+        "Percentage": 12.59,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "KAG Tiles",
+        "Brand Name/Parent Comany": "Chungath Jewellers",
         "Brand - Product": ""
     },
     {
-        "Category": "Food Products",
-        "Percentage": 3.32,
+        "Category": "Accessories - Jewellery",
+        "Percentage": 1.11,
         "Level": "Brand",
-        "Brand Name/Parent Comany": " Ca Sa Taa",
+        "Brand Name/Parent Comany": "Chungath Jewellry",
         "Brand - Product": ""
     },
     {
-        "Category": "Food Products",
-        "Percentage": 9.23,
+        "Category": "Accessories - Jewellery",
+        "Percentage": 0.37,
         "Level": "Brand",
-        "Brand Name/Parent Comany": " French Lemon Salt",
+        "Brand Name/Parent Comany": "Ernakulam Jewellery",
         "Brand - Product": ""
     },
     {
-        "Category": "Food Products",
-        "Percentage": 35.06,
+        "Category": "Accessories - Jewellery",
+        "Percentage": 35.93,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Be-Rite Sunflower Oil",
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
         "Brand - Product": ""
     },
     {
-        "Category": "Food Products",
-        "Percentage": 52.4,
+        "Category": "Accessories - Jewellery",
+        "Percentage": 21.85,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Sakthi Masale",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds Jewellry",
         "Brand - Product": ""
     },
     {
-        "Category": "Furniture Retail",
+        "Category": "Airline",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Royal Furniture",
+        "Brand Name/Parent Comany": "Vietjet",
         "Brand - Product": ""
     },
     {
-        "Category": "Hotels & Restaurants",
+        "Category": "Automobile - Car",
+        "Percentage": 31.58,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Kia",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 15.79,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Kia ",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Automobile - Car",
+        "Percentage": 52.63,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Skoda",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Banking",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Meridian Ramyas Hotel",
+        "Brand Name/Parent Comany": "RBI",
         "Brand - Product": ""
     },
     {
-        "Category": "Manufacturing - Renewable Energy",
+        "Category": "Banking and Financial Services",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Canara Bank",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Cleaning products",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Veto",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Refrigerator",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "LG",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer Durables - Smart Phone",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "WHF",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 75.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Kelvinator",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Air Conditioner",
+        "Percentage": 25.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Panasonic",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Consumer durables - Solar Panels",
         "Percentage": 100.0,
         "Level": "Brand",
         "Brand Name/Parent Comany": "Rayzon Solar",
         "Brand - Product": ""
     },
     {
-        "Category": "Medicinal Products",
-        "Percentage": 9.41,
+        "Category": "Contest",
+        "Percentage": 52.38,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Anjol Medicine",
+        "Brand Name/Parent Comany": "Govt of Kerala",
         "Brand - Product": ""
     },
     {
-        "Category": "Medicinal Products",
-        "Percentage": 10.59,
+        "Category": "Contest",
+        "Percentage": 4.76,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Gopal Palpodi",
+        "Brand Name/Parent Comany": "Kerala",
         "Brand - Product": ""
     },
     {
-        "Category": "Medicinal Products",
-        "Percentage": 80.0,
+        "Category": "Contest",
+        "Percentage": 42.86,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Metopil R",
+        "Brand Name/Parent Comany": "Kerala Govt",
         "Brand - Product": ""
     },
     {
-        "Category": "Property - Housing",
+        "Category": "Entertainment",
+        "Percentage": 10.91,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Mirchi FM",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 89.09,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Parimatch",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 46.3,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "BHIM",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 53.7,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Canara Bank",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Finance - Insurance",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Sree Nidhi Promoters",
+        "Brand Name/Parent Comany": "LIC",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Health Drink",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "ORS",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Healthcare - Pharmaceuticals",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "MSD Pharmaceuticals Pvt Ltd.",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Hospital",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Aster Medicity",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 6.82,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Dish Wash",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 93.18,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": ""
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Brand",
+        "Brand Name/Parent Comany": "Euro Guard",
         "Brand - Product": ""
     },
     {
         "Category": "Public Service Ads",
-        "Percentage": 25.71,
+        "Percentage": 27.91,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Government of India (Obesity Awareness)",
+        "Brand Name/Parent Comany": "Govt of Kerala",
         "Brand - Product": ""
     },
     {
         "Category": "Public Service Ads",
-        "Percentage": 74.29,
+        "Percentage": 72.09,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Reserve Bank of India (RBI)",
+        "Brand Name/Parent Comany": "SBI",
         "Brand - Product": ""
     },
     {
-        "Category": "Radio",
+        "Category": "Services-Medical",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Suryan FM",
+        "Brand Name/Parent Comany": "Rajagiri Hospital",
         "Brand - Product": ""
     },
     {
-        "Category": "Retail - Hypermarket",
+        "Category": "Skincare",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Smart Bazaar",
+        "Brand Name/Parent Comany": "Saibon",
         "Brand - Product": ""
     },
     {
-        "Category": "Schools & Camps",
+        "Category": "Travel & Tourism",
         "Percentage": 100.0,
         "Level": "Brand",
-        "Brand Name/Parent Comany": "Sowma Public School",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 4.75,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": " Saraswathi Vidyalaya School",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 14.54,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "CARE College of Engineering",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 11.72,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Dhanalakshmi Srinivasan University",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 4.6,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Hindustan College",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 22.55,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Indra Ganeshan College of Engineering",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 15.73,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "K.Ramakrishnan College of Engineering",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 1.04,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "KCG College of Engineering",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 0.45,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "National College Trichy",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 5.64,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Samadh Senior Secondary School",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 3.71,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Shrimati Indira Gandhi College",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 6.23,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sowdambikaa Mount Litera Zee School",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 9.05,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Srimad Andavan Arts and Science College",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Catering",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Masala Door",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 5.89,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Apollo Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 13.63,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Dhanalakshmi Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 2.76,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Maa Kauvery Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 22.65,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Silverline Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 27.26,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "The Eye Foundation",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 27.81,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Vijayalakshmi Eye Hospital",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Spiritual\u00a0Products",
-        "Percentage": 100.0,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Devdarshan",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 7.55,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Anantha Silks Paradise",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 19.64,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Pothys Silks",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 62.42,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Sarathas Clothing",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 1.27,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Varamahalakshmi Silks",
-        "Brand - Product": ""
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 9.12,
-        "Level": "Brand",
-        "Brand Name/Parent Comany": "Viking Baniyan",
+        "Brand Name/Parent Comany": "Govt of Uttarakhand",
         "Brand - Product": ""
     },
     {
         "Category": "Accessories - Jewellery",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Akshaya Tritiya Sentiments",
+        "Brand Name/Parent Comany": "Bhima Jewellers",
+        "Brand - Product": "Gold & Diamond"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Chungath Jewellers",
+        "Brand - Product": "Chungath Jewellers Ernakulam Showroom"
+    },
+    {
+        "Category": "Accessories - Jewellery",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Chungath Jewellry",
         "Brand - Product": "Gold & Diamonds\nJewellry"
     },
     {
         "Category": "Accessories - Jewellery",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Anantha Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
+        "Brand Name/Parent Comany": "Ernakulam Jewellery",
+        "Brand - Product": "Akshay Tritiya Offer"
     },
     {
         "Category": "Accessories - Jewellery",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Bhima Jewellery",
-        "Brand - Product": "Gold & Silver\nJewellry"
+        "Brand Name/Parent Comany": "Malabar Gold & Diamonds",
+        "Brand - Product": "Gold & Diamond"
     },
     {
         "Category": "Accessories - Jewellery",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "GRT Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Gopaldas Jewellers & Co",
+        "Brand Name/Parent Comany": "Nakshathra Gold&Diamonds Jewellry",
         "Brand - Product": "Gold & Diamonds\nJewellry"
     },
     {
-        "Category": "Accessories - Jewellery",
+        "Category": "Airline",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Harini Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Jodi Premium Jewellery",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Jos alukkas Jewellers",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Kalyan Jewellers",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Kongu Thanga Maligai",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Malabar Gold and Diamonds",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Malabar and Malabar",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Mangal & Mangal Thanga Maligai",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Pothys",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sree Kumaran Thangamaligai",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sri Thaila Jewellers",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "TNN Gold & Diamonds",
-        "Brand - Product": "Gold & Diamond Jewellery"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Tahila Jewellers",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Tanishq Jewels",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Vedha Radha Thanga Maaligai",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Wonder Diamonds",
-        "Brand - Product": "Gold & Diamonds\nJewellry"
-    },
-    {
-        "Category": "Accessories - Jewellery",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "joy alukkas",
-        "Brand - Product": "Gold & Silver\nJewellry"
-    },
-    {
-        "Category": "Airlines",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "AirAsia",
-        "Brand - Product": " low-cost airline services"
+        "Brand Name/Parent Comany": "Vietjet",
+        "Brand - Product": "Low cost Airline"
     },
     {
         "Category": "Automobile - Car",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Hyundai",
-        "Brand - Product": "Hyunai GT"
+        "Brand Name/Parent Comany": "Kia",
+        "Brand - Product": "Kia Motors"
     },
     {
-        "Category": "Automobile - Cars",
+        "Category": "Automobile - Car",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Kia ",
+        "Brand - Product": "Kia Motors"
+    },
+    {
+        "Category": "Automobile - Car",
         "Percentage": 100.0,
         "Level": "Product",
         "Brand Name/Parent Comany": "Skoda",
-        "Brand - Product": "passenger vehicles"
+        "Brand - Product": "Skoda Kylaq"
     },
     {
-        "Category": "Automobile - Cars",
+        "Category": "Banking",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Skoda Kylaq",
-        "Brand - Product": "skoda kylaq"
+        "Brand Name/Parent Comany": "RBI",
+        "Brand - Product": "Awareness"
     },
     {
-        "Category": "Automobile - Dealers",
+        "Category": "Banking and Financial Services",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Ramani KIA Car dealer",
-        "Brand - Product": "kia passenger vehicles"
+        "Brand Name/Parent Comany": "Canara Bank",
+        "Brand - Product": "Canara Bank"
     },
     {
-        "Category": "Automobile - Dealers",
+        "Category": "Cleaning products",
+        "Percentage": 25.81,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Veto",
+        "Brand - Product": "Car Cleaner"
+    },
+    {
+        "Category": "Cleaning products",
+        "Percentage": 9.68,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Veto",
+        "Brand - Product": "Dish Wash"
+    },
+    {
+        "Category": "Cleaning products",
+        "Percentage": 19.35,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Veto",
+        "Brand - Product": "Hand Wash"
+    },
+    {
+        "Category": "Cleaning products",
+        "Percentage": 16.13,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Veto",
+        "Brand - Product": "Toilet Cleaner"
+    },
+    {
+        "Category": "Cleaning products",
+        "Percentage": 12.9,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Veto",
+        "Brand - Product": "Wash Max Cleaner"
+    },
+    {
+        "Category": "Cleaning products",
+        "Percentage": 16.13,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Veto",
+        "Brand - Product": "Washing Powder"
+    },
+    {
+        "Category": "Consumer Durables - Refrigerator",
+        "Percentage": 68.57,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "LG",
+        "Brand - Product": "Refrigerator"
+    },
+    {
+        "Category": "Consumer Durables - Refrigerator",
+        "Percentage": 31.43,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "LG",
+        "Brand - Product": "Wi-Fi Refrigerator"
+    },
+    {
+        "Category": "Consumer Durables - Smart Phone",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Ramani Volkswagen",
-        "Brand - Product": " volkswagen passenger vehicles"
+        "Brand Name/Parent Comany": "WHF",
+        "Brand - Product": "Mobile"
     },
     {
-        "Category": "Automobile - Dealers",
+        "Category": "Consumer durables - Air Conditioner",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Vandi Mandi",
-        "Brand - Product": "second-hand car sales platform"
+        "Brand Name/Parent Comany": "Kelvinator",
+        "Brand - Product": "Air Conditioner"
     },
     {
-        "Category": "Confectioneries",
+        "Category": "Consumer durables - Air Conditioner",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Aswin Sweets",
-        "Brand - Product": "traditional south indian sweets"
+        "Brand Name/Parent Comany": "Panasonic",
+        "Brand - Product": "Air Conditioner"
     },
     {
-        "Category": "Confectioneries",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "CakeBee",
-        "Brand - Product": "cakes & desserts"
-    },
-    {
-        "Category": "Construction products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Chettinad Cement",
-        "Brand - Product": "cement products"
-    },
-    {
-        "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "BPL  AC",
-        "Brand - Product": "air conditioners"
-    },
-    {
-        "Category": "Consumer Durables - Air Conditioner",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Vasanth & Co",
-        "Brand - Product": "air conditioners"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Bharath Electronics and Appliances",
-        "Brand - Product": "electrical equipment & appliances"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Darling Retail",
-        "Brand - Product": "home appliances"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Hamsa Electronics",
-        "Brand - Product": "electronics"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Kelvinator Digital Expert",
-        "Brand - Product": "electrical equipment & appliances"
-    },
-    {
-        "Category": "Electrical Equipments",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Saravana Electricals",
-        "Brand - Product": "home appliances"
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Gangers (Movie)",
-        "Brand - Product": "Gangers (Movie)"
-    },
-    {
-        "Category": "Entertainment - Movie",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Retro Movie",
-        "Brand - Product": "Retro Movie"
-    },
-    {
-        "Category": "Finance ",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "BHIM",
-        "Brand - Product": "UPI Payment"
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Federal Bank",
-        "Brand - Product": " Retail & Corporate Banking Services"
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Karur Vysya Bank",
-        "Brand - Product": "banking services"
-    },
-    {
-        "Category": "Finance - Bank",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "SBI",
-        "Brand - Product": "banking services"
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Anuj Tiles",
-        "Brand - Product": " floor tiles"
-    },
-    {
-        "Category": "Floorings & Tiles",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "KAG Tiles",
-        "Brand - Product": " floor tiles"
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": " Ca Sa Taa",
-        "Brand - Product": "Casatta Icecream"
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": " French Lemon Salt",
-        "Brand - Product": "Seasoning"
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Be-Rite Sunflower Oil",
-        "Brand - Product": "sunflower oil"
-    },
-    {
-        "Category": "Food Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sakthi Masale",
-        "Brand - Product": "spice powders"
-    },
-    {
-        "Category": "Furniture Retail",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Royal Furniture",
-        "Brand - Product": "Furniture Retail"
-    },
-    {
-        "Category": "Hotels & Restaurants",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Meridian Ramyas Hotel",
-        "Brand - Product": "hotel & accommodation"
-    },
-    {
-        "Category": "Manufacturing - Renewable Energy",
+        "Category": "Consumer durables - Solar Panels",
         "Percentage": 100.0,
         "Level": "Product",
         "Brand Name/Parent Comany": "Rayzon Solar",
-        "Brand - Product": "photovoltaic solar modules"
+        "Brand - Product": "Solar Panel"
     },
     {
-        "Category": "Medicinal Products",
-        "Percentage": 100.0,
+        "Category": "Contest",
+        "Percentage": 18.18,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Anjol Medicine",
-        "Brand - Product": "ayurvedic tablets"
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Mizhiv Photo Contest"
     },
     {
-        "Category": "Medicinal Products",
-        "Percentage": 100.0,
+        "Category": "Contest",
+        "Percentage": 81.82,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Gopal Palpodi",
-        "Brand - Product": "tooth powder"
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Short Video Contest"
     },
     {
-        "Category": "Medicinal Products",
+        "Category": "Contest",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Metopil R",
-        "Brand - Product": "antihypersensitive medication"
+        "Brand Name/Parent Comany": "Kerala",
+        "Brand - Product": "Photography Contest"
     },
     {
-        "Category": "Property - Housing",
+        "Category": "Contest",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Sree Nidhi Promoters",
-        "Brand - Product": " residential plots"
+        "Brand Name/Parent Comany": "Kerala Govt",
+        "Brand - Product": "Mizhiv Photo Contest"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Mirchi FM",
+        "Brand - Product": "Money Matter"
+    },
+    {
+        "Category": "Entertainment",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Parimatch",
+        "Brand - Product": "Cricket Festival Box"
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "BHIM",
+        "Brand - Product": "Payment App"
+    },
+    {
+        "Category": "Finance - Application",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Canara Bank",
+        "Brand - Product": "Paymet Apps"
+    },
+    {
+        "Category": "Finance - Insurance",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "LIC",
+        "Brand - Product": "Jeevan Labh Insurance"
+    },
+    {
+        "Category": "Health Drink",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "ORS",
+        "Brand - Product": " Electrolyte"
+    },
+    {
+        "Category": "Healthcare - Pharmaceuticals",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "MSD Pharmaceuticals Pvt Ltd.",
+        "Brand - Product": "MSD Pharmaceuticals Pvt Ltd."
+    },
+    {
+        "Category": "Hospital",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Aster Medicity",
+        "Brand - Product": "Cancer Treatment"
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Dish Wash",
+        "Brand - Product": "Cleaning products"
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 21.95,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": " Home and Kitchen Appliances"
+    },
+    {
+        "Category": "Household Products",
+        "Percentage": 78.05,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Pittapillil Agencies",
+        "Brand - Product": "Home and Kitchen Appliances"
+    },
+    {
+        "Category": "Industrial & Manufacturing Services\n\n",
+        "Percentage": 100.0,
+        "Level": "Product",
+        "Brand Name/Parent Comany": "Euro Guard",
+        "Brand - Product": "UPVC Rain Water Gutters"
     },
     {
         "Category": "Public Service Ads",
-        "Percentage": 100.0,
+        "Percentage": 75.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Government of India (Obesity Awareness)",
-        "Brand - Product": "obesity awareness & low-oil diet promotion"
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Road Safety is Life Safety"
     },
     {
         "Category": "Public Service Ads",
-        "Percentage": 100.0,
+        "Percentage": 25.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Reserve Bank of India (RBI)",
-        "Brand - Product": " public awareness campaign"
+        "Brand Name/Parent Comany": "Govt of Kerala",
+        "Brand - Product": "Sahakarana Expo 2025"
     },
     {
-        "Category": "Radio",
-        "Percentage": 100.0,
+        "Category": "Public Service Ads",
+        "Percentage": 50.54,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Suryan FM",
-        "Brand - Product": " ppl league"
+        "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": "Awareness"
     },
     {
-        "Category": "Retail - Hypermarket",
-        "Percentage": 100.0,
+        "Category": "Public Service Ads",
+        "Percentage": 49.46,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Smart Bazaar",
-        "Brand - Product": "Supermarket & Grocery"
+        "Brand Name/Parent Comany": "SBI",
+        "Brand - Product": "KYC Update"
     },
     {
-        "Category": "Schools & Camps",
+        "Category": "Services-Medical",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "Sowma Public School",
-        "Brand - Product": "cbse schooling"
+        "Brand Name/Parent Comany": "Rajagiri Hospital",
+        "Brand - Product": "Cardiology"
     },
     {
-        "Category": "Seminars & Lectures",
+        "Category": "Skincare",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": " Saraswathi Vidyalaya School",
-        "Brand - Product": "Secondary School"
+        "Brand Name/Parent Comany": "Saibon",
+        "Brand - Product": "Saibon Cream"
     },
     {
-        "Category": "Seminars & Lectures",
+        "Category": "Travel & Tourism",
         "Percentage": 100.0,
         "Level": "Product",
-        "Brand Name/Parent Comany": "CARE College of Engineering",
-        "Brand - Product": "Engineering Programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Dhanalakshmi Srinivasan University",
-        "Brand - Product": "higher education"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Hindustan College",
-        "Brand - Product": "education-aviation"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Indra Ganeshan College of Engineering",
-        "Brand - Product": "engineering"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "K.Ramakrishnan College of Engineering",
-        "Brand - Product": "engineering programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "KCG College of Engineering",
-        "Brand - Product": " engineering programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Samadh Senior Secondary School",
-        "Brand - Product": "Senior Secondary Education"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Shrimati Indira Gandhi College",
-        "Brand - Product": "arts & science college programs"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sowdambikaa Mount Litera Zee School",
-        "Brand - Product": "Educational Services"
-    },
-    {
-        "Category": "Seminars & Lectures",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Srimad Andavan Arts and Science College",
-        "Brand - Product": "graduation courses"
-    },
-    {
-        "Category": "Services - Catering",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Masala Door",
-        "Brand - Product": "Artisanal Vegetarian Cuisine"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Apollo Hospital",
-        "Brand - Product": "multispecialty"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Dhanalakshmi Hospital",
-        "Brand - Product": "multispecialty"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Maa Kauvery Hospital",
-        "Brand - Product": " women & child healthcare services"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Silverline Hospital",
-        "Brand - Product": "cancer care"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "The Eye Foundation",
-        "Brand - Product": "ophthalmology"
-    },
-    {
-        "Category": "Services - Medical",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Vijayalakshmi Eye Hospital",
-        "Brand - Product": "ophthalmology"
-    },
-    {
-        "Category": "Spiritual\u00a0Products",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Devdarshan",
-        "Brand - Product": "Dhoop & Incense"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Anantha Silks Paradise",
-        "Brand - Product": "silk sarees"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Pothys Silks",
-        "Brand - Product": "silk sarees & traditional wear"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Sarathas Clothing",
-        "Brand - Product": "Silk Sarees Cotton Sarees"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Varamahalakshmi Silks",
-        "Brand - Product": "silk sarees & apparel"
-    },
-    {
-        "Category": "Textiles & Apparels",
-        "Percentage": 100.0,
-        "Level": "Product",
-        "Brand Name/Parent Comany": "Viking Baniyan",
-        "Brand - Product": "apparel & accessories"
+        "Brand Name/Parent Comany": "Govt of Uttarakhand",
+        "Brand - Product": "Chardham Yathra"
     }
 ]

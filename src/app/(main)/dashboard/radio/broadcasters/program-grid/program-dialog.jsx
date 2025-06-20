@@ -15,11 +15,15 @@ const ProgramDialog = ({ selectedProgram, setSelectedProgram }) => {
       <DialogContent className="max-w-lg bg-white dark:bg-zinc-900 rounded-xl shadow-2xl border border-zinc-200/50 dark:border-zinc-800/50 p-0">
         <DialogHeader className="p-6 border-b border-zinc-200/50 dark:border-zinc-700/50">
           <DialogTitle className="flex items-center gap-3">
+           
             <img
-              src={`/images/${selectedProgram?.channel?.toLowerCase().trim().replace(/\s+/g, "-")}.png`}
-              alt={selectedProgram?.channel}
-              className="h-12 w-12 rounded-lg shadow-md"
-            />
+                src={`https://radio-playback-files.s3.ap-south-1.amazonaws.com/logos/${selectedProgram?.channel
+                  .toLowerCase()
+                  .trim()
+                  .replace(/\s+/g, "-")}.png`}
+                alt={selectedProgram?.channel}
+                className="h-12 w-12 rounded-lg shadow-md mr-3"
+              />
             <div>
               <h1 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{selectedProgram?.program}</h1>
               <span className="text-sm text-zinc-600 dark:text-zinc-400">{selectedProgram?.channel}</span>

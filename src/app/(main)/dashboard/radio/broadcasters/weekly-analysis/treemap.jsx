@@ -9,8 +9,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Radio, Info } from "lucide-react";
-import { hello as helloWeek1, Suryan as SuryanWeek1 } from "./treemap-data.js";
-import { hello as helloWeek2, Suryan as SuryanWeek2 } from "./treemap-data_2.js";
+import { club as clubWeek1, mango as mangoWeek1, redfm as redfmWeek1, mirchi as mirchiWeek1 } from "./treemap-data.js";
+import { club as clubWeek2, mango as mangoWeek2, redfm as redfmWeek2, mirchi as mirchiWeek2 } from "./treemap-data_2.js";
 
 // Define colors based on percentage ranges (accessible palette)
 const getColorByRange = (percentage) => {
@@ -44,29 +44,35 @@ const aggregateData = (data) => {
 };
 
 const SectorTreemap = () => {
-  const [selectedStation, setSelectedStation] = useState("hello");
+  const [selectedStation, setSelectedStation] = useState("club");
   const [selectedWeek, setSelectedWeek] = useState("week1");
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const stations = [
-    { id: "hello", name: "Hello FM" },
-    { id: "Suryan", name: "Suryan FM" },
+    { id: "club", name: "Club FM" },
+    { id: "mango", name: "Mango FM" },
+    { id: "redfm", name: "Red FM" },
+    { id: "mirchi", name: "Mirchi FM" },
   ];
 
   const weeks = [
-    { id: "week1", name: "Week 1" },
-    { id: "week2", name: "Week 2" },
+    { id: "week1", name: "Week 16" },
+    { id: "week2", name: "Week 17" },
   ];
 
   // Map station and week data with aggregated categories
   const stationData = {
     week1: {
-      hello: { name: "Hello FM", children: aggregateData(helloWeek1) },
-      Suryan: { name: "Suryan FM", children: aggregateData(SuryanWeek1) },
+      club: { name: "Club FM", children: aggregateData(clubWeek1) },
+      mango: { name: "Mango FM", children: aggregateData(mangoWeek1) },
+      redfm: { name: "Red FM", children: aggregateData(redfmWeek1) },
+      mirchi: { name: "Mirchi FM", children: aggregateData(mirchiWeek1) },
     },
     week2: {
-      hello: { name: "Hello FM", children: aggregateData(helloWeek2) },
-      Suryan: { name: "Suryan FM", children: aggregateData(SuryanWeek2) },
+      club: { name: "Club FM", children: aggregateData(clubWeek2) },
+      mango: { name: "Mango FM", children: aggregateData(mangoWeek2) },
+      redfm: { name: "Red FM", children: aggregateData(redfmWeek2) },
+      mirchi: { name: "Mirchi FM", children: aggregateData(mirchiWeek2) },
     },
   };
 
@@ -162,7 +168,7 @@ const SectorTreemap = () => {
   };
 
   const CustomTooltip = ({ active, payload }) => {
-    if (active && payload && payload.length) {
+    if (active && payload && payload?.length) {
       const industry = payload[0].payload;
       return (
         <div className="backdrop-blur-xl bg-white/95 p-4 rounded-xl shadow-xl border border-gray-100">
@@ -176,7 +182,7 @@ const SectorTreemap = () => {
           <p className="text-sm text-gray-600 mb-2">
             Percentage: {(industry.size / 100)?.toFixed(2)}%
           </p>
-          {industry.brands.length > 0 && (
+          {industry.brands?.length > 0 && (
             <div className="space-y-1">
               <p className="font-medium text-sm text-gray-700">Top Brands:</p>
               {industry.brands.map((brand, index) => (
@@ -278,7 +284,7 @@ const SectorTreemap = () => {
               <Info className="w-4 h-4 text-gray-400" />
             </div>
             <div className="px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              {currentStation.children.length} Categories
+              {currentStation.children?.length} Categories
             </div>
           </div>
           <div className="h-[550px] rounded-2xl overflow-hidden border border-gray-200 shadow-sm bg-white">

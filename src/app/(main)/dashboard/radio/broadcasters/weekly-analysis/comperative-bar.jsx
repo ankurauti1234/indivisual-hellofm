@@ -14,107 +14,262 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { SuryanSerctorData, HelloSerctorData } from "./sector-data";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+
+const HelloSectorData = [
+  {
+    "week": "week_1",
+    "seconds": {
+      "ACCESSORIES": 19208,
+      "RETAIL": 11189,
+      "CONSUMER DURABLES": 11052,
+      "HEALTHCARE": 7600,
+      "ENTERTAINMENT": 5571,
+      "EDUCATION": 4149,
+      "FMCG": 3960,
+      "AUTOMOBILE": 3625,
+      "CONSTRUCTIONS": 1957,
+      "PUBLIC INTEREST": 1948,
+      "FINANCE": 1823,
+      "PROPERTY": 1452,
+      "TRAVEL&TOURISM": 1440,
+      "HOSPITALITY": 1223,
+      "HOME FURNISHING": 379,
+      "ORAL CARE": 108
+    },
+    "plays": {
+      "ACCESSORIES": 1658,
+      "RETAIL": 1445,
+      "CONSUMER DURABLES": 1083,
+      "HEALTHCARE": 912,
+      "ENTERTAINMENT": 497,
+      "EDUCATION": 539,
+      "FMCG": 796,
+      "AUTOMOBILE": 517,
+      "CONSTRUCTIONS": 300,
+      "PUBLIC INTEREST": 63,
+      "FINANCE": 154,
+      "PROPERTY": 262,
+      "TRAVEL&TOURISM": 72,
+      "HOSPITALITY": 145,
+      "HOME FURNISHING": 78,
+      "ORAL CARE": 49
+    }
+  },
+  {
+    "week": "week_2",
+    "seconds": {
+      "ACCESSORIES": 42646,
+      "RETAIL": 12447,
+      "CONSUMER DURABLES": 9479,
+      "FINANCE": 7914,
+      "ENTERTAINMENT": 7267,
+      "HEALTHCARE": 6423,
+      "FMCG": 5853,
+      "EDUCATION": 5200,
+      "AUTOMOBILE": 3049,
+      "PUBLIC INTEREST": 2683,
+      "HOSPITALITY": 2424,
+      "CONSTRUCTIONS": 2170,
+      "TRAVEL&TOURISM": 1833,
+      "HOME FURNISHING": 1086,
+      "PROPERTY": 897,
+      "JEWELLERY-RETAIL": 363,
+      "ORAL CARE": 130,
+      "FURNITURE-RETAIL": 97
+    },
+    "plays": {
+      "ACCESSORIES": 3657,
+      "RETAIL": 1637,
+      "CONSUMER DURABLES": 1140,
+      "FINANCE": 505,
+      "ENTERTAINMENT": 857,
+      "HEALTHCARE": 1023,
+      "FMCG": 1163,
+      "EDUCATION": 711,
+      "AUTOMOBILE": 613,
+      "PUBLIC INTEREST": 33,
+      "HOSPITALITY": 338,
+      "CONSTRUCTIONS": 311,
+      "TRAVEL&TOURISM": 93,
+      "HOME FURNISHING": 183,
+      "PROPERTY": 211,
+      "JEWELLERY-RETAIL": 26,
+      "ORAL CARE": 60,
+      "FURNITURE-RETAIL": 11
+    }
+  }
+]
+
+const SuryanSectorData = [
+  {
+    "week": "week_1",
+    "seconds": {
+      "ACCESSORIES": 17591,
+      "RETAIL": 14910,
+      "CONSUMER DURABLES": 10259,
+      "HEALTHCARE": 7145,
+      "EDUCATION": 5554,
+      "AUTOMOBILE": 4889,
+      "CONSTRUCTIONS": 3317,
+      "FINANCE": 2950,
+      "PUBLIC INTEREST": 2660,
+      "FMCG": 1936,
+      "TRAVEL&TOURISM": 1600,
+      "PROPERTY": 1063,
+      "RENEWABLE ENERGY": 950,
+      "ENTERTAINMENT": 181,
+      "HOSPITALITY": 112,
+      "ORAL CARE": 70,
+      "HOME FURNISHING": 43
+    },
+    "plays": {
+      "ACCESSORIES": 1291,
+      "RETAIL": 1554,
+      "CONSUMER DURABLES": 798,
+      "HEALTHCARE": 546,
+      "EDUCATION": 501,
+      "AUTOMOBILE": 371,
+      "CONSTRUCTIONS": 343,
+      "FINANCE": 120,
+      "PUBLIC INTEREST": 78,
+      "FMCG": 340,
+      "TRAVEL&TOURISM": 80,
+      "PROPERTY": 52,
+      "RENEWABLE ENERGY": 95,
+      "ENTERTAINMENT": 8,
+      "HOSPITALITY": 16,
+      "ORAL CARE": 7,
+      "HOME FURNISHING": 2
+    }
+  },
+  {
+    "week": "week_2",
+    "seconds": {
+      "ACCESSORIES": 36665,
+      "RETAIL": 16828,
+      "FINANCE": 11345,
+      "EDUCATION": 9786,
+      "CONSUMER DURABLES": 8617,
+      "HEALTHCARE": 6219,
+      "FMCG": 3934,
+      "CONSTRUCTIONS": 3624,
+      "AUTOMOBILE": 3084,
+      "TRAVEL&TOURISM": 1840,
+      "PUBLIC INTEREST": 1100,
+      "RENEWABLE ENERGY": 1060,
+      "HOSPITALITY": 478,
+      "PROPERTY": 324,
+      "HOME FURNISHING": 286,
+      "ENTERTAINMENT": 240,
+      "ORAL CARE": 101
+    },
+    "plays": {
+      "ACCESSORIES": 2293,
+      "RETAIL": 1741,
+      "FINANCE": 511,
+      "EDUCATION": 762,
+      "CONSUMER DURABLES": 660,
+      "HEALTHCARE": 543,
+      "FMCG": 444,
+      "CONSTRUCTIONS": 357,
+      "AUTOMOBILE": 270,
+      "TRAVEL&TOURISM": 92,
+      "PUBLIC INTEREST": 36,
+      "RENEWABLE ENERGY": 106,
+      "HOSPITALITY": 53,
+      "PROPERTY": 74,
+      "HOME FURNISHING": 34,
+      "ENTERTAINMENT": 24,
+      "ORAL CARE": 9
+    }
+  }
+]
 
 const RadioSectorAnalysis = () => {
   const [selectedWeeks, setSelectedWeeks] = useState(["week_1"]);
   const [selectedStations, setSelectedStations] = useState(["all"]);
+  const [dataType, setDataType] = useState("seconds");
+  const [highlightedSector, setHighlightedSector] = useState(null);
 
-  // Define sectors with colors (fixed duplicate keys)
-  const sectors = {
-    Accessories: { name: "Accessories", color: "#61C9A8" }, // Emerald
-    Airlines: { name: "Airlines", color: "#ED9B40" }, // Orange
-    Automobile: { name: "Automobile", color: "#009DDC" }, // Cyan
-    BuildingMaterials: { name: "Building Materials", color: "#A855F7" }, // Purple
-    Constructions: { name: "Constructions", color: "#F26430" }, // Coral
-    ConsumerDurables: { name: "Consumer Durables", color: "#FF6B6B" }, // Red
-    Education: { name: "Education", color: "#4ECDC4" }, // Teal
-    Entertainment: { name: "Entertainment", color: "#45B7D1" }, // Light Blue
-    FMCG: { name: "FMCG", color: "#2ED343" }, // Green
-    Finance: { name: "Finance", color: "#D4A5A5" }, // Light Pink
-    Government: { name: "Government", color: "#FFEEAD" }, // Light Yellow
-    HomeFurnishing: { name: "Home Furnishing", color: "#D72638" }, // Crimson
-    Manufacturing: { name: "Manufacturing", color: "#3F88C5" }, // Blue
-    Medicine: { name: "Medicine", color: "#A8DA1C" }, // Lime
-    Property: { name: "Property", color: "#457B9D" }, // Slate Blue
-    Retail: { name: "Retail", color: "#1D3557" }, // Dark Blue
-    Services: { name: "Services", color: "#E63946" }, // Bright Red
-    AduthaduthuMoonuPattu: { name: "Aduthaduthu Moonu Pattu", color: "#111" }, // Black
-    Hospitality: { name: "Hospitality", color: "#2A9D8F" }, // Dark Teal
-  };
+ const sectors = {
+  "ACCESSORIES": { name: "Accessories", color: "#34D399" },               // Emerald
+  "AUTOMOBILE": { name: "Automobile", color: "#F472B6" },                 // Pink
+  "CONSTRUCTIONS": { name: "Constructions", color: "#F59E0B" },           // Amber
+  "CONSUMER DURABLES": { name: "Consumer Durables", color: "#3B82F6" },   // Blue
+  "EDUCATION": { name: "Education", color: "#4ADE80" },                   // Green
+  "ENTERTAINMENT": { name: "Entertainment", color: "#F87171" },           // Red
+  "FINANCE": { name: "Finance", color: "#60A5FA" },                       // Light Blue
+  "FMCG": { name: "FMCG", color: "#A78BFA" },                             // Purple
+  "FURNITURE-RETAIL": { name: "Furniture - Retail", color: "#FB7185" },   // Rose
+  "HEALTHCARE": { name: "Healthcare", color: "#10B981" },                // Teal
+  "HOME FURNISHING": { name: "Home Furnishing", color: "#E879F9" },       // Orchid
+  "HOSPITALITY": { name: "Hospitality", color: "#FCD34D" },               // Yellow
+  "JEWELLERY-RETAIL": { name: "Jewellery - Retail", color: "#FBBF24" },   // Golden
+  "ORAL CARE": { name: "Oral Care", color: "#818CF8" },                   // Indigo
+  "PROPERTY": { name: "Property", color: "#FB923C" },                     // Orange
+  "PUBLIC INTEREST": { name: "Public Interest", color: "#93C5FD" },       // Sky Blue
+  "RENEWABLE ENERGY": { name: "Renewable Energy", color: "#6EE7B7" },     // Mint
+  "RETAIL": { name: "Retail", color: "#FCA5A5" },                         // Salmon
+  "TRAVEL&TOURISM": { name: "Travel & Tourism", color: "#FDBA74" },       // Peach
+};
 
-  // Define weeks
+
   const weeks = [
-    { value: "week_1", label: "Week 1", shortLabel: "Week 1" },
-    { value: "week_2", label: "Week 2", shortLabel: "Week 2" },
+    { value: "week_1", label: "Week 16 (Apr 16-23, 2025)", shortLabel: "Week 16" },
+    { value: "week_2", label: "Week 17 (Apr 24-30, 2025)", shortLabel: "Week 17" },
   ];
 
-  // Define stations
   const stations = [
     { value: "all", label: "All Stations" },
-    { value: "Suryan", label: "Suryan" },
-    { value: "hellofm", label: "HelloFM" },
+    { value: "Hello FM", label: "Hello FM" },
+    { value: "Suryan FM", label: "Suryan FM" },
   ];
 
-  // Combine and normalize data
   const rawData = {
-    Suryan: {
-      region: "chennai",
-      language: "tamil",
+    "Hello FM": {
+      region: "Trichy",
+      language: "malayalam",
       weekly: Object.fromEntries(
-        SuryanSerctorData.map(({ week, data }) => [week, data])
+        HelloSectorData.map(({ week, seconds, plays }) => [
+          week,
+          { seconds, plays },
+        ])
       ),
     },
-    HelloFM: {
-      region: "chennai",
-      language: "tamil",
+    "Suryan FM": {
+      region: "Trichy",
+      language: "malayalam",
       weekly: Object.fromEntries(
-        HelloSerctorData.map(({ week, data }) => [week, data])
+        SuryanSectorData.map(({ week, seconds, plays }) => [
+          week,
+          { seconds, plays },
+        ])
       ),
     },
   };
 
-  // Convert nested data structure to flat array for filtering
   const flattenedData = Object.entries(rawData).map(([station, data]) => ({
     station,
     ...data,
   }));
 
-  // Filter data based on selected stations and weeks
-  const filteredData = useMemo(() => {
-    const isAllSelected = selectedStations.includes("all");
-    return flattenedData
-      .filter((stationData) => {
-        return isAllSelected || selectedStations.includes(stationData.station.toLowerCase());
-      })
-      .map((stationData) => ({
-        station: stationData.station,
-        weeklyData: selectedWeeks.map((week) => ({
-          week,
-          sectors: stationData.weekly[week] || {},
-        })),
-        region: stationData.region,
-        language: stationData.language,
-      }));
-  }, [selectedWeeks, selectedStations]);
-
-  // Calculate maximum total percentage for scaling
-  const maxTotalPercentage = useMemo(() => {
-    const max = Math.max(
-      ...filteredData.map((station) =>
-        station.weeklyData.reduce((sum, weekData) => {
-          const total = Object.values(weekData.sectors).reduce(
-            (acc, sector) => acc + (sector.total_percentage || 0),
-            0
-          );
-          return Math.max(sum, total);
-        }, 0)
-      ),
-      100
-    );
-    console.log("maxTotalPercentage:", max);
-    return max;
-  }, [filteredData]);
+ const filteredData = useMemo(() => {
+  const isAllSelected = selectedStations.includes("all");
+  return flattenedData
+    .filter((stationData) =>
+      isAllSelected || selectedStations.includes(stationData.station)
+    )
+    .map((stationData) => ({
+      station: stationData.station,
+      weeklyData: selectedWeeks.map((week) => ({
+        week,
+        sectors: stationData.weekly[week]?.[dataType] || {},
+      })),
+      region: stationData.region,
+      language: stationData.language,
+    }));
+}, [selectedWeeks, selectedStations, dataType]);
 
   const formatSelectedWeeks = (selected) => {
     if (selected.length === 0) return "Select weeks";
@@ -157,43 +312,54 @@ const RadioSectorAnalysis = () => {
     }
   };
 
+  const formatValue = (value) => {
+    if (dataType === "seconds") {
+      return `${Math.round(value)}s`;
+    }
+    return `${Math.round(value)}`;
+  };
+
+  const toggleSectorHighlight = (sectorKey) => {
+    setHighlightedSector((prev) => (prev === sectorKey ? null : sectorKey));
+  };
+
   return (
-    <Card className="w-full bg-white shadow-xl rounded-2xl overflow-hidden">
-      <CardHeader className="bg-gradient-to-r from-gray-50 to-gray-100 p-6">
+    <Card className="w-full bg-card shadow-lg rounded-lg border border-border">
+      <CardHeader className="p-6 border-b">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-3">
-              <div className="rounded-full bg-primary/10 p-2 shadow-md">
+              <div className="rounded-full bg-muted p-2 shadow-md">
                 <Radio className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <CardTitle className="text-xl font-bold text-gray-800">
+                <CardTitle className="text-xl font-bold text-foreground">
                   Sector-wise Ad Distribution
                 </CardTitle>
-                <CardDescription className="text-sm text-gray-600 mt-1">
-                  Analyze sector performance for Suryan and HelloFM
+                <CardDescription className="text-sm text-muted-foreground mt-1">
+                  Interactive sector performance across radio stations
                 </CardDescription>
               </div>
             </div>
             <div className="flex items-center gap-3 flex-wrap">
-              <Filter className="h-5 w-5 text-gray-500" />
-              <div className="flex gap-2">
+              <Filter className="h-5 w-5 text-muted-foreground" />
+              <div className="flex gap-2 flex-wrap">
                 <Select value="" onValueChange={handleWeekSelection}>
-                  <SelectTrigger className="w-40 bg-white shadow-sm border-gray-200 hover:bg-gray-100 transition-colors">
+                  <SelectTrigger className="w-40 bg-popover shadow-sm border-border rounded-md">
                     <SelectValue placeholder={formatSelectedWeeks(selectedWeeks)} />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="rounded-md shadow-lg bg-popover">
                     {weeks.map((week) => (
                       <SelectItem
                         key={week.value}
                         value={week.value}
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 px-3 py-2"
                       >
                         <input
                           type="checkbox"
                           checked={selectedWeeks.includes(week.value)}
                           onChange={() => handleWeekSelection(week.value)}
-                          className="mr-2"
+                          className="h-4 w-4"
                         />
                         {week.label}
                       </SelectItem>
@@ -201,115 +367,154 @@ const RadioSectorAnalysis = () => {
                   </SelectContent>
                 </Select>
                 <Select value="" onValueChange={handleStationSelection}>
-                  <SelectTrigger className="w-48 bg-white shadow-sm border-gray-200 hover:bg-gray-100 transition-colors">
+                  <SelectTrigger className="w-48 bg-popover shadow-sm border-border rounded-md">
                     <SelectValue placeholder={formatSelectedStations(selectedStations)} />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="rounded-md shadow-lg bg-popover">
                     {stations.map((station) => (
                       <SelectItem
                         key={station.value}
                         value={station.value}
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 px-3 py-2"
                       >
                         <input
                           type="checkbox"
                           checked={selectedStations.includes(station.value)}
                           onChange={() => handleStationSelection(station.value)}
-                          className="mr-2"
+                          className="h-4 w-4"
                         />
                         {station.label}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+                <ToggleGroup
+                  type="single"
+                  value={dataType}
+                  onValueChange={(value) => value && setDataType(value)}
+                  className="flex gap-2"
+                >
+                  <ToggleGroupItem
+                    value="seconds"
+                    className="bg-popover shadow-sm border-border px-4 py-2 rounded-md text-sm font-medium data-[state=on]:bg-primary data-[state=on]:text-primary-foreground hover:bg-muted"
+                  >
+                    Seconds
+                  </ToggleGroupItem>
+                  <ToggleGroupItem
+                    value="plays"
+                    className="bg-popover shadow-sm border-border px-4 py-2 rounded-md text-sm font-medium data-[state=on]:bg-primary data-[state=on]:text-primary-foreground hover:bg-muted"
+                  >
+                    Plays
+                  </ToggleGroupItem>
+                </ToggleGroup>
               </div>
             </div>
           </div>
         </div>
       </CardHeader>
-      <CardContent className="p-6">
-        <div className="flex flex-wrap gap-3 justify-center">
+      <CardContent className="p-6 bg-card">
+        <div className="flex flex-wrap gap-2 justify-center mb-6">
           {Object.entries(sectors).map(([key, sector]) => (
-            <div
+            <button
               key={key}
-              className="flex items-center gap-2 bg-white/80 rounded-full px-3 py-1 shadow-sm"
+              onClick={() => toggleSectorHighlight(key)}
+              className={`flex items-center gap-2 rounded-md px-3 py-1.5 shadow-sm transition-all duration-200 ${
+                highlightedSector === key
+                  ? "bg-accent ring-2 ring-primary"
+                  : "bg-popover hover:bg-muted"
+              }`}
             >
               <div
-                className="h-2.5 w-2.5 rounded-full ring-1 ring-white"
+                className="h-2.5 w-2.5 rounded-full ring-1 ring-border"
                 style={{ backgroundColor: sector.color }}
               />
-              <span className="text-xs font-medium text-gray-700">{sector.name}</span>
-            </div>
+              <span className="text-xs font-medium text-foreground">
+                {sector.name}
+              </span>
+            </button>
           ))}
         </div>
         <div className="space-y-6">
           {filteredData.map((station) => (
             <div
               key={station.station}
-              className="bg-gray-50/50 rounded-xl p-4 hover:bg-gray-50 transition-colors"
+              className="bg-card rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-200"
             >
               <div className="flex items-start gap-4">
                 <div className="w-36 flex-shrink-0">
-                  <div className="text-sm font-semibold text-gray-800">{station.station}</div>
-                  <div className="text-xs text-gray-500 mt-1">{station.region}</div>
-                  <div className="text-xs text-gray-500">{station.language}</div>
+                  <div className="text-sm font-semibold text-foreground">
+                    {station.station}
+                  </div>
+                  <div className="text-xs text-muted-foreground mt-1">{station.region}</div>
+                  <div className="text-xs text-muted-foreground">{station.language}</div>
                 </div>
                 <div className="flex-1">
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {station.weeklyData.map((weekData) => {
-                      const totalWeekPercentage = Object.values(weekData.sectors).reduce(
-                        (sum, sector) => sum + (sector.total_percentage || 0),
+                      const totalWeekValue = Object.values(weekData.sectors).reduce(
+                        (sum, value) => sum + (value || 0),
                         0
                       );
-                      console.log(`Station: ${station.station}, Week: ${weekData.week}, Total: ${totalWeekPercentage}`);
-                      if (totalWeekPercentage === 0) {
+                      if (totalWeekValue === 0) {
                         return (
                           <div key={weekData.week} className="relative">
-                            <div className="text-xs font-medium text-gray-600 mb-1.5">
+                            <div className="text-xs font-medium text-foreground mb-2">
                               {weeks.find((w) => w.value === weekData.week)?.label}
                             </div>
-                            <div className="text-xs text-gray-500">No data available</div>
+                            <div className="text-xs text-muted-foreground">
+                              No data available
+                            </div>
                           </div>
                         );
                       }
                       return (
                         <div key={weekData.week} className="relative">
-                          <div className="text-xs font-medium text-gray-600 mb-1.5">
-                            {weeks.find((w) => w.value === weekData.week)?.label}
+                          <div className="flex justify-between items-center mb-2">
+                            <div className="text-xs font-medium text-foreground">
+                              {weeks.find((w) => w.value === weekData.week)?.label}
+                            </div>
+                            <div className="text-xs font-semibold text-foreground">
+                              Total: {formatValue(totalWeekValue)}
+                            </div>
                           </div>
                           <div className="relative h-10 w-full">
-                            <div className="absolute inset-y-0 w-full bg-gray-200/50 rounded-full" />
+                            <div className="absolute inset-y-0 w-full bg-muted rounded-md shadow-inner" />
                             <div
-                              className="relative h-full rounded-full flex shadow-sm"
-                              style={{
-                                width: `${Math.min((totalWeekPercentage / maxTotalPercentage) * 100, 100)}%`,
-                              }}
+                              className="relative h-full rounded-md flex shadow-sm"
+                              style={{ width: "100%" }}
                             >
-                              {Object.entries(weekData.sectors).map(([sectorKey, sectorData]) => {
-                                const percentage = sectorData.total_percentage || 0;
-                                if (percentage === 0) return null;
-                                const barWidth = (percentage / totalWeekPercentage) * 100;
-                                return (
-                                  <div
-                                    key={sectorKey}
-                                    className="h-full flex items-center justify-center group transition-all duration-200 hover:brightness-110"
-                                    style={{
-                                      width: `${barWidth}%`,
-                                      backgroundColor: sectors[sectorKey]?.color || "#CCCCCC",
-                                      minWidth: percentage > 0 ? "24px" : "0px",
-                                    }}
-                                  >
-                                    <div className="text-xs font-medium text-white px-1.5">
-                                      {percentage.toFixed(1)}%
+                              {Object.entries(weekData.sectors)
+                                .filter(([, value]) => value > 0)
+                                .sort(([, a], [, b]) => b - a) // Sort in descending order
+                                .map(([sectorKey, value]) => {
+                                  const barWidth = (value / totalWeekValue) * 100;
+                                  const percentage = ((value / totalWeekValue) * 100).toFixed(1);
+                                  const isHighlighted =
+                                    highlightedSector === null || highlightedSector === sectorKey;
+                                  return (
+                                    <div
+                                      key={sectorKey}
+                                      className="h-full flex items-center justify-center group transition-all duration-200 relative hover:scale-105"
+                                      style={{
+                                        width: `${barWidth}%`,
+                                        backgroundColor: sectors[sectorKey]?.color || "#CCCCCC",
+                                        minWidth: value > 0 ? "24px" : "0px",
+                                        opacity: isHighlighted ? 1 : 0.1,
+                                        transformOrigin: "center",
+                                        boxShadow: isHighlighted
+                                          ? "inset 0 0 6px rgba(0,0,0,0.15)"
+                                          : "none",
+                                      }}
+                                    >
+                                      <div className="text-xs font-semibold text-white px-1.5 truncate drop-shadow">
+                                        {formatValue(value)}
+                                      </div>
+                                      <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2.5 py-1 bg-background text-foreground text-xs rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-10">
+                                        {sectors[sectorKey]?.name || sectorKey}: {formatValue(value)} ({percentage}%)
+                                      </div>
                                     </div>
-                                    <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900/95 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none max-w-[200px]">
-                                      <span className="block whitespace-normal break-words">
-                                        {sectors[sectorKey]?.name || sectorKey}: {percentage.toFixed(1)}%
-                                      </span>
-                                    </div>
-                                  </div>
-                                );
-                              })}
+                                  );
+                                })}
                             </div>
                           </div>
                         </div>
