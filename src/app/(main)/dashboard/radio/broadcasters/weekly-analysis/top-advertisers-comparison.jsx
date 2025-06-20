@@ -31,8 +31,17 @@ const getTopAdvertisers = (week16Data, week17Data) => {
   return Array.from(combinedBrands);
 };
 
-// Get all advertisers
+// Function to calculate all unique sectors
+const getUniqueSectors = (week16Data, week17Data) => {
+  const combinedSectors = new Set();
+  week16Data.forEach((item) => combinedSectors.add(item.Sector));
+  week17Data.forEach((item) => combinedSectors.add(item.Sector));
+  return Array.from(combinedSectors);
+};
+
+// Get all advertisers and sectors
 const topAdvertisers = getTopAdvertisers(week16, week17);
+const uniqueSectors = getUniqueSectors(week16, week17);
 
 // Create chart configuration for the advertisers
 const chartConfig = {
@@ -54,6 +63,7 @@ const advertiserDataByWeek = {
       data: week16.map((item) => ({
         advertiser: item.Brand,
         spend: item["Hello FM"] || 0,
+        sector: item.Sector,
       })),
     },
     suryanfm: {
@@ -61,6 +71,7 @@ const advertiserDataByWeek = {
       data: week16.map((item) => ({
         advertiser: item.Brand,
         spend: item["Suryan FM"] || 0,
+        sector: item.Sector,
       })),
     },
   },
@@ -70,6 +81,7 @@ const advertiserDataByWeek = {
       data: week17.map((item) => ({
         advertiser: item.Brand,
         spend: item["Hello FM"] || 0,
+        sector: item.Sector,
       })),
     },
     suryanfm: {
@@ -77,6 +89,7 @@ const advertiserDataByWeek = {
       data: week17.map((item) => ({
         advertiser: item.Brand,
         spend: item["Suryan FM"] || 0,
+        sector: item.Sector,
       })),
     },
   },
@@ -85,6 +98,7 @@ const advertiserDataByWeek = {
 export default function TopAdvertisersComparison() {
   const [selectedAdvertisers, setSelectedAdvertisers] = useState([topAdvertisers[0]]);
   const [selectedWeek, setSelectedWeek] = useState("week16");
+  const [selectedSector, setSelectedSector] = useState("all");
   const [showTable, setShowTable] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
@@ -119,14 +133,25 @@ export default function TopAdvertisersComparison() {
     },
   ];
 
-  // Prepare data for table
+  // Prepare data for table with sector filter
   const tableData = topAdvertisers
-    .filter((adv) => adv.toLowerCase().includes(searchTerm.toLowerCase()))
-    .map((adv) => ({
-      advertiser: adv,
-      hellofm: currentWeekData["hellofm"].data.find((d) => d.advertiser === adv)?.spend || 0,
-      suryanfm: currentWeekData["suryanfm"].data.find((d) => d.advertiser === adv)?.spend || 0,
-    }));
+    .filter((adv) => {
+      const weekData = selectedWeek === "week16" ? week16 : week17;
+      const advertiserData = weekData.find((item) => item.Brand === adv);
+      const matchesSector = selectedSector === "all" || advertiserData?.Sector === selectedSector;
+      const matchesSearch = adv.toLowerCase().includes(searchTerm.toLowerCase());
+      return matchesSector && matchesSearch;
+    })
+    .map((adv) => {
+      const weekData = selectedWeek === "week16" ? week16 : week17;
+      const advertiserData = weekData.find((item) => item.Brand === adv);
+      return {
+        advertiser: adv,
+        hellofm: currentWeekData["hellofm"].data.find((d) => d.advertiser === adv)?.spend || 0,
+        suryanfm: currentWeekData["suryanfm"].data.find((d) => d.advertiser === adv)?.spend || 0,
+        sector: advertiserData?.Sector || "Unknown",
+      };
+    });
 
   // Pagination logic
   const totalItems = tableData.length;
@@ -137,7 +162,7 @@ export default function TopAdvertisersComparison() {
   );
 
   const formatCurrency = (value) => {
-    return `${value} Plays`; // Adjust based on what the numbers represent
+    return `${value.toFixed(0)} Plays`; // Adjust based on what the numbers represent
   };
 
   const handleAdvertiserSelectChange = (value) => {
@@ -148,11 +173,17 @@ export default function TopAdvertisersComparison() {
       setSelectedAdvertisers([value]);
       setSearchTerm(""); // Clear search term when selecting a specific advertiser
     }
+    setCurrentPage(1); // Reset to first page
   };
 
   const handleWeekSelectChange = (value) => {
     setSelectedWeek(value);
     setCurrentPage(1); // Reset to first page when week changes
+  };
+
+  const handleSectorSelectChange = (value) => {
+    setSelectedSector(value);
+    setCurrentPage(1); // Reset to first page when sector changes
   };
 
   const handleSearchChange = (e) => {
@@ -180,6 +211,19 @@ export default function TopAdvertisersComparison() {
               <SelectItem value="week17">Week 17</SelectItem>
             </SelectContent>
           </Select>
+          <Select onValueChange={handleSectorSelectChange} defaultValue="all">
+            <SelectTrigger className="w-48">
+              <SelectValue placeholder="Select sector" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Sectors</SelectItem>
+              {uniqueSectors.map((sector) => (
+                <SelectItem key={sector} value={sector}>
+                  {sector}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
           <Select onValueChange={handleAdvertiserSelectChange}>
             <SelectTrigger className="w-48">
               <SelectValue placeholder="Select or search advertiser" />
@@ -195,7 +239,14 @@ export default function TopAdvertisersComparison() {
               </div>
               <SelectItem value="all">All Advertisers</SelectItem>
               {topAdvertisers
-                .filter((adv) => adv.toLowerCase().includes(searchTerm.toLowerCase()))
+                .filter((adv) => {
+                  const weekData = selectedWeek === "week16" ? week16 : week17;
+                  const advertiserData = weekData.find((item) => item.Brand === adv);
+                  return (
+                    adv.toLowerCase().includes(searchTerm.toLowerCase()) &&
+                    (selectedSector === "all" || advertiserData?.Sector === selectedSector)
+                  );
+                })
                 .map((adv) => (
                   <SelectItem key={adv} value={adv}>
                     {adv}
@@ -211,6 +262,7 @@ export default function TopAdvertisersComparison() {
             <TableHeader>
               <TableRow>
                 <TableHead>Advertiser</TableHead>
+                <TableHead>Sector</TableHead>
                 <TableHead>Hello FM</TableHead>
                 <TableHead>Suryan FM</TableHead>
               </TableRow>
@@ -219,6 +271,7 @@ export default function TopAdvertisersComparison() {
               {paginatedData.map((row) => (
                 <TableRow key={row.advertiser}>
                   <TableCell>{row.advertiser}</TableCell>
+                  <TableCell>{row.sector}</TableCell>
                   <TableCell>{formatCurrency(row.hellofm)}</TableCell>
                   <TableCell>{formatCurrency(row.suryanfm)}</TableCell>
                 </TableRow>

@@ -13,16 +13,26 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { sectorData } from "./treemap-sector-data";
 import { sectorSecondsData } from "./treemap-sector-seconds-data";
 
-const COLORS = [
-  "#FF4B4B", // Red
-  "#4CAF50", // Green
-  "#2196F3", // Blue
-  "#FFC107", // Yellow
-  "#E91E63", // Pink
-  "#00BCD4", // Cyan
-  "#FF9800", // Orange
-  "#9C27B0", // Purple
-];
+// Define sector colors
+const sectors = {
+  "ACCESSORIES": { name: "Accessories", color: "#34D399" },               // Emerald
+  "AUTOMOBILE": { name: "Automobile", color: "#F472B6" },                 // Pink
+  "CONSTRUCTIONS": { name: "Constructions", color: "#F59E0B" },           // Amber
+  "CONSUMER DURABLES": { name: "Consumer Durables", color: "#3B82F6" },   // Blue
+  "EDUCATION": { name: "Education", color: "#4ADE80" },                   // Green
+  "ENTERTAINMENT": { name: "Entertainment", color: "#F87171" },           // Red
+  "FINANCE": { name: "Finance", color: "#60A5FA" },                       // Light Blue
+  "FMCG": { name: "FMCG", color: "#A78BFA" },                             // Purple
+  "HEALTHCARE": { name: "Healthcare", color: "#10B981" },                // Teal
+  "HOME FURNISHING": { name: "Home Furnishing", color: "#E879F9" },       // Orchid
+  "HOSPITALITY": { name: "Hospitality", color: "#FCD34D" },               // Yellow
+  "PERSONAL CARE": { name: "Personal Care", color: "#818CF8" },           // Indigo
+  "PROPERTY": { name: "Property", color: "#FB923C" },                     // Orange
+  "PUBLIC INTEREST": { name: "Public Interest", color: "#93C5FD" },       // Sky Blue
+  "RENEWABLE ENERGY": { name: "Renewable Energy", color: "#6EE7B7" },     // Mint
+  "RETAIL": { name: "Retail", color: "#FCA5A5" },                         // Salmon
+  "TRAVEL&TOURISM": { name: "Travel & Tourism", color: "#FDBA74" },       // Peach
+};
 
 const TVChannelTreemap = () => {
   const [selectedWeek, setSelectedWeek] = useState("week16");
@@ -58,8 +68,12 @@ const TVChannelTreemap = () => {
 
     if (selectedCategory) {
       const brands = data[selectedChannel]?.categories?.[selectedCategory]?.brands || {};
-      const categoryColor = data[selectedChannel]?.categories?.[selectedCategory]?.color || COLORS[0];
-      return Object.entries(brands).map(([name, brandData], index) => ({
+      // Use the category's color or fallback to channel's color
+      const categoryColor =
+        sectors[selectedCategory.toUpperCase()]?.color ||
+        sectors[selectedChannel.toUpperCase()]?.color ||
+        "#CCCCCC"; // Fallback color
+      return Object.entries(brands).map(([name, brandData]) => ({
         name,
         size: brandData.sum || 0,
         color: categoryColor,
@@ -67,17 +81,19 @@ const TVChannelTreemap = () => {
     }
     if (selectedChannel) {
       const categories = data[selectedChannel]?.categories || {};
-      const channelColor = data[selectedChannel]?.color || COLORS[0];
-      return Object.entries(categories).map(([name, categoryData], index) => ({
+      // Use the channel's color for categories
+      const channelColor = sectors[selectedChannel.toUpperCase()]?.color || "#CCCCCC";
+      return Object.entries(categories).map(([name]) => ({
         name,
-        size: categoryData.sum || 0,
-        color: categoryData.color || channelColor,
+        size: categories[name].sum || 0,
+        color: sectors[name.toUpperCase()]?.color || channelColor,
       }));
     }
-    return Object.entries(data).map(([name, channelData], index) => ({
+    // Top-level channels (sectors)
+    return Object.entries(data).map(([name]) => ({
       name,
-      size: channelData.sum || 0,
-      color: channelData.color || COLORS[index % COLORS.length],
+      size: data[name].sum || 0,
+      color: sectors[name.toUpperCase()]?.color || "#CCCCCC", // Fallback color
     }));
   }, [selectedWeek, selectedStation, selectedChannel, selectedCategory, dataType]);
 

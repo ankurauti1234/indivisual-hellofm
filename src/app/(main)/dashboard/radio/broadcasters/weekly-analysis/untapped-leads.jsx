@@ -13,6 +13,17 @@ import ChartCard from "@/components/card/charts-card";
 import { week16, week17 } from "./top-ad-data"; // Import the JSON data
 import { Button } from "@/components/ui/button";
 
+// Function to calculate all unique sectors
+const getUniqueSectors = (week16Data, week17Data) => {
+  const combinedSectors = new Set();
+  week16Data.forEach((item) => combinedSectors.add(item.Sector));
+  week17Data.forEach((item) => combinedSectors.add(item.Sector));
+  return Array.from(combinedSectors);
+};
+
+// Get all unique sectors
+const uniqueSectors = getUniqueSectors(week16, week17);
+
 // Derive station data from week16 and week17
 const stationDataByWeek = {
   week16: {
@@ -21,6 +32,7 @@ const stationDataByWeek = {
       advertisers: week16.map((item) => ({
         brand: item.Brand,
         ads: item["Hello FM"] || 0,
+        sector: item.Sector,
       })).filter((item) => item.ads > 0),
     },
     suryanfm: {
@@ -28,6 +40,7 @@ const stationDataByWeek = {
       advertisers: week16.map((item) => ({
         brand: item.Brand,
         ads: item["Suryan FM"] || 0,
+        sector: item.Sector,
       })).filter((item) => item.ads > 0),
     },
   },
@@ -37,6 +50,7 @@ const stationDataByWeek = {
       advertisers: week17.map((item) => ({
         brand: item.Brand,
         ads: item["Hello FM"] || 0,
+        sector: item.Sector,
       })).filter((item) => item.ads > 0),
     },
     suryanfm: {
@@ -44,6 +58,7 @@ const stationDataByWeek = {
       advertisers: week17.map((item) => ({
         brand: item.Brand,
         ads: item["Suryan FM"] || 0,
+        sector: item.Sector,
       })).filter((item) => item.ads > 0),
     },
   },
@@ -58,6 +73,7 @@ const stationOptions = [
 export default function UntappedLeads() {
   const [selectedStation, setSelectedStation] = useState("hellofm");
   const [selectedWeek, setSelectedWeek] = useState("week16");
+  const [selectedSector, setSelectedSector] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
@@ -75,7 +91,10 @@ export default function UntappedLeads() {
     Object.keys(currentWeekData).forEach((station) => {
       if (station !== selectedStation) {
         currentWeekData[station].advertisers.forEach((advertiser) => {
-          if (!selectedStationAdvertisers.has(advertiser.brand)) {
+          if (
+            !selectedStationAdvertisers.has(advertiser.brand) &&
+            (selectedSector === "all" || advertiser.sector === selectedSector)
+          ) {
             const existingLead = untappedLeads.find(
               (lead) => lead.brand === advertiser.brand
             );
@@ -87,6 +106,7 @@ export default function UntappedLeads() {
                 brand: advertiser.brand,
                 stations: [currentWeekData[station].name],
                 ads: advertiser.ads,
+                sector: advertiser.sector,
               });
             }
           }
@@ -109,7 +129,7 @@ export default function UntappedLeads() {
   );
 
   const formatCurrency = (value) => {
-    return `${value} Plays`; // Adjust based on what the numbers represent
+    return `${value.toFixed(0)} Plays`; // Adjust based on what the numbers represent
   };
 
   const handleStationChange = (value) => {
@@ -120,6 +140,11 @@ export default function UntappedLeads() {
   const handleWeekChange = (value) => {
     setSelectedWeek(value);
     setCurrentPage(1); // Reset to first page when week changes
+  };
+
+  const handleSectorChange = (value) => {
+    setSelectedSector(value);
+    setCurrentPage(1); // Reset to first page when sector changes
   };
 
   const handlePageChange = (page) => {
@@ -144,6 +169,19 @@ export default function UntappedLeads() {
               <SelectItem value="week17">Week 17</SelectItem>
             </SelectContent>
           </Select>
+          <Select onValueChange={handleSectorChange} defaultValue="all">
+            <SelectTrigger className="w-48">
+              <SelectValue placeholder="Select sector" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Sectors</SelectItem>
+              {uniqueSectors.map((sector) => (
+                <SelectItem key={sector} value={sector}>
+                  {sector}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
           <Select onValueChange={handleStationChange} defaultValue="hellofm">
             <SelectTrigger className="w-48">
               <SelectValue placeholder="Select station" />
@@ -164,6 +202,7 @@ export default function UntappedLeads() {
             <thead className="text-xs text-gray-700 uppercase bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3">Brand</th>
+                <th scope="col" className="px-6 py3">Sector</th>
                 <th scope="col" className="px-6 py-3">Competitor Stations</th>
                 <th scope="col" className="px-6 py-3">Plays</th>
               </tr>
@@ -173,6 +212,7 @@ export default function UntappedLeads() {
                 paginatedLeads.map((lead, index) => (
                   <tr key={lead.brand} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="px-6 py-4 font-medium text-gray-900">{lead.brand}</td>
+                    <td className="px-6 py-4">{lead.sector}</td>
                     <td className="px-6 py-4">{lead.stations.join(", ")}</td>
                     <td className="px-6 py-4">
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
@@ -183,7 +223,7 @@ export default function UntappedLeads() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan={3} className="px-6 py-4 text-center text-gray-400">
+                  <td colSpan={4} className="px-6 py-4 text-center text-gray-400">
                     No untapped leads found for {currentWeekData[selectedStation].name} in {selectedWeek === 'week16' ? 'Week 16' : 'Week 17'}.
                   </td>
                 </tr>
