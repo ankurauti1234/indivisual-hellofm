@@ -54,26 +54,10 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
     setDate(selectedDate);
   }, [selectedDate]);
 
-  // Validate data for EPG export
+  // Reset noDataAlert when filters change
   useEffect(() => {
-    if (exportType === "epg") {
-      const filteredData = epgData.filter((item) => {
-        if (item.date !== date) return false;
-        if (station && station !== "all" && item.channel !== station) return false;
-        if (region !== "all" && item.region !== region) return false;
-        const itemStartTime = item.start;
-        const itemEndTime = item.end;
-        return (
-          (itemStartTime >= startTime && itemStartTime <= endTime) ||
-          (itemEndTime >= startTime && itemEndTime <= endTime) ||
-          (startTime >= itemStartTime && endTime <= itemEndTime)
-        );
-      });
-      setNoDataAlert(filteredData.length === 0);
-    } else {
-      setNoDataAlert(false);
-    }
-  }, [exportType, date, startTime, endTime, station, region, epgData]);
+    setNoDataAlert(false);
+  }, [exportType, date, startTime, endTime, station, region]);
 
   const handleDownload = async () => {
     if (exportType === "report" && (!region || !station || !date)) {
@@ -137,6 +121,11 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
 
         if (filteredData.length === 0) {
           setNoDataAlert(true);
+          toast({
+            title: "No Data Available",
+            description: "No data available for the selected date, time range, channel, or region.",
+            variant: "destructive",
+          });
           setIsDownloading(false);
           return;
         }
@@ -207,7 +196,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
             </DialogTitle>
           </DialogHeader>
 
-          {exportType === "epg" && noDataAlert && (
+          {noDataAlert && (
             <Alert className="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800 text-red-800 dark:text-red-200 rounded-lg">
               <AlertDescription>
                 No data available for the selected date, time range, channel, or region.
@@ -375,7 +364,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
             disabled={
               isDownloading ||
               (exportType === "report" && (!region || !station || !date)) ||
-              (exportType === "epg" && (noDataAlert || !date || !startTime || !endTime))
+              (exportType === "epg" && (!date || !startTime || !endTime))
             }
             className="w-full rounded-lg bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
