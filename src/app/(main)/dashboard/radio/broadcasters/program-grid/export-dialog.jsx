@@ -71,7 +71,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
     if (exportType === "epg" && (!date || !startTime || !endTime)) {
       toast({
         title: "Selection Required",
-        description: "Please select date and time range.",
+        description: "Please select time range.",
         variant: "destructive",
       });
       return;
@@ -192,7 +192,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
         <div className="p-6 space-y-6">
           <DialogHeader>
             <DialogTitle className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-              {exportType === "report" ? "Download Report" : "Export EPG Data"}
+              {exportType === "report" ? "Download Processed Data" : "Export Raw Data"}
             </DialogTitle>
           </DialogHeader>
 
@@ -219,17 +219,19 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
               </Select>
             </div>
 
-            {/* Date Selection */}
-            <div className="space-y-2">
-              <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Date</Label>
-              <Input
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                className="bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400"
-                required
-              />
-            </div>
+            {/* Date Selection for Report Only */}
+            {exportType === "report" && (
+              <div className="space-y-2">
+                <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Date</Label>
+                <Input
+                  type="date"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                  className="bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-400"
+                  required
+                />
+              </div>
+            )}
 
             {exportType === "report" ? (
               <>
@@ -269,7 +271,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
               </>
             ) : (
               <>
-                {/* Region Selection for EPG */}
+                {/* Region Selection for Raw Data */}
                 <div className="space-y-2">
                   <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Region</Label>
                   <Select value={region} onValueChange={setRegion}>
@@ -293,7 +295,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
                   </Select>
                 </div>
 
-                {/* Station Selection for EPG */}
+                {/* Station Selection for Raw Data */}
                 <div className="space-y-2">
                   <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Station</Label>
                   <Select value={station} onValueChange={setStation}>
@@ -317,7 +319,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
                   </Select>
                 </div>
 
-                {/* Time Range Selection for EPG */}
+                {/* Time Range Selection for Raw Data */}
                 <div className="space-y-2">
                   <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Time Range (24-hour format)</Label>
                   <div className="flex items-center gap-3">
@@ -341,7 +343,7 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
                   </div>
                 </div>
 
-                {/* File Format Selection for EPG */}
+                {/* File Format Selection for Raw Data */}
                 <div className="space-y-2">
                   <Label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">File Format</Label>
                   <Select value={fileFormat} onValueChange={setFileFormat}>
