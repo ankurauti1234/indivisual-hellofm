@@ -41,12 +41,12 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
   const regions = ["Trichy"];
   const reportStations = ["hello-fm", "suryan-fm"];
 
-  // Available stations for EPG export based on selected date
+  // Available stations for Raw Data based on selected date
   const availableStations = Object.keys(availableData).filter((station) =>
     availableData[station].dates.includes(date)
   );
 
-  // Get unique regions from epgData for EPG export
+  // Get unique regions from epgData for Raw Data
   const epgRegions = [...new Set(epgData.map((item) => item.region).filter(Boolean))];
 
   // Sync date state with selectedDate prop
@@ -213,8 +213,8 @@ const ExportDialog = ({ selectedDate, epgData, availableData }) => {
                   <SelectValue placeholder="Select export type" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="report">Report</SelectItem>
-                  <SelectItem value="epg">EPG Export</SelectItem>
+                  <SelectItem value="report">Processed Data</SelectItem>
+                  <SelectItem value="epg">Raw Data</SelectItem>
                 </SelectContent>
               </Select>
             </div>
